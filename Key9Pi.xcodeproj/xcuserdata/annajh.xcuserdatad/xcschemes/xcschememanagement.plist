@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Key9Board.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Key9Pi.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>0BB1E9EE1E5381DC00C391C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0BB1EA041E5383C500C391C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

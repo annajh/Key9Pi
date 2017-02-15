@@ -15,6 +15,10 @@
 		0BB1E9DE1E5381DC00C391C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB1E9DC1E5381DC00C391C9 /* LaunchScreen.storyboard */; };
 		0BB1E9E91E5381DC00C391C9 /* Key9PiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1E9E81E5381DC00C391C9 /* Key9PiTests.swift */; };
 		0BB1E9F41E5381DC00C391C9 /* Key9PiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1E9F31E5381DC00C391C9 /* Key9PiUITests.swift */; };
+		0BB1EA081E5383C500C391C9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1EA071E5383C500C391C9 /* KeyboardViewController.swift */; };
+		0BB1EA0C1E5383C500C391C9 /* Key9Board.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0BB1EA051E5383C500C391C9 /* Key9Board.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0BB1EA141E538CD000C391C9 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB1EA131E538CD000C391C9 /* KeyboardView.xib */; };
+		0BB1EA161E5392A100C391C9 /* DictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1EA151E5392A100C391C9 /* DictionaryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,28 @@
 			remoteGlobalIDString = 0BB1E9CC1E5381DC00C391C9;
 			remoteInfo = Key9Pi;
 		};
+		0BB1EA0A1E5383C500C391C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BB1E9C51E5381DC00C391C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BB1EA041E5383C500C391C9;
+			remoteInfo = Key9Board;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0BB1EA101E5383C500C391C9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0BB1EA0C1E5383C500C391C9 /* Key9Board.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0BB1E9CD1E5381DC00C391C9 /* Key9Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Key9Pi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +74,11 @@
 		0BB1E9EF1E5381DC00C391C9 /* Key9PiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Key9PiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB1E9F31E5381DC00C391C9 /* Key9PiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key9PiUITests.swift; sourceTree = "<group>"; };
 		0BB1E9F51E5381DC00C391C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BB1EA051E5383C500C391C9 /* Key9Board.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Key9Board.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BB1EA071E5383C500C391C9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		0BB1EA091E5383C500C391C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BB1EA131E538CD000C391C9 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
+		0BB1EA151E5392A100C391C9 /* DictionaryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BB1EA021E5383C500C391C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +119,7 @@
 				0BB1E9CF1E5381DC00C391C9 /* Key9Pi */,
 				0BB1E9E71E5381DC00C391C9 /* Key9PiTests */,
 				0BB1E9F21E5381DC00C391C9 /* Key9PiUITests */,
+				0BB1EA061E5383C500C391C9 /* Key9Board */,
 				0BB1E9CE1E5381DC00C391C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +130,7 @@
 				0BB1E9CD1E5381DC00C391C9 /* Key9Pi.app */,
 				0BB1E9E41E5381DC00C391C9 /* Key9PiTests.xctest */,
 				0BB1E9EF1E5381DC00C391C9 /* Key9PiUITests.xctest */,
+				0BB1EA051E5383C500C391C9 /* Key9Board.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +145,7 @@
 				0BB1E9DC1E5381DC00C391C9 /* LaunchScreen.storyboard */,
 				0BB1E9DF1E5381DC00C391C9 /* Info.plist */,
 				0BB1E9D71E5381DC00C391C9 /* Key9Pi.xcdatamodeld */,
+				0BB1EA151E5392A100C391C9 /* DictionaryModel.swift */,
 			);
 			path = Key9Pi;
 			sourceTree = "<group>";
@@ -128,6 +168,16 @@
 			path = Key9PiUITests;
 			sourceTree = "<group>";
 		};
+		0BB1EA061E5383C500C391C9 /* Key9Board */ = {
+			isa = PBXGroup;
+			children = (
+				0BB1EA131E538CD000C391C9 /* KeyboardView.xib */,
+				0BB1EA071E5383C500C391C9 /* KeyboardViewController.swift */,
+				0BB1EA091E5383C500C391C9 /* Info.plist */,
+			);
+			path = Key9Board;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +188,12 @@
 				0BB1E9C91E5381DC00C391C9 /* Sources */,
 				0BB1E9CA1E5381DC00C391C9 /* Frameworks */,
 				0BB1E9CB1E5381DC00C391C9 /* Resources */,
+				0BB1EA101E5383C500C391C9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0BB1EA0B1E5383C500C391C9 /* PBXTargetDependency */,
 			);
 			name = Key9Pi;
 			productName = Key9Pi;
@@ -184,6 +236,23 @@
 			productReference = 0BB1E9EF1E5381DC00C391C9 /* Key9PiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0BB1EA041E5383C500C391C9 /* Key9Board */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BB1EA0D1E5383C500C391C9 /* Build configuration list for PBXNativeTarget "Key9Board" */;
+			buildPhases = (
+				0BB1EA011E5383C500C391C9 /* Sources */,
+				0BB1EA021E5383C500C391C9 /* Frameworks */,
+				0BB1EA031E5383C500C391C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Key9Board;
+			productName = Key9Board;
+			productReference = 0BB1EA051E5383C500C391C9 /* Key9Board.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +277,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0BB1E9CC1E5381DC00C391C9;
 					};
+					0BB1EA041E5383C500C391C9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 0BB1E9C81E5381DC00C391C9 /* Build configuration list for PBXProject "Key9Pi" */;
@@ -226,6 +299,7 @@
 				0BB1E9CC1E5381DC00C391C9 /* Key9Pi */,
 				0BB1E9E31E5381DC00C391C9 /* Key9PiTests */,
 				0BB1E9EE1E5381DC00C391C9 /* Key9PiUITests */,
+				0BB1EA041E5383C500C391C9 /* Key9Board */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +329,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BB1EA031E5383C500C391C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BB1EA141E538CD000C391C9 /* KeyboardView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,6 +347,7 @@
 				0BB1E9D31E5381DC00C391C9 /* ViewController.swift in Sources */,
 				0BB1E9D91E5381DC00C391C9 /* Key9Pi.xcdatamodeld in Sources */,
 				0BB1E9D11E5381DC00C391C9 /* AppDelegate.swift in Sources */,
+				0BB1EA161E5392A100C391C9 /* DictionaryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +367,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BB1EA011E5383C500C391C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BB1EA081E5383C500C391C9 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,6 +387,11 @@
 			isa = PBXTargetDependency;
 			target = 0BB1E9CC1E5381DC00C391C9 /* Key9Pi */;
 			targetProxy = 0BB1E9F01E5381DC00C391C9 /* PBXContainerItemProxy */;
+		};
+		0BB1EA0B1E5383C500C391C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BB1EA041E5383C500C391C9 /* Key9Board */;
+			targetProxy = 0BB1EA0A1E5383C500C391C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,6 +509,7 @@
 		0BB1E9F91E5381DC00C391C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Key9Pi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -425,6 +522,7 @@
 		0BB1E9FA1E5381DC00C391C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Key9Pi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -488,6 +586,30 @@
 			};
 			name = Release;
 		};
+		0BB1EA0E1E5383C500C391C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Key9Board/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anna.Key9Pi.Key9Board;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0BB1EA0F1E5383C500C391C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Key9Board/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anna.Key9Pi.Key9Board;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -521,6 +643,14 @@
 			buildConfigurations = (
 				0BB1E9FF1E5381DC00C391C9 /* Debug */,
 				0BB1EA001E5381DC00C391C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0BB1EA0D1E5383C500C391C9 /* Build configuration list for PBXNativeTarget "Key9Board" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BB1EA0E1E5383C500C391C9 /* Debug */,
+				0BB1EA0F1E5383C500C391C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
