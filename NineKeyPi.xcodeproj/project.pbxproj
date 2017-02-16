@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E282B29C1E55562F0002FCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282B29B1E55562F0002FCCC /* AppDelegate.swift */; };
+		E282B29E1E55562F0002FCCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282B29D1E55562F0002FCCC /* ViewController.swift */; };
+		E282B2A11E55562F0002FCCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E282B29F1E55562F0002FCCC /* Main.storyboard */; };
+		E282B2A41E55562F0002FCCC /* NineKeyPi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E282B2A21E55562F0002FCCC /* NineKeyPi.xcdatamodeld */; };
+		E282B2A61E55562F0002FCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E282B2A51E55562F0002FCCC /* Assets.xcassets */; };
+		E282B2A91E55562F0002FCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E282B2A71E55562F0002FCCC /* LaunchScreen.storyboard */; };
+		E282B2B41E55562F0002FCCC /* NineKeyPiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282B2B31E55562F0002FCCC /* NineKeyPiTests.swift */; };
+		E282B2BF1E55562F0002FCCC /* NineKeyPiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282B2BE1E55562F0002FCCC /* NineKeyPiUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E282B2B01E55562F0002FCCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E282B2901E55562F0002FCCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E282B2971E55562F0002FCCC;
+			remoteInfo = NineKeyPi;
+		};
+		E282B2BB1E55562F0002FCCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E282B2901E55562F0002FCCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E282B2971E55562F0002FCCC;
+			remoteInfo = NineKeyPi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E282B2981E55562F0002FCCC /* NineKeyPi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineKeyPi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E282B29B1E55562F0002FCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E282B29D1E55562F0002FCCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E282B2A01E55562F0002FCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E282B2A31E55562F0002FCCC /* NineKeyPi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NineKeyPi.xcdatamodel; sourceTree = "<group>"; };
+		E282B2A51E55562F0002FCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E282B2A81E55562F0002FCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E282B2AA1E55562F0002FCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E282B2AF1E55562F0002FCCC /* NineKeyPiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NineKeyPiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E282B2B31E55562F0002FCCC /* NineKeyPiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineKeyPiTests.swift; sourceTree = "<group>"; };
+		E282B2B51E55562F0002FCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E282B2BA1E55562F0002FCCC /* NineKeyPiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NineKeyPiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E282B2BE1E55562F0002FCCC /* NineKeyPiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineKeyPiUITests.swift; sourceTree = "<group>"; };
+		E282B2C01E55562F0002FCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E282B2951E55562F0002FCCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E282B2AC1E55562F0002FCCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E282B2B71E55562F0002FCCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E282B28F1E55562F0002FCCC = {
+			isa = PBXGroup;
+			children = (
+				E282B29A1E55562F0002FCCC /* NineKeyPi */,
+				E282B2B21E55562F0002FCCC /* NineKeyPiTests */,
+				E282B2BD1E55562F0002FCCC /* NineKeyPiUITests */,
+				E282B2991E55562F0002FCCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E282B2991E55562F0002FCCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E282B2981E55562F0002FCCC /* NineKeyPi.app */,
+				E282B2AF1E55562F0002FCCC /* NineKeyPiTests.xctest */,
+				E282B2BA1E55562F0002FCCC /* NineKeyPiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E282B29A1E55562F0002FCCC /* NineKeyPi */ = {
+			isa = PBXGroup;
+			children = (
+				E282B29B1E55562F0002FCCC /* AppDelegate.swift */,
+				E282B29D1E55562F0002FCCC /* ViewController.swift */,
+				E282B29F1E55562F0002FCCC /* Main.storyboard */,
+				E282B2A51E55562F0002FCCC /* Assets.xcassets */,
+				E282B2A71E55562F0002FCCC /* LaunchScreen.storyboard */,
+				E282B2AA1E55562F0002FCCC /* Info.plist */,
+				E282B2A21E55562F0002FCCC /* NineKeyPi.xcdatamodeld */,
+			);
+			path = NineKeyPi;
+			sourceTree = "<group>";
+		};
+		E282B2B21E55562F0002FCCC /* NineKeyPiTests */ = {
+			isa = PBXGroup;
+			children = (
+				E282B2B31E55562F0002FCCC /* NineKeyPiTests.swift */,
+				E282B2B51E55562F0002FCCC /* Info.plist */,
+			);
+			path = NineKeyPiTests;
+			sourceTree = "<group>";
+		};
+		E282B2BD1E55562F0002FCCC /* NineKeyPiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E282B2BE1E55562F0002FCCC /* NineKeyPiUITests.swift */,
+				E282B2C01E55562F0002FCCC /* Info.plist */,
+			);
+			path = NineKeyPiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E282B2971E55562F0002FCCC /* NineKeyPi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E282B2C31E55562F0002FCCC /* Build configuration list for PBXNativeTarget "NineKeyPi" */;
+			buildPhases = (
+				E282B2941E55562F0002FCCC /* Sources */,
+				E282B2951E55562F0002FCCC /* Frameworks */,
+				E282B2961E55562F0002FCCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NineKeyPi;
+			productName = NineKeyPi;
+			productReference = E282B2981E55562F0002FCCC /* NineKeyPi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E282B2AE1E55562F0002FCCC /* NineKeyPiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E282B2C61E55562F0002FCCC /* Build configuration list for PBXNativeTarget "NineKeyPiTests" */;
+			buildPhases = (
+				E282B2AB1E55562F0002FCCC /* Sources */,
+				E282B2AC1E55562F0002FCCC /* Frameworks */,
+				E282B2AD1E55562F0002FCCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E282B2B11E55562F0002FCCC /* PBXTargetDependency */,
+			);
+			name = NineKeyPiTests;
+			productName = NineKeyPiTests;
+			productReference = E282B2AF1E55562F0002FCCC /* NineKeyPiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E282B2B91E55562F0002FCCC /* NineKeyPiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E282B2C91E55562F0002FCCC /* Build configuration list for PBXNativeTarget "NineKeyPiUITests" */;
+			buildPhases = (
+				E282B2B61E55562F0002FCCC /* Sources */,
+				E282B2B71E55562F0002FCCC /* Frameworks */,
+				E282B2B81E55562F0002FCCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E282B2BC1E55562F0002FCCC /* PBXTargetDependency */,
+			);
+			name = NineKeyPiUITests;
+			productName = NineKeyPiUITests;
+			productReference = E282B2BA1E55562F0002FCCC /* NineKeyPiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E282B2901E55562F0002FCCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Mingyuan Zhou";
+				TargetAttributes = {
+					E282B2971E55562F0002FCCC = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					E282B2AE1E55562F0002FCCC = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E282B2971E55562F0002FCCC;
+					};
+					E282B2B91E55562F0002FCCC = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E282B2971E55562F0002FCCC;
+					};
+				};
+			};
+			buildConfigurationList = E282B2931E55562F0002FCCC /* Build configuration list for PBXProject "NineKeyPi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E282B28F1E55562F0002FCCC;
+			productRefGroup = E282B2991E55562F0002FCCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E282B2971E55562F0002FCCC /* NineKeyPi */,
+				E282B2AE1E55562F0002FCCC /* NineKeyPiTests */,
+				E282B2B91E55562F0002FCCC /* NineKeyPiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E282B2961E55562F0002FCCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E282B2A91E55562F0002FCCC /* LaunchScreen.storyboard in Resources */,
+				E282B2A61E55562F0002FCCC /* Assets.xcassets in Resources */,
+				E282B2A11E55562F0002FCCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E282B2AD1E55562F0002FCCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E282B2B81E55562F0002FCCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E282B2941E55562F0002FCCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E282B29E1E55562F0002FCCC /* ViewController.swift in Sources */,
+				E282B29C1E55562F0002FCCC /* AppDelegate.swift in Sources */,
+				E282B2A41E55562F0002FCCC /* NineKeyPi.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E282B2AB1E55562F0002FCCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E282B2B41E55562F0002FCCC /* NineKeyPiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E282B2B61E55562F0002FCCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E282B2BF1E55562F0002FCCC /* NineKeyPiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E282B2B11E55562F0002FCCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E282B2971E55562F0002FCCC /* NineKeyPi */;
+			targetProxy = E282B2B01E55562F0002FCCC /* PBXContainerItemProxy */;
+		};
+		E282B2BC1E55562F0002FCCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E282B2971E55562F0002FCCC /* NineKeyPi */;
+			targetProxy = E282B2BB1E55562F0002FCCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E282B29F1E55562F0002FCCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E282B2A01E55562F0002FCCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E282B2A71E55562F0002FCCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E282B2A81E55562F0002FCCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E282B2C11E55562F0002FCCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E282B2C21E55562F0002FCCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E282B2C41E55562F0002FCCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NineKeyPi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EECS481.NineKeyPi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E282B2C51E55562F0002FCCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NineKeyPi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EECS481.NineKeyPi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E282B2C71E55562F0002FCCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NineKeyPiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EECS481.NineKeyPiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NineKeyPi.app/NineKeyPi";
+			};
+			name = Debug;
+		};
+		E282B2C81E55562F0002FCCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NineKeyPiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EECS481.NineKeyPiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NineKeyPi.app/NineKeyPi";
+			};
+			name = Release;
+		};
+		E282B2CA1E55562F0002FCCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = NineKeyPiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EECS481.NineKeyPiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NineKeyPi;
+			};
+			name = Debug;
+		};
+		E282B2CB1E55562F0002FCCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = NineKeyPiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EECS481.NineKeyPiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NineKeyPi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E282B2931E55562F0002FCCC /* Build configuration list for PBXProject "NineKeyPi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E282B2C11E55562F0002FCCC /* Debug */,
+				E282B2C21E55562F0002FCCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E282B2C31E55562F0002FCCC /* Build configuration list for PBXNativeTarget "NineKeyPi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E282B2C41E55562F0002FCCC /* Debug */,
+				E282B2C51E55562F0002FCCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E282B2C61E55562F0002FCCC /* Build configuration list for PBXNativeTarget "NineKeyPiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E282B2C71E55562F0002FCCC /* Debug */,
+				E282B2C81E55562F0002FCCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E282B2C91E55562F0002FCCC /* Build configuration list for PBXNativeTarget "NineKeyPiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E282B2CA1E55562F0002FCCC /* Debug */,
+				E282B2CB1E55562F0002FCCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E282B2A21E55562F0002FCCC /* NineKeyPi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E282B2A31E55562F0002FCCC /* NineKeyPi.xcdatamodel */,
+			);
+			currentVersion = E282B2A31E55562F0002FCCC /* NineKeyPi.xcdatamodel */;
+			path = NineKeyPi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E282B2901E55562F0002FCCC /* Project object */;
+}
