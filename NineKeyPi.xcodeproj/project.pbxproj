@@ -15,6 +15,9 @@
 		E282B2A91E55562F0002FCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E282B2A71E55562F0002FCCC /* LaunchScreen.storyboard */; };
 		E282B2B41E55562F0002FCCC /* NineKeyPiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282B2B31E55562F0002FCCC /* NineKeyPiTests.swift */; };
 		E282B2BF1E55562F0002FCCC /* NineKeyPiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282B2BE1E55562F0002FCCC /* NineKeyPiUITests.swift */; };
+		E282B2D31E55564A0002FCCC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282B2D21E55564A0002FCCC /* KeyboardViewController.swift */; };
+		E282B2D71E55564A0002FCCC /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E282B2D01E55564A0002FCCC /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E282B32C1E5598CE0002FCCC /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E282B32B1E5598CE0002FCCC /* KeyboardView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +35,28 @@
 			remoteGlobalIDString = E282B2971E55562F0002FCCC;
 			remoteInfo = NineKeyPi;
 		};
+		E282B2D51E55564A0002FCCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E282B2901E55562F0002FCCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E282B2CF1E55564A0002FCCC;
+			remoteInfo = Keyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E282B2DB1E55564A0002FCCC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E282B2D71E55564A0002FCCC /* Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E282B2981E55562F0002FCCC /* NineKeyPi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineKeyPi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +73,10 @@
 		E282B2BA1E55562F0002FCCC /* NineKeyPiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NineKeyPiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E282B2BE1E55562F0002FCCC /* NineKeyPiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineKeyPiUITests.swift; sourceTree = "<group>"; };
 		E282B2C01E55562F0002FCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E282B2D01E55564A0002FCCC /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E282B2D21E55564A0002FCCC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		E282B2D41E55564A0002FCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E282B32B1E5598CE0002FCCC /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E282B2CD1E55564A0002FCCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +117,7 @@
 				E282B29A1E55562F0002FCCC /* NineKeyPi */,
 				E282B2B21E55562F0002FCCC /* NineKeyPiTests */,
 				E282B2BD1E55562F0002FCCC /* NineKeyPiUITests */,
+				E282B2D11E55564A0002FCCC /* Keyboard */,
 				E282B2991E55562F0002FCCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +128,7 @@
 				E282B2981E55562F0002FCCC /* NineKeyPi.app */,
 				E282B2AF1E55562F0002FCCC /* NineKeyPiTests.xctest */,
 				E282B2BA1E55562F0002FCCC /* NineKeyPiUITests.xctest */,
+				E282B2D01E55564A0002FCCC /* Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +165,16 @@
 			path = NineKeyPiUITests;
 			sourceTree = "<group>";
 		};
+		E282B2D11E55564A0002FCCC /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E282B2D21E55564A0002FCCC /* KeyboardViewController.swift */,
+				E282B2D41E55564A0002FCCC /* Info.plist */,
+				E282B32B1E5598CE0002FCCC /* KeyboardView.xib */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +185,12 @@
 				E282B2941E55562F0002FCCC /* Sources */,
 				E282B2951E55562F0002FCCC /* Frameworks */,
 				E282B2961E55562F0002FCCC /* Resources */,
+				E282B2DB1E55564A0002FCCC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E282B2D61E55564A0002FCCC /* PBXTargetDependency */,
 			);
 			name = NineKeyPi;
 			productName = NineKeyPi;
@@ -184,6 +233,23 @@
 			productReference = E282B2BA1E55562F0002FCCC /* NineKeyPiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E282B2CF1E55564A0002FCCC /* Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E282B2D81E55564A0002FCCC /* Build configuration list for PBXNativeTarget "Keyboard" */;
+			buildPhases = (
+				E282B2CC1E55564A0002FCCC /* Sources */,
+				E282B2CD1E55564A0002FCCC /* Frameworks */,
+				E282B2CE1E55564A0002FCCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keyboard;
+			productName = Keyboard;
+			productReference = E282B2D01E55564A0002FCCC /* Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +274,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = E282B2971E55562F0002FCCC;
 					};
+					E282B2CF1E55564A0002FCCC = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E282B2931E55562F0002FCCC /* Build configuration list for PBXProject "NineKeyPi" */;
@@ -226,6 +296,7 @@
 				E282B2971E55562F0002FCCC /* NineKeyPi */,
 				E282B2AE1E55562F0002FCCC /* NineKeyPiTests */,
 				E282B2B91E55562F0002FCCC /* NineKeyPiUITests */,
+				E282B2CF1E55564A0002FCCC /* Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +323,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E282B2CE1E55564A0002FCCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E282B32C1E5598CE0002FCCC /* KeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +363,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E282B2CC1E55564A0002FCCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E282B2D31E55564A0002FCCC /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,6 +383,11 @@
 			isa = PBXTargetDependency;
 			target = E282B2971E55562F0002FCCC /* NineKeyPi */;
 			targetProxy = E282B2BB1E55562F0002FCCC /* PBXContainerItemProxy */;
+		};
+		E282B2D61E55564A0002FCCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E282B2CF1E55564A0002FCCC /* Keyboard */;
+			targetProxy = E282B2D51E55564A0002FCCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,6 +505,7 @@
 		E282B2C41E55562F0002FCCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NineKeyPi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -425,6 +518,7 @@
 		E282B2C51E55562F0002FCCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NineKeyPi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -488,6 +582,30 @@
 			};
 			name = Release;
 		};
+		E282B2D91E55564A0002FCCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EECS481.NineKeyPi.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E282B2DA1E55564A0002FCCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EECS481.NineKeyPi.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -507,6 +625,7 @@
 				E282B2C51E55562F0002FCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E282B2C61E55562F0002FCCC /* Build configuration list for PBXNativeTarget "NineKeyPiTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +634,7 @@
 				E282B2C81E55562F0002FCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E282B2C91E55562F0002FCCC /* Build configuration list for PBXNativeTarget "NineKeyPiUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +643,16 @@
 				E282B2CB1E55562F0002FCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E282B2D81E55564A0002FCCC /* Build configuration list for PBXNativeTarget "Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E282B2D91E55564A0002FCCC /* Debug */,
+				E282B2DA1E55564A0002FCCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

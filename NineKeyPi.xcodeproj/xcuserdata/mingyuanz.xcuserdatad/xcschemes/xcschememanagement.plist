@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Keyboard.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>NineKeyPi.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>E282B2B91E55562F0002FCCC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E282B2CF1E55564A0002FCCC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
