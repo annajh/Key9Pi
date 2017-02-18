@@ -91,6 +91,7 @@ class KeyboardViewController: UIInputViewController {
                 }
             }
         }
+        (textDocumentProxy as UIKeyInput).insertText("\(CoreDataStorage.foo())")
     }
     
 }

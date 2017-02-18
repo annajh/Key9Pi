@@ -19,6 +19,8 @@
 		0BB1EA0C1E5383C500C391C9 /* Key9Board.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0BB1EA051E5383C500C391C9 /* Key9Board.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BB1EA141E538CD000C391C9 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB1EA131E538CD000C391C9 /* KeyboardView.xib */; };
 		0BB1EA161E5392A100C391C9 /* DictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1EA151E5392A100C391C9 /* DictionaryModel.swift */; };
+		0BC72AFC1E5625000026AD13 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AFB1E5625000026AD13 /* CoreDataStorage.swift */; };
+		0BC72AFD1E5625860026AD13 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AFB1E5625000026AD13 /* CoreDataStorage.swift */; };
 		4C63EE5F1E53F1EB00C47F54 /* Key9Pi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1E9D71E5381DC00C391C9 /* Key9Pi.xcdatamodeld */; };
 		4C63EE611E54067900C47F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1E9D01E5381DC00C391C9 /* AppDelegate.swift */; };
 		4C63EE671E54B57F00C47F54 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1EA071E5383C500C391C9 /* KeyboardViewController.swift */; };
@@ -82,6 +84,7 @@
 		0BB1EA091E5383C500C391C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BB1EA131E538CD000C391C9 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		0BB1EA151E5392A100C391C9 /* DictionaryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryModel.swift; sourceTree = "<group>"; };
+		0BC72AFB1E5625000026AD13 /* CoreDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		4C63EE5D1E53E73D00C47F54 /* Key9Pi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Key9Pi.entitlements; sourceTree = "<group>"; };
 		4C63EE5E1E53EE4E00C47F54 /* Key9Board.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Key9Board.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +124,7 @@
 		0BB1E9C41E5381DC00C391C9 = {
 			isa = PBXGroup;
 			children = (
+				0BC72AFA1E5624E90026AD13 /* Shared */,
 				0BB1E9CF1E5381DC00C391C9 /* Key9Pi */,
 				0BB1E9E71E5381DC00C391C9 /* Key9PiTests */,
 				0BB1E9F21E5381DC00C391C9 /* Key9PiUITests */,
@@ -183,6 +187,14 @@
 				0BB1EA091E5383C500C391C9 /* Info.plist */,
 			);
 			path = Key9Board;
+			sourceTree = "<group>";
+		};
+		0BC72AFA1E5624E90026AD13 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0BC72AFB1E5625000026AD13 /* CoreDataStorage.swift */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC72AFC1E5625000026AD13 /* CoreDataStorage.swift in Sources */,
 				0BB1E9D31E5381DC00C391C9 /* ViewController.swift in Sources */,
 				4C63EE671E54B57F00C47F54 /* KeyboardViewController.swift in Sources */,
 				0BB1E9D91E5381DC00C391C9 /* Key9Pi.xcdatamodeld in Sources */,
@@ -391,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC72AFD1E5625860026AD13 /* CoreDataStorage.swift in Sources */,
 				4C63EE611E54067900C47F54 /* AppDelegate.swift in Sources */,
 				4C63EE5F1E53F1EB00C47F54 /* Key9Pi.xcdatamodeld in Sources */,
 				0BB1EA081E5383C500C391C9 /* KeyboardViewController.swift in Sources */,
