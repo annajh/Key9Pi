@@ -21,6 +21,18 @@
 		0BB1EA161E5392A100C391C9 /* DictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1EA151E5392A100C391C9 /* DictionaryModel.swift */; };
 		0BC72AFC1E5625000026AD13 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AFB1E5625000026AD13 /* CoreDataStorage.swift */; };
 		0BC72AFD1E5625860026AD13 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AFB1E5625000026AD13 /* CoreDataStorage.swift */; };
+		4C089A2C1E59321600827B22 /* Key9Pi.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A2B1E59321600827B22 /* Key9Pi.sqlite */; };
+		4C089A2D1E59321600827B22 /* Key9Pi.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A2B1E59321600827B22 /* Key9Pi.sqlite */; };
+		4C089A2E1E59321600827B22 /* Key9Pi.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A2B1E59321600827B22 /* Key9Pi.sqlite */; };
+		4C089A2F1E59321600827B22 /* Key9Pi.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A2B1E59321600827B22 /* Key9Pi.sqlite */; };
+		4C089A321E59477000827B22 /* Key9Pi.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A301E59477000827B22 /* Key9Pi.sqlite-shm */; };
+		4C089A331E59477000827B22 /* Key9Pi.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A301E59477000827B22 /* Key9Pi.sqlite-shm */; };
+		4C089A341E59477000827B22 /* Key9Pi.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A301E59477000827B22 /* Key9Pi.sqlite-shm */; };
+		4C089A351E59477000827B22 /* Key9Pi.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A301E59477000827B22 /* Key9Pi.sqlite-shm */; };
+		4C089A361E59477000827B22 /* Key9Pi.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A311E59477000827B22 /* Key9Pi.sqlite-wal */; };
+		4C089A371E59477000827B22 /* Key9Pi.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A311E59477000827B22 /* Key9Pi.sqlite-wal */; };
+		4C089A381E59477000827B22 /* Key9Pi.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A311E59477000827B22 /* Key9Pi.sqlite-wal */; };
+		4C089A391E59477000827B22 /* Key9Pi.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 4C089A311E59477000827B22 /* Key9Pi.sqlite-wal */; };
 		4C63EE5F1E53F1EB00C47F54 /* Key9Pi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1E9D71E5381DC00C391C9 /* Key9Pi.xcdatamodeld */; };
 		4C63EE611E54067900C47F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1E9D01E5381DC00C391C9 /* AppDelegate.swift */; };
 		4C63EE671E54B57F00C47F54 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1EA071E5383C500C391C9 /* KeyboardViewController.swift */; };
@@ -85,6 +97,9 @@
 		0BB1EA131E538CD000C391C9 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		0BB1EA151E5392A100C391C9 /* DictionaryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryModel.swift; sourceTree = "<group>"; };
 		0BC72AFB1E5625000026AD13 /* CoreDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		4C089A2B1E59321600827B22 /* Key9Pi.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Key9Pi.sqlite; sourceTree = "<group>"; };
+		4C089A301E59477000827B22 /* Key9Pi.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Key9Pi.sqlite-shm"; sourceTree = "<group>"; };
+		4C089A311E59477000827B22 /* Key9Pi.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Key9Pi.sqlite-wal"; sourceTree = "<group>"; };
 		4C63EE5D1E53E73D00C47F54 /* Key9Pi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Key9Pi.entitlements; sourceTree = "<group>"; };
 		4C63EE5E1E53EE4E00C47F54 /* Key9Board.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Key9Board.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +139,7 @@
 		0BB1E9C41E5381DC00C391C9 = {
 			isa = PBXGroup;
 			children = (
+				4C089A271E59262C00827B22 /* Resources */,
 				0BC72AFA1E5624E90026AD13 /* Shared */,
 				0BB1E9CF1E5381DC00C391C9 /* Key9Pi */,
 				0BB1E9E71E5381DC00C391C9 /* Key9PiTests */,
@@ -195,6 +211,16 @@
 				0BC72AFB1E5625000026AD13 /* CoreDataStorage.swift */,
 			);
 			name = Shared;
+			sourceTree = "<group>";
+		};
+		4C089A271E59262C00827B22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C089A2B1E59321600827B22 /* Key9Pi.sqlite */,
+				4C089A301E59477000827B22 /* Key9Pi.sqlite-shm */,
+				4C089A311E59477000827B22 /* Key9Pi.sqlite-wal */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,8 +366,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C089A2C1E59321600827B22 /* Key9Pi.sqlite in Resources */,
 				0BB1E9DE1E5381DC00C391C9 /* LaunchScreen.storyboard in Resources */,
 				0BB1E9DB1E5381DC00C391C9 /* Assets.xcassets in Resources */,
+				4C089A361E59477000827B22 /* Key9Pi.sqlite-wal in Resources */,
+				4C089A321E59477000827B22 /* Key9Pi.sqlite-shm in Resources */,
 				0BB1E9D61E5381DC00C391C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +379,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C089A371E59477000827B22 /* Key9Pi.sqlite-wal in Resources */,
+				4C089A2D1E59321600827B22 /* Key9Pi.sqlite in Resources */,
+				4C089A331E59477000827B22 /* Key9Pi.sqlite-shm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +389,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C089A381E59477000827B22 /* Key9Pi.sqlite-wal in Resources */,
+				4C089A2E1E59321600827B22 /* Key9Pi.sqlite in Resources */,
+				4C089A341E59477000827B22 /* Key9Pi.sqlite-shm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +399,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C089A351E59477000827B22 /* Key9Pi.sqlite-shm in Resources */,
+				4C089A391E59477000827B22 /* Key9Pi.sqlite-wal in Resources */,
+				4C089A2F1E59321600827B22 /* Key9Pi.sqlite in Resources */,
 				0BB1EA141E538CD000C391C9 /* KeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
