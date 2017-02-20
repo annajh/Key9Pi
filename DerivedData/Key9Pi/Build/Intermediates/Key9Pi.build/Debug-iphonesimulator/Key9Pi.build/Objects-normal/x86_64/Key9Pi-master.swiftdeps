@@ -1,0 +1,12 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "25aa558effeef0f4fbff547aff5c36d9"
+build_time: [540881382, 714292000]
+inputs:
+  "/Users/Michael/Desktop/Key9Pi/CoreDataStorage.swift": [540872536, 0]
+  "/Users/Michael/Desktop/Key9Pi/Key9Pi/ViewController.swift": [540881382, 0]
+  "/Users/Michael/Desktop/Key9Pi/Key9Board/KeyboardViewController.swift": [540872536, 0]
+  "/Users/Michael/Desktop/Key9Pi/Key9Pi/AppDelegate.swift": [540880906, 0]
+  "/Users/Michael/Desktop/Key9Pi/Key9Pi/DictionaryModel.swift": [540878666, 0]
+  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9Pi/Build/Intermediates/Key9Pi.build/Debug-iphonesimulator/Key9Pi.build/DerivedSources/CoreDataGenerated/Key9Pi/Entry+CoreDataClass.swift": [540874923, 0]
+  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9Pi/Build/Intermediates/Key9Pi.build/Debug-iphonesimulator/Key9Pi.build/DerivedSources/CoreDataGenerated/Key9Pi/Entry+CoreDataProperties.swift": [540874923, 0]
+  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9Pi/Build/Intermediates/Key9Pi.build/Debug-iphonesimulator/Key9Pi.build/DerivedSources/CoreDataGenerated/Key9Pi/Key9Pi+CoreDataModel.swift": [540874923, 0]

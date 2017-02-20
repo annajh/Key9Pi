@@ -12,10 +12,10 @@ import CoreData
 class ViewController: UIViewController {
     
     var inString = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        textField.isEditable = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,34 +60,29 @@ class ViewController: UIViewController {
     }
 
     
-    func storeEntry (word: String) {
-        let context = getContext()
-        
-        //retrieve the entity that we just created
-        let entity =  NSEntityDescription.entity(forEntityName: "Entry", in: context)
-        
-        let entry = NSManagedObject(entity: entity!, insertInto: context)
-        
-        //set the entity values
-        entry.setValue(word, forKey: "word")
-        
-        //save the object
-        do {
-            try context.save()
-            print("saved!")
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        } catch {
-            
-        }
-    }
+//    func storeEntry (word: String) {
+//        let context = getContext()
+//        
+//        //retrieve the entity that we just created
+//        let entity =  NSEntityDescription.entity(forEntityName: "Entry", in: context)
+//        
+//        let entry = NSManagedObject(entity: entity!, insertInto: context)
+//        
+//        //set the entity values
+//        entry.setValue(word, forKey: "word")
+//        
+//        //save the object
+//        do {
+//            try context.save()
+//            print("saved!")
+//        } catch let error as NSError  {
+//            print("Could not save \(error), \(error.userInfo)")
+//        } catch {
+//            
+//        }
+//    }
     
-    @IBOutlet weak var seqInput: UITextField!
-    
-    @IBOutlet weak var wordSuggestions: UITextField!
-    
-    
-    @IBAction func printCoreData(_ sender: UIButton) {
+//    @IBAction func printCoreData(_ sender: UIButton) {
 //        getWords()
 //        wordSuggestions.text = ""
 //        
@@ -101,26 +96,87 @@ class ViewController: UIViewController {
 //            }
 //        }
 //        //117, 32445, 17, 8233142 -> good examples
-    }
+//    }
     
-    @IBAction func keyPress(_ sender: UIButton) {
+    @IBOutlet weak var textField: UITextView!
+    
+    @IBAction func letterKeyPress(_ sender: UIButton) {
         getWords()
-        wordSuggestions.text = ""
+        //wordSuggestions.text = ""
         
         if sender.currentTitle == "abc" {
-            inString = inString + "1"
-        } else if sender.currentTitle == "stu" {
+            inString = inString + "2"
+        } else if sender.currentTitle == "def" {
+            inString = inString + "3"
+        } else if sender.currentTitle == "ghi" {
+            inString = inString + "4"
+        } else if sender.currentTitle == "jkl" {
+            inString = inString + "5"
+        } else if sender.currentTitle == "mno" {
+            inString = inString + "6"
+        } else if sender.currentTitle == "pqrs" {
             inString = inString + "7"
+        } else if sender.currentTitle == "tuv" {
+            inString = inString + "8"
+        } else if sender.currentTitle == "wxyz" {
+            inString = inString + "9"
         }
         
-        let results = trie.getPossibilities(seq: inString, rootNode: rootNode)
+        getResults()
         
-        for word in results {
-            print(word.key, terminator:" ")
-            wordSuggestions.text?.append(word.key + " ")
+    }
+    @IBAction func spacePressed(_ sender: UIButton) {
+        textField.text.append(" ")
+    }
+    
+    @IBAction func returnPressed(_ sender: Any) {
+        textField.text.append("\n")
+    }
+    
+    @IBAction func backPressed(_ sender: UIButton) {
+        if inString.characters.count != 0{
+            let endIndex = inString.index(inString.endIndex, offsetBy: -1)
+            inString = inString.substring(to: endIndex)
+            
+            getResults()
         }
     }
     
+    @IBAction func wordPressed(_ sender: UIButton) {
+        inString = ""
+        
+        if sender.currentTitle! != "..." {
+            textField.text.append(sender.currentTitle!)
+            textField.text.append(" ")
+        }
+        
+        for i in 18...20 {
+            let button = self.view.subviews[i] as? UIButton
+            button?.setTitle("...", for: .normal)
+        }
+    }
+    
+
+    func getResults() {
+        let results = trie.getPossibilities(seq: inString, rootNode: rootNode)
+        
+        for i in 18...20 {
+            let button = self.view.subviews[i] as? UIButton
+            button?.setTitle("...", for: .normal)
+        }
+        
+        var index = 18
+        
+        for word in results {
+            if index == 21 {
+                break
+            }
+            let button = self.view.subviews[index] as? UIButton
+            button?.setTitle("\(word.key)", for: .normal)
+            index += 1
+            print(word.key, terminator:" ")
+        }
+    }
 }
 
 

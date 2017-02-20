@@ -36,6 +36,8 @@
 		4C63EE5F1E53F1EB00C47F54 /* Key9Pi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1E9D71E5381DC00C391C9 /* Key9Pi.xcdatamodeld */; };
 		4C63EE611E54067900C47F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1E9D01E5381DC00C391C9 /* AppDelegate.swift */; };
 		4C63EE671E54B57F00C47F54 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1EA071E5383C500C391C9 /* KeyboardViewController.swift */; };
+		4C73DD971E5A92A100654D2C /* KeyboardView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C73DD961E5A92A100654D2C /* KeyboardView2.xib */; };
+		4C73DD981E5A92A100654D2C /* KeyboardView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C73DD961E5A92A100654D2C /* KeyboardView2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,7 @@
 		4C089A311E59477000827B22 /* Key9Pi.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Key9Pi.sqlite-wal"; sourceTree = "<group>"; };
 		4C63EE5D1E53E73D00C47F54 /* Key9Pi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Key9Pi.entitlements; sourceTree = "<group>"; };
 		4C63EE5E1E53EE4E00C47F54 /* Key9Board.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Key9Board.entitlements; sourceTree = "<group>"; };
+		4C73DD961E5A92A100654D2C /* KeyboardView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KeyboardView2.xib; path = ../Key9Board/KeyboardView2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,7 @@
 				0BB1E9D01E5381DC00C391C9 /* AppDelegate.swift */,
 				4C63EE5D1E53E73D00C47F54 /* Key9Pi.entitlements */,
 				0BB1E9D21E5381DC00C391C9 /* ViewController.swift */,
+				4C73DD961E5A92A100654D2C /* KeyboardView2.xib */,
 				0BB1E9D41E5381DC00C391C9 /* Main.storyboard */,
 				0BB1E9DA1E5381DC00C391C9 /* Assets.xcassets */,
 				0BB1E9DC1E5381DC00C391C9 /* LaunchScreen.storyboard */,
@@ -369,6 +373,7 @@
 				4C089A2C1E59321600827B22 /* Key9Pi.sqlite in Resources */,
 				0BB1E9DE1E5381DC00C391C9 /* LaunchScreen.storyboard in Resources */,
 				0BB1E9DB1E5381DC00C391C9 /* Assets.xcassets in Resources */,
+				4C73DD971E5A92A100654D2C /* KeyboardView2.xib in Resources */,
 				4C089A361E59477000827B22 /* Key9Pi.sqlite-wal in Resources */,
 				4C089A321E59477000827B22 /* Key9Pi.sqlite-shm in Resources */,
 				0BB1E9D61E5381DC00C391C9 /* Main.storyboard in Resources */,
@@ -400,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C089A351E59477000827B22 /* Key9Pi.sqlite-shm in Resources */,
+				4C73DD981E5A92A100654D2C /* KeyboardView2.xib in Resources */,
 				4C089A391E59477000827B22 /* Key9Pi.sqlite-wal in Resources */,
 				4C089A2F1E59321600827B22 /* Key9Pi.sqlite in Resources */,
 				0BB1EA141E538CD000C391C9 /* KeyboardView.xib in Resources */,
