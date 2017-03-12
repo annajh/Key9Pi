@@ -8,7 +8,11 @@
 
 import UIKit
 
+let path = Bundle.main.path(forResource: "large-dict", ofType: "txt")
+
 class KeyboardViewController: UIInputViewController {
+    
+    var trie = Trie(fileName: path!)
 
     @IBOutlet var nextKeyboardButton: UIButton!
     
@@ -20,6 +24,10 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let defaults = UserDefaults.standard
+        let dict = defaults.object(forKey: "resultsDict")
+        print(dict!)
         
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
@@ -57,5 +65,6 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-
 }
+
+

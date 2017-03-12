@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "140ac81a8fda885e603c5e32ea5b1679"
+build_time: [542420416, 364759000]
+inputs:
+  "/Users/Michael/Desktop/Key9pi/Key9pi/ViewController.swift": [542414061, 0]
+  "/Users/Michael/Desktop/Key9pi/Key9pi/AppDelegate.swift": [542414084, 0]
+  "/Users/Michael/Desktop/Key9pi/customKeyboard/KeyboardViewController.swift": [542420350, 0]
+  "/Users/Michael/Desktop/Key9pi/customKeyboard/DictionaryModel.swift": [542420412, 0]
+  "/Users/Michael/Desktop/Key9pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Word+CoreDataClass.swift": [542420358, 0]
+  "/Users/Michael/Desktop/Key9pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Word+CoreDataProperties.swift": [542420358, 0]
+  "/Users/Michael/Desktop/Key9pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Key9pi+CoreDataModel.swift": [542420358, 0]
