@@ -6,16 +6,16 @@ provides-nominal:
 provides-member:
 - ["C6Key9pi14ViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- !private "Int"
-- !private "StringLiteralType"
-- !private "String"
-- "ViewController"
-- "UIViewController"
-- !private "UserDefaults"
 - "AssignmentPrecedence"
+- !private "UserDefaults"
+- "UIViewController"
+- !private "Int"
+- !private "String"
+- !private "StringLiteralType"
+- "ViewController"
 depends-member:
 - !private ["Ps9AnyObject", "Int"]
 - !private ["Ps9AnyObject", "String"]

@@ -3,16 +3,15 @@
 //  customKeyboard
 //
 //  Created by Michael on 3/7/17.
-//  Copyright © 2017 EECS 481. All rights reserved.
+//  Copyright © 2017 EECS 481. All rights reserved.x
 //
 
 import UIKit
 
-let path = Bundle.main.path(forResource: "large-dict", ofType: "txt")
+let path = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
+var trie = Trie(fileName: path!)
 
 class KeyboardViewController: UIInputViewController {
-    
-    var trie = Trie(fileName: path!)
 
     @IBOutlet var nextKeyboardButton: UIButton!
     
@@ -25,14 +24,14 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = UserDefaults.standard
-        let dict = defaults.object(forKey: "resultsDict")
-        print(dict!)
+        //let defaults = UserDefaults.standard
+        //let dict = defaults.object(forKey: "resultsDict")
+        //print(dict!)
         
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
         
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
+        //self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
         

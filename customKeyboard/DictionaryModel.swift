@@ -39,7 +39,7 @@ class Trie {
         DispatchQueue.global(qos: .background).async {
             print("This is run on the background queue")
             
-            if let filepath = Bundle.main.path(forResource: "large-dict", ofType: "txt")
+            if let filepath = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
             {
                 do
                 {
