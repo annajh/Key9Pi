@@ -14,11 +14,14 @@ var trie = Trie(fileName: path!)
 class KeyboardViewController: UIInputViewController {
 
     @IBOutlet var nextKeyboardButton: UIButton!
+    var heightConstraint: NSLayoutConstraint!
+
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
         
         // Add custom view sizing constraints here
+        setUpHeightConstraint();
     }
     
     override func viewDidLoad() {
@@ -64,6 +67,28 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
+    
+    func setUpHeightConstraint()
+    {
+        let customHeight = UIScreen.main.bounds.height / 2.2
+        
+        if heightConstraint == nil {
+            heightConstraint = NSLayoutConstraint(item: view,
+                                                  attribute: .height,
+                                                  relatedBy: .equal,
+                                                  toItem: nil,
+                                                  attribute: .notAnAttribute,
+                                                  multiplier: 1,
+                                                  constant: customHeight)
+            heightConstraint.priority = UILayoutPriority(UILayoutPriorityRequired)
+            
+            view.addConstraint(heightConstraint)
+        }
+        else {
+            heightConstraint.constant = customHeight
+        }
+    }
+
 }
 
 
