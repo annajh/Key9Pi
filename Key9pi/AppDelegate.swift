@@ -1,13 +1,4 @@
-//
-//  AppDelegate.swift
-//  Key9Pi
-//
-//  Created by Anna Hua on 2/14/17.
-//  Copyright © 2017 EECS481. All rights reserved.
-//
-
 import UIKit
-import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +8,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        //print("App Path: \(dirPaths)")
-        // Creates a writable copy of the bundled default database in the application Documents directory.
         return true
     }
     
@@ -43,63 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
     }
     
-    
-    func getDocumentsDirectory()-> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
-    
-    // MARK: - Core Data stack
-    
-    lazy var persistentContainer: NSPersistentContainer = {
-        
-        let container = NSPersistentContainer(name: "Key9pi")
-        let appName: String = "Key9pi"
-        var persistentStoreDescriptions: NSPersistentStoreDescription
-        
-        let storeUrl = self.getDocumentsDirectory().appendingPathComponent("Key9pi.sqlite")
-        
-        if !FileManager.default.fileExists(atPath: (storeUrl.path)) {
-            let seededDataUrl = Bundle.main.url(forResource: appName, withExtension: "sqlite")
-            try! FileManager.default.copyItem(at: seededDataUrl!, to: storeUrl)
-        }
-        
-        let description = NSPersistentStoreDescription()
-        description.shouldInferMappingModelAutomatically = true
-        description.shouldMigrateStoreAutomatically = true
-        description.url = storeUrl
-        
-        container.persistentStoreDescriptions = [description]
-        
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
-    
-    // MARK: - Core Data Saving support
-    
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
     
 }
 

@@ -39,6 +39,9 @@
                                 <state key="normal" title="Space">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="spacePress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="nqm-od-I1y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCy-w6-vIm">
                                 <rect key="frame" x="301" y="501" width="75" height="45"/>
@@ -47,6 +50,9 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="backspacePress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="erz-1D-BtH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLH-Ji-xhl">
                                 <rect key="frame" x="1" y="469" width="110" height="30"/>
@@ -74,6 +80,9 @@
                                 <state key="normal" title="pqrs">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="kfX-GT-9Tj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST4-FA-6O7">
                                 <rect key="frame" x="223" y="469" width="108" height="31"/>
@@ -92,6 +101,9 @@
                                 <state key="normal" title="jkl">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="dLF-QC-qIr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzE-Cw-E7t">
                                 <rect key="frame" x="225" y="546" width="75" height="46"/>
@@ -100,6 +112,9 @@
                                 <state key="normal" title="mno">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="V01-4d-4Jk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-UG-D5O">
                                 <rect key="frame" x="332" y="469" width="44" height="30"/>
@@ -118,6 +133,9 @@
                                 <state key="normal" title="wxyz">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="N4C-46-1nv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USV-hn-YmT">
                                 <rect key="frame" x="301" y="591" width="75" height="76"/>
@@ -145,6 +163,9 @@
                                 <state key="normal" title="tuv">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="cOf-ZB-ZHw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zZ-Qa-EAp">
                                 <rect key="frame" x="225" y="501" width="75" height="45"/>
@@ -153,6 +174,9 @@
                                 <state key="normal" title="def">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="1GJ-js-vHd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLS-f8-YCP">
                                 <rect key="frame" x="151" y="501" width="75" height="45"/>
@@ -165,7 +189,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="createTrie:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="k6l-1J-Vg6"/>
+                                    <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="ayP-rH-cZ3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffy-LX-jnf">
@@ -191,12 +215,15 @@
                                 <state key="normal" title="ghi">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="eS6-IL-DQh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkP-n3-84c">
                                 <rect key="frame" x="1" y="638" width="75" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="0.0" height="-2"/>
-                                <state key="normal" title="Globe">
+                                <state key="normal" title="    ">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>

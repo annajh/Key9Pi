@@ -11,35 +11,35 @@ provides-member:
 - ["C6Key9pi4Trie", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "=="
-- !private "print"
-- "StringLiteralType"
-- !private "Bundle"
-- "Node"
-- "UnicodeScalarType"
-- !private "BooleanLiteralType"
-- "String"
-- "Int"
-- !private "+="
-- "IntegerLiteralType"
-- !private "DispatchQueue"
-- "Trie"
-- !private "!="
-- "alphaToNumeric"
 - "Bool"
+- "UnicodeScalarType"
+- "Node"
+- "StringLiteralType"
+- !private "print"
 - !private "ExtendedGraphemeClusterType"
-- "UInt64"
-- "Dictionary"
+- !private "BooleanLiteralType"
 - !private "CharacterSet"
+- "UInt64"
+- "IntegerLiteralType"
+- "alphaToNumeric"
+- "Trie"
+- !private "+="
+- !private "DispatchQueue"
+- "Int"
+- !private "Bundle"
+- "String"
+- !private "!="
+- "Dictionary"
 - "AssignmentPrecedence"
+- !private "=="
 depends-member:
 - !private ["Ps9AnyObject", "Bundle"]
 - !private ["Ps9AnyObject", "CharacterSet"]
 - !private ["Ps9AnyObject", "DispatchQueue"]
-- ["Ps9AnyObject", "Int"]
+- !private ["Ps9AnyObject", "Int"]
 - ["Ps9AnyObject", "Node"]
 - ["Ps9AnyObject", "String"]
-- !private ["Ps9AnyObject", "UInt64"]
+- ["Ps9AnyObject", "UInt64"]
 - !private ["Ps9AnyObject", "alphaToNumeric"]
 - !private ["Ps9AnyObject", "async"]
 - !private ["Ps9AnyObject", "characters"]
@@ -395,7 +395,7 @@ depends-member:
 - !private ["C6Key9pi4Trie", "Bundle"]
 - !private ["C6Key9pi4Trie", "CharacterSet"]
 - !private ["C6Key9pi4Trie", "DispatchQueue"]
-- ["C6Key9pi4Trie", "Int"]
+- !private ["C6Key9pi4Trie", "Int"]
 - ["C6Key9pi4Trie", "Node"]
 - ["C6Key9pi4Trie", "String"]
 - ["C6Key9pi4Trie", "UInt64"]
@@ -585,4 +585,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "f8c26df41b53cff4dbd7fd0d8d60c5e6"
+interface-hash: "c4896e04bffdc039a1252837a10b0d71"
