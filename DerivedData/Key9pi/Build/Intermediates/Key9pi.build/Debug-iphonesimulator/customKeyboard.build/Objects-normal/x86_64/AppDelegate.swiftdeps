@@ -7,21 +7,21 @@ provides-member:
 - ["C14customKeyboard11AppDelegate", ""]
 provides-dynamic-lookup:
 - "applicationWillTerminate"
-- "window"
-- "applicationDidBecomeActive"
-- "applicationWillResignActive"
-- "applicationWillEnterForeground"
 - "application"
+- "applicationDidBecomeActive"
 - "applicationDidEnterBackground"
+- "applicationWillEnterForeground"
+- "applicationWillResignActive"
+- "window"
 depends-top-level:
-- "UIWindow"
-- "Bool"
-- "UIApplicationDelegate"
-- "UIResponder"
 - "UIApplicationLaunchOptionsKey"
 - "UIApplication"
 - !private "BooleanLiteralType"
 - "AppDelegate"
+- "Bool"
+- "UIWindow"
+- "UIApplicationDelegate"
+- "UIResponder"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]

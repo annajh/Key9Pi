@@ -110,7 +110,7 @@ class Trie {
         return false;
     }
     
-    func getPossibilities(seq: String, rootNode: Node) -> [String:UInt64] {
+    func getPossibilities(seq: String, rootNode: Node, maxDepth: Int) -> [String:UInt64] {
         var currNode = rootNode
         
         for number in seq.characters {
@@ -122,6 +122,22 @@ class Trie {
             }
         }
         
-        return currNode.wordList
+        var results = currNode.wordList
+        
+        func getDeeperPossibilities(startNode: Node, maxDepth: Int, count: Int) {
+            if (startNode.children.count == 0 || count > maxDepth)  { return }
+            
+            for word in startNode.wordList {
+                results[word.key] = word.value
+            }
+            
+            for child in startNode.children {
+                getDeeperPossibilities(startNode: child.value, maxDepth: maxDepth, count: count + 1)
+            }
+        }
+        
+        getDeeperPossibilities(startNode: currNode, maxDepth: 3, count: 0);
+        
+        return results
     }
 }

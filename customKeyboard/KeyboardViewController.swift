@@ -88,7 +88,7 @@ class KeyboardViewController: UIInputViewController {
         }
         
         
-        let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode)
+        let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode, maxDepth: 1)
         print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
     }
     
@@ -97,7 +97,7 @@ class KeyboardViewController: UIInputViewController {
             let endIndex = inString.index(inString.endIndex, offsetBy: -1)
             inString = inString.substring(to: endIndex)
             
-            let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode)
+            let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode, maxDepth: 1)
             print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
         } else {
             while textDocumentProxy.hasText {
