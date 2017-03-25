@@ -103,7 +103,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     
-    @IBAction func backspacePress(_ sender: UIButton) {
+    @IBAction func backspacePressed(_ sender: UIButton) {
         (textDocumentProxy as UIKeyInput).deleteBackward()
     }
     
@@ -183,7 +183,79 @@ class KeyboardViewController: UIInputViewController {
             heightConstraint.constant = customHeight
         }
     }
+    
+//    @IBAction func letterKeyPress(_ sender: UIButton) {
+//        if sender.currentTitle == "abc" {
+//            inString += "2"
+//        } else if sender.currentTitle == "def" {
+//            inString += "3"
+//        } else if sender.currentTitle == "ghi" {
+//            inString += "4"
+//        } else if sender.currentTitle == "jkl" {
+//            inString += "5"
+//        } else if sender.currentTitle == "mno" {
+//            inString += "6"
+//        } else if sender.currentTitle == "pqrs" {
+//            inString += "7"
+//        } else if sender.currentTitle == "tuv" {
+//            inString += "8"
+//        } else if sender.currentTitle == "wxyz" {
+//            inString += "9"
+//        }
+//        
+//        
+//        let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode)
+//        print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
+//    }
+    
+    @IBAction func letterKeyPress(_ sender: UIButton) {
+        if sender.titleLabel!.text!.lowercased() == "abc" {
+            inString += "2"
+        } else if sender.titleLabel!.text!.lowercased() == "def" {
+            inString += "3"
+        } else if sender.titleLabel!.text!.lowercased() == "ghi" {
+            inString += "4"
+        } else if sender.titleLabel!.text!.lowercased() == "jkl" {
+            inString += "5"
+        } else if sender.titleLabel!.text!.lowercased() == "mno" {
+            inString += "6"
+        } else if sender.titleLabel!.text!.lowercased() == "pqrs" {
+            inString += "7"
+        } else if sender.titleLabel!.text!.lowercased() == "tuv" {
+            inString += "8"
+        } else if sender.titleLabel!.text!.lowercased() == "wxyz" {
+            inString += "9"
+        }
+        
+        
+        let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode)
+        print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
+    }
 
+    
+    
+//    @IBAction func backspacePress(_ sender: UIButton) {
+//        if inString.characters.count != 0 {
+//            let endIndex = inString.index(inString.endIndex, offsetBy: -1)
+//            inString = inString.substring(to: endIndex)
+//            
+//            let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode)
+//            print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
+//        } else {
+//            while textDocumentProxy.hasText {
+//                let tempDocText = textDocumentProxy.documentContextBeforeInput
+//                if tempDocText?.characters.last == " " {
+//                    textDocumentProxy.deleteBackward()
+//                    return
+//                } else {
+//                    textDocumentProxy.deleteBackward()
+//                }
+//            }
+//        }
+//    }
+    
+    
+    
 }
 
 
