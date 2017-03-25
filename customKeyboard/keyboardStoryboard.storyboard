@@ -522,7 +522,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCz-kY-6Qh">
                                         <rect key="frame" x="101" y="240" width="176" height="41"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
                                         <state key="normal" title="Space">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -742,12 +742,13 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="uhc-ix-wGT" secondAttribute="trailing" constant="-16" id="EHC-nJ-8du"/>
                             <constraint firstItem="rOZ-pb-AAh" firstAttribute="top" secondItem="uhc-ix-wGT" secondAttribute="bottom" constant="346" id="MAQ-ZJ-MfN"/>
                             <constraint firstAttribute="leadingMargin" secondItem="uhc-ix-wGT" secondAttribute="leading" constant="16" id="dhB-Ik-6ve"/>
                             <constraint firstItem="uhc-ix-wGT" firstAttribute="top" secondItem="LPN-ak-rz9" secondAttribute="bottom" id="i3a-uX-JW6"/>
+                            <constraint firstItem="uhc-ix-wGT" firstAttribute="centerX" secondItem="Q2e-g2-3ve" secondAttribute="centerX" id="oBo-Ba-1dj"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -758,13 +759,14 @@
                     </view>
                     <connections>
                         <outlet property="numView" destination="aZL-8J-TUd" id="QxV-ar-ZTI"/>
+                        <outlet property="shiftButton" destination="8v5-Gp-ga0" id="iZ0-6s-ccM"/>
                         <outlet property="symView" destination="vHf-vm-ori" id="kHr-Gj-ybq"/>
                         <outlet property="textView" destination="uhc-ix-wGT" id="KXY-Qc-KTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOI-VO-ngD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114.40000000000001" y="-102.09895052473765"/>
+            <point key="canvasLocation" x="-290" y="-332"/>
         </scene>
     </scenes>
 </document>

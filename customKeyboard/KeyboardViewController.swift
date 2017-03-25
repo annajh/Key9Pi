@@ -23,6 +23,21 @@ class KeyboardViewController: UIInputViewController {
     var shiftPressed = false
     var enterPressed = false
     
+    @IBOutlet weak var shiftButton: UIButton!
+    
+    
+//    @IBOutlet weak var abcButton: UIButton!
+//    @IBOutlet weak var defButton: UIButton!
+//    @IBOutlet weak var ghiButton: UIButton!
+//    @IBOutlet weak var jklButton: UIButton!
+//    @IBOutlet weak var mnoButton: UIButton!
+//    @IBOutlet weak var pqrsButton: UIButton!
+//    @IBOutlet weak var tuvButton: UIButton!
+//    @IBOutlet weak var wxyzButton: UIButton!
+//    
+    
+    //let letterButtons: [UIButton] = [abcButton ];
+    
     
     @IBAction func goToNum(_ sender: UIButton) {
         numView.isHidden = false
@@ -70,6 +85,7 @@ class KeyboardViewController: UIInputViewController {
         if shiftPressed {
             str =  str.uppercased()
             shiftPressed = false
+            shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
         }
         if enterPressed {
             str =  str.uppercased()
@@ -81,6 +97,7 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func shiftPress(_ sender: UIButton) {
         shiftPressed = true
+        shiftButton.backgroundColor = UIColor.cyan;
         
     }
     
