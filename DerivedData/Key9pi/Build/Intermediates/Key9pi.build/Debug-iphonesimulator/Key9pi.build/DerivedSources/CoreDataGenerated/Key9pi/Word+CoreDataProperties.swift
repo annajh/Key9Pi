@@ -2,7 +2,7 @@
 //  Word+CoreDataProperties.swift
 //  
 //
-//  Created by Michael on 3/9/17.
+//  Created by Michael on 3/24/17.
 //
 //  This file was automatically generated and should not be edited.
 //

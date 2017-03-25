@@ -17,10 +17,10 @@ class ViewController: UIViewController {
 //        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
 //        let fileURL = documentsURL?.appendingPathComponent("test.sqlite")
 
-        let defaults = UserDefaults.standard
-        var dict = [String: Int]()
-        dict["apple"] = 0;
-        defaults.set(dict, forKey: "resultsDict")
+//        let defaults = UserDefaults.standard
+//        var dict = [String: Int]()
+//        dict["apple"] = 0;
+//        defaults.set(dict, forKey: "resultsDict")
         
 
         

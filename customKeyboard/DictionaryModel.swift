@@ -20,7 +20,7 @@ var alphaToNumeric: [String:Int] = [
 ]
 
 class Node {
-    var wordList: [String:Int] = [:]
+    var wordList: [String:UInt64] = [:]
     var children: [Int:Node] = [:]
     var size: UInt64 = 0 //only for root node to track Trie size
 }
@@ -28,18 +28,15 @@ class Node {
 class Trie {
     
     var rootNode = Node()
-    var dict = [String:Int]()
-    
-    init(fileName:String) {
-        self.loadTrie(fileName: fileName)
-    }
+    var dict = [String:UInt64]()
     
     func loadTrie(fileName:String) {
+        var common:UInt64 = 0
         
         DispatchQueue.global(qos: .background).async {
             print("This is run on the background queue")
             
-            if let filepath = Bundle.main.path(forResource: "large-dict", ofType: "txt")
+            if let filepath = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
             {
                 do
                 {
@@ -48,7 +45,8 @@ class Trie {
                     for line in lines {
                         print(line)
                         let trimmedLine = line.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                        self.insert(word: trimmedLine.lowercased(), freq: 0, rootNode: self.rootNode)
+                        self.insert(word: trimmedLine.lowercased(), freq: common, rootNode: self.rootNode)
+                        common += 1
                     }
                 }
                 catch
@@ -68,9 +66,8 @@ class Trie {
         }
     }
     
-    func insert(word: String, freq: Int, rootNode: Node) {
-        //retain root node for incrementing size after insertion later
-        var originalRootNode = rootNode
+    func insert(word: String, freq: UInt64, rootNode: Node) {
+        rootNode.size += 1
         var currNode = rootNode
         
         func traverseAddingNodes() -> Node {
@@ -82,7 +79,7 @@ class Trie {
                 if currNode.children.index(forKey: keyNum) != nil {
                     currNode = currNode.children[keyNum]!
                 } else {
-                    keyNum = alphaToNumeric[String(letter)]!
+    
                     currNode.children[keyNum] = Node()
                     currNode = currNode.children[keyNum]!
                 }
@@ -93,8 +90,7 @@ class Trie {
         
         //TODO add frequency ordering for Beta
         func insertWordIntoList(nodeToAddWord: Node) {
-            nodeToAddWord.wordList[word] = 0
-            originalRootNode.size += 1
+            nodeToAddWord.wordList[word] = freq
         }
         
         var nodeToAddWord = Node()
@@ -114,7 +110,7 @@ class Trie {
         return false;
     }
     
-    func getPossibilities(seq: String, rootNode: Node) -> [String:Int] {
+    func getPossibilities(seq: String, rootNode: Node, maxDepth: Int) -> [String:UInt64] {
         var currNode = rootNode
         
         for number in seq.characters {
@@ -126,6 +122,22 @@ class Trie {
             }
         }
         
-        return currNode.wordList
+        var results = currNode.wordList
+        
+        func getDeeperPossibilities(startNode: Node, maxDepth: Int, count: Int) {
+            if (startNode.children.count == 0 || count > maxDepth)  { return }
+            
+            for word in startNode.wordList {
+                results[word.key] = word.value
+            }
+            
+            for child in startNode.children {
+                getDeeperPossibilities(startNode: child.value, maxDepth: maxDepth, count: count + 1)
+            }
+        }
+        
+        getDeeperPossibilities(startNode: currNode, maxDepth: 3, count: 0);
+        
+        return results
     }
 }

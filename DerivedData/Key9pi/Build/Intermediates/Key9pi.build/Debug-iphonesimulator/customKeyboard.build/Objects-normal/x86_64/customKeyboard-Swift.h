@@ -116,14 +116,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
-@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class UIWindow;
 @class UIApplication;
-@class NSPersistentContainer;
 
 SWIFT_CLASS("_TtC14customKeyboard11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -134,9 +132,6 @@ SWIFT_CLASS("_TtC14customKeyboard11AppDelegate")
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
-- (NSURL * _Nonnull)getDocumentsDirectory;
-@property (nonatomic, strong) NSPersistentContainer * _Nonnull persistentContainer;
-- (void)saveContext;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -153,7 +148,9 @@ SWIFT_CLASS("_TtC14customKeyboard22KeyboardViewController")
 - (void)didReceiveMemoryWarning;
 - (void)textWillChange:(id <UITextInput> _Nullable)textInput;
 - (void)textDidChange:(id <UITextInput> _Nullable)textInput;
-- (IBAction)typing:(UIButton * _Nonnull)sender;
+- (IBAction)letterKeyPress:(UIButton * _Nonnull)sender;
+- (IBAction)backspacePress:(UIButton * _Nonnull)sender;
+- (IBAction)spacePress:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		FuCXgRsfWGr5fMyXQq+Dx88un2U=
+		OX/vIEC3ueeR6UsWdOStLmabh2M=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		CCIFD+IDHusWp+FV/h1oSypozQU=
+		sf/2tKmrgUAaqHYkRjofNs85dAw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		W7o0I9eLMYy10mDviHoNHO2FiHg=
+		z2cg/wk149M6wC/FFLul9nnpBYY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		ODSeZ/GpfDADCpQft1JYsW7yw/Y=
+		rKYBi+/6YWZ4404vBhQ+DSQyH5Q=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -98,11 +98,15 @@
 		</data>
 		<key>PlugIns/customKeyboard.appex/_CodeSignature/CodeResources</key>
 		<data>
-		aumPbF58URSQbsiI33aqK7crIX4=
+		VeuKGpWegig5BQktRu9J7Vp1BKM=
+		</data>
+		<key>PlugIns/customKeyboard.appex/comm-dict.txt</key>
+		<data>
+		kfxIYiWZi2LyX3OEmMzaUBCWd5Q=
 		</data>
 		<key>PlugIns/customKeyboard.appex/customKeyboard</key>
 		<data>
-		YTBIXE6rsa6xdQ3BU93mnOow29U=
+		HcZwC1jgGRCdoy3q6vyK63kMGNY=
 		</data>
 		<key>PlugIns/customKeyboard.appex/keyboardStoryboard.storyboardc/Info.plist</key>
 		<data>
@@ -110,15 +114,19 @@
 		</data>
 		<key>PlugIns/customKeyboard.appex/keyboardStoryboard.storyboardc/UIViewController-rTm-Wr-SFk.nib</key>
 		<data>
-		QFfjdBRiWCb19PtgV/Ngm6libp4=
+		LiXY7hL3ixYU2OzEntO28zoZo6A=
 		</data>
 		<key>PlugIns/customKeyboard.appex/keyboardStoryboard.storyboardc/rTm-Wr-SFk-view-6Cu-3v-unA.nib</key>
 		<data>
-		74ELKIV31M2FI1H53sMWGk3lgTA=
+		mwmr2Z81Z/Jy7JijiGRTjNRSVf0=
 		</data>
 		<key>PlugIns/customKeyboard.appex/large-dict.txt</key>
 		<data>
 		KcUcS2G09XLPrxXRkd5Ing7yISQ=
+		</data>
+		<key>comm-dict.txt</key>
+		<data>
+		kfxIYiWZi2LyX3OEmMzaUBCWd5Q=
 		</data>
 		<key>large-dict.txt</key>
 		<data>
@@ -135,11 +143,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FuCXgRsfWGr5fMyXQq+Dx88un2U=
+			OX/vIEC3ueeR6UsWdOStLmabh2M=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZzIHVSUZqBnRkxUgo0FC+P4a1FXlqNhYdaHXdhXtUVE=
+			r+E2pj9IgV11HG5ggoNFP9Wwtc3yjeVVIbtxKFiTfqU=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -157,22 +165,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CCIFD+IDHusWp+FV/h1oSypozQU=
+			sf/2tKmrgUAaqHYkRjofNs85dAw=
 			</data>
 			<key>hash2</key>
 			<data>
-			r+aXsa6UWL3bTCw6V+vXcFhm9SUd936c5hZfeK55WGw=
+			5py91127/g0BtG40mJiE9w9V3sEeUwPgs97RUdzE150=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W7o0I9eLMYy10mDviHoNHO2FiHg=
+			z2cg/wk149M6wC/FFLul9nnpBYY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bhoa3GsvZBYS7FmfVqBqUwY+esIWzzJ4hSzNN/iSzBE=
+			SkjYMP1g0wNvQcuzEhk47cgFB0mabaI15iP/rkrM2tI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -190,11 +198,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ODSeZ/GpfDADCpQft1JYsW7yw/Y=
+			rKYBi+/6YWZ4404vBhQ+DSQyH5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			yaK71Vtdlx9HTdb6RY0aX4gCOO/4dkaSwpedtFDrdKU=
+			gAWFqKPgvbgQPl5S5sLg6YtPlN4Pc0Bh6yHuSnFfiMs=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
@@ -366,22 +374,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aumPbF58URSQbsiI33aqK7crIX4=
+			VeuKGpWegig5BQktRu9J7Vp1BKM=
 			</data>
 			<key>hash2</key>
 			<data>
-			DfsPboykASdezWsMSdI/TULM/as2NM7iBZ1pvPcluvg=
+			4HfDQ15xo3T6mtfNgafAJqfGqOHRQmM9aRTjUH01uXg=
+			</data>
+		</dict>
+		<key>PlugIns/customKeyboard.appex/comm-dict.txt</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kfxIYiWZi2LyX3OEmMzaUBCWd5Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			Mv93jrFh9BE9L+o14Q5q/MD47NGiE9UutYbZTLGlzlU=
 			</data>
 		</dict>
 		<key>PlugIns/customKeyboard.appex/customKeyboard</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YTBIXE6rsa6xdQ3BU93mnOow29U=
+			HcZwC1jgGRCdoy3q6vyK63kMGNY=
 			</data>
 			<key>hash2</key>
 			<data>
-			FIQqdr1vDNcjzcQO8S80IHMxXvBYXgBrWtvD4cm725M=
+			rCL+8EU1CwDCGkUNtY3i76BKSb+wscsAeQBuo4iKg/E=
 			</data>
 		</dict>
 		<key>PlugIns/customKeyboard.appex/keyboardStoryboard.storyboardc/Info.plist</key>
@@ -399,22 +418,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QFfjdBRiWCb19PtgV/Ngm6libp4=
+			LiXY7hL3ixYU2OzEntO28zoZo6A=
 			</data>
 			<key>hash2</key>
 			<data>
-			+aLi8UH+UDiTAyuQ248j/2CjrWbYKkkXvLyMZkOCi0k=
+			wWAXZfvThQno9KASwpkhNgMnRqBS/NGSY06+3znlM6s=
 			</data>
 		</dict>
 		<key>PlugIns/customKeyboard.appex/keyboardStoryboard.storyboardc/rTm-Wr-SFk-view-6Cu-3v-unA.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			74ELKIV31M2FI1H53sMWGk3lgTA=
+			mwmr2Z81Z/Jy7JijiGRTjNRSVf0=
 			</data>
 			<key>hash2</key>
 			<data>
-			sSHEokdHHAn1861P9V1gpIbKYei2gjxqxX2/2vjbziM=
+			0iYyv4gGgbjSkEW4wAsXKiHbpGfwwqADCI+Qnh0vp+k=
 			</data>
 		</dict>
 		<key>PlugIns/customKeyboard.appex/large-dict.txt</key>
@@ -426,6 +445,17 @@
 			<key>hash2</key>
 			<data>
 			JxS3AuPg7gu9jCvcbbwn1RmfU5mb5ZPwnVtfgeSdyLI=
+			</data>
+		</dict>
+		<key>comm-dict.txt</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kfxIYiWZi2LyX3OEmMzaUBCWd5Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			Mv93jrFh9BE9L+o14Q5q/MD47NGiE9UutYbZTLGlzlU=
 			</data>
 		</dict>
 		<key>large-dict.txt</key>

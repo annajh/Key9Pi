@@ -3,16 +3,16 @@
 //  customKeyboard
 //
 //  Created by Michael on 3/7/17.
-//  Copyright © 2017 EECS 481. All rights reserved.
+//  Copyright © 2017 EECS 481. All rights reserved.x
 //
 
 import UIKit
 
-let path = Bundle.main.path(forResource: "large-dict", ofType: "txt")
+let path = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
+var trie = Trie()
+var inString = ""
 
 class KeyboardViewController: UIInputViewController {
-    
-    var trie = Trie(fileName: path!)
 
     @IBOutlet var nextKeyboardButton: UIButton!
     
@@ -25,14 +25,16 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = UserDefaults.standard
-        let dict = defaults.object(forKey: "resultsDict")
-        print(dict!)
+        trie.loadTrie(fileName: path!)
+        
+        //let defaults = UserDefaults.standard
+        //let dict = defaults.object(forKey: "resultsDict")
+        //print(dict!)
         
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
         
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
+        self.nextKeyboardButton.setTitle(NSLocalizedString("Next", comment: "Title for 'Next Keyboard' button"), for: [])
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -65,6 +67,57 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
+    
+    @IBAction func letterKeyPress(_ sender: UIButton) {
+        if sender.currentTitle == "abc" {
+            inString += "2"
+        } else if sender.currentTitle == "def" {
+            inString += "3"
+        } else if sender.currentTitle == "ghi" {
+            inString += "4"
+        } else if sender.currentTitle == "jkl" {
+            inString += "5"
+        } else if sender.currentTitle == "mno" {
+            inString += "6"
+        } else if sender.currentTitle == "pqrs" {
+            inString += "7"
+        } else if sender.currentTitle == "tuv" {
+            inString += "8"
+        } else if sender.currentTitle == "wxyz" {
+            inString += "9"
+        }
+        
+        
+        let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode, maxDepth: 1)
+        print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
+    }
+    
+    @IBAction func backspacePress(_ sender: UIButton) {
+        if inString.characters.count != 0 {
+            let endIndex = inString.index(inString.endIndex, offsetBy: -1)
+            inString = inString.substring(to: endIndex)
+            
+            let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode, maxDepth: 1)
+            print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
+        } else {
+            while textDocumentProxy.hasText {
+                let tempDocText = textDocumentProxy.documentContextBeforeInput
+                if tempDocText?.characters.last == " " {
+                    textDocumentProxy.deleteBackward()
+                    return
+                } else {
+                    textDocumentProxy.deleteBackward()
+                }
+            }
+        }
+    }
+    
+    @IBAction func spacePress(_ sender: UIButton) {
+        textDocumentProxy.insertText(" ")
+    }
+    
+    
+    
 }
 
 

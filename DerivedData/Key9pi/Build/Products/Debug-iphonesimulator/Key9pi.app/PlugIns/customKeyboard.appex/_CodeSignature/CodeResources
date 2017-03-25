@@ -8,17 +8,21 @@
 		<data>
 		NjhqpMBBXmavr+GwcYMybX9W2gk=
 		</data>
+		<key>comm-dict.txt</key>
+		<data>
+		kfxIYiWZi2LyX3OEmMzaUBCWd5Q=
+		</data>
 		<key>keyboardStoryboard.storyboardc/Info.plist</key>
 		<data>
 		7Rl+R6ygGML7VsMzhYjXalk8pq4=
 		</data>
 		<key>keyboardStoryboard.storyboardc/UIViewController-rTm-Wr-SFk.nib</key>
 		<data>
-		QFfjdBRiWCb19PtgV/Ngm6libp4=
+		LiXY7hL3ixYU2OzEntO28zoZo6A=
 		</data>
 		<key>keyboardStoryboard.storyboardc/rTm-Wr-SFk-view-6Cu-3v-unA.nib</key>
 		<data>
-		74ELKIV31M2FI1H53sMWGk3lgTA=
+		mwmr2Z81Z/Jy7JijiGRTjNRSVf0=
 		</data>
 		<key>large-dict.txt</key>
 		<data>
@@ -27,6 +31,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>comm-dict.txt</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kfxIYiWZi2LyX3OEmMzaUBCWd5Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			Mv93jrFh9BE9L+o14Q5q/MD47NGiE9UutYbZTLGlzlU=
+			</data>
+		</dict>
 		<key>keyboardStoryboard.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -42,22 +57,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QFfjdBRiWCb19PtgV/Ngm6libp4=
+			LiXY7hL3ixYU2OzEntO28zoZo6A=
 			</data>
 			<key>hash2</key>
 			<data>
-			+aLi8UH+UDiTAyuQ248j/2CjrWbYKkkXvLyMZkOCi0k=
+			wWAXZfvThQno9KASwpkhNgMnRqBS/NGSY06+3znlM6s=
 			</data>
 		</dict>
 		<key>keyboardStoryboard.storyboardc/rTm-Wr-SFk-view-6Cu-3v-unA.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			74ELKIV31M2FI1H53sMWGk3lgTA=
+			mwmr2Z81Z/Jy7JijiGRTjNRSVf0=
 			</data>
 			<key>hash2</key>
 			<data>
-			sSHEokdHHAn1861P9V1gpIbKYei2gjxqxX2/2vjbziM=
+			0iYyv4gGgbjSkEW4wAsXKiHbpGfwwqADCI+Qnh0vp+k=
 			</data>
 		</dict>
 		<key>large-dict.txt</key>
