@@ -10,7 +10,7 @@ import UIKit
 
 let path = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
 var trie = Trie()
-var inString = ""
+var seq = SequenceModel()
 
 class KeyboardViewController: UIInputViewController {
 
@@ -25,6 +25,23 @@ class KeyboardViewController: UIInputViewController {
     var enterPressed = false
     
     @IBOutlet weak var shiftButton: UIButton!
+    
+    @IBOutlet weak var word1: UIButton!
+    @IBOutlet weak var word2: UIButton!
+    @IBOutlet weak var word3: UIButton!
+    
+    @IBAction func wordPress(_ sender: UIButton) {
+        // TODO: make it work with array of buttons
+        let str = sender.currentTitle!
+        (textDocumentProxy as UIKeyInput).insertText(str)
+        seq.reset()
+        
+        // Reset
+        word1?.setTitle("", for: .normal)
+        word2?.setTitle("", for: .normal)
+        word3?.setTitle("", for: .normal)
+    }
+    
     
     
 //    @IBOutlet weak var abcButton: UIButton!
@@ -83,11 +100,11 @@ class KeyboardViewController: UIInputViewController {
         let index = str.startIndex
         str = (String(str[index])).lowercased()
         //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
-        if shiftPressed {
-            str =  str.uppercased()
-            shiftPressed = false
-            shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
-        }
+//        if shiftPressed {
+//            str =  str.uppercased()
+//            shiftPressed = false
+//            shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
+//        }
         if enterPressed {
             str =  str.uppercased()
             enterPressed = false
@@ -97,17 +114,14 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func shiftPress(_ sender: UIButton) {
-        shiftPressed = true
-        shiftButton.backgroundColor = UIColor.cyan;
+        shiftPressed = !shiftPressed
+        if shiftPressed {
+            shiftButton.backgroundColor = UIColor.cyan;
+        } else {
+            shiftButton.backgroundColor = UIColor.white
+        }
         
     }
-    
-    
-    @IBAction func backspacePressed(_ sender: UIButton) {
-        (textDocumentProxy as UIKeyInput).deleteBackward()
-    }
-    
-
     
     
     override func updateViewConstraints() {
@@ -183,63 +197,34 @@ class KeyboardViewController: UIInputViewController {
             heightConstraint.constant = customHeight
         }
     }
-    
-//    @IBAction func letterKeyPress(_ sender: UIButton) {
-//        if sender.currentTitle == "abc" {
-//            inString += "2"
-//        } else if sender.currentTitle == "def" {
-//            inString += "3"
-//        } else if sender.currentTitle == "ghi" {
-//            inString += "4"
-//        } else if sender.currentTitle == "jkl" {
-//            inString += "5"
-//        } else if sender.currentTitle == "mno" {
-//            inString += "6"
-//        } else if sender.currentTitle == "pqrs" {
-//            inString += "7"
-//        } else if sender.currentTitle == "tuv" {
-//            inString += "8"
-//        } else if sender.currentTitle == "wxyz" {
-//            inString += "9"
-//        }
-//        
-//        
-//        let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode)
-//        print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
-//    }
-    
+
     @IBAction func letterKeyPress(_ sender: UIButton) {
-        if sender.titleLabel!.text!.lowercased() == "abc" {
-            inString += "2"
-        } else if sender.titleLabel!.text!.lowercased() == "def" {
-            inString += "3"
-        } else if sender.titleLabel!.text!.lowercased() == "ghi" {
-            inString += "4"
-        } else if sender.titleLabel!.text!.lowercased() == "jkl" {
-            inString += "5"
-        } else if sender.titleLabel!.text!.lowercased() == "mno" {
-            inString += "6"
-        } else if sender.titleLabel!.text!.lowercased() == "pqrs" {
-            inString += "7"
-        } else if sender.titleLabel!.text!.lowercased() == "tuv" {
-            inString += "8"
-        } else if sender.titleLabel!.text!.lowercased() == "wxyz" {
-            inString += "9"
-        }
+        let letterGroup = sender.titleLabel!.text!.lowercased()
+        seq.push(button: letterGroup, cap: shiftPressed)
+        print(seq.numSeq)
         
-        
-        let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode, maxDepth: 1)
-        print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
+        let tempDict = trie.getPossibilities(seq: seq.numSeq, rootNode: trie.rootNode, maxDepth: 1)
+        let sorted = tempDict.sorted(by: { (a, b) in (a.value) < (b.value) })
+        print(sorted)
+        displaySuggestions(results: sorted)
     }
 
     
     @IBAction func backspacePress(_ sender: UIButton) {
-        if inString.characters.count != 0 {
-            let endIndex = inString.index(inString.endIndex, offsetBy: -1)
-            inString = inString.substring(to: endIndex)
+        if !seq.isEmpty() {
+            seq.pop()
+            if seq.isEmpty() {
+                // TODO: refactor when button array is implemented.
+                word1?.setTitle("", for: .normal)
+                word2?.setTitle("", for: .normal)
+                word3?.setTitle("", for: .normal)
+                return
+            }
             
-            let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode, maxDepth: 1)
-            print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
+            let tempDict = trie.getPossibilities(seq: seq.numSeq, rootNode: trie.rootNode, maxDepth: 1)
+            let sorted = tempDict.sorted(by: { (a, b) in (a.value) < (b.value) })
+            print(sorted)
+            displaySuggestions(results: sorted)
         } else {
             while textDocumentProxy.hasText {
                 let tempDocText = textDocumentProxy.documentContextBeforeInput
@@ -253,27 +238,26 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
-//    @IBAction func backspacePress(_ sender: UIButton) {
-//        if inString.characters.count != 0 {
-//            let endIndex = inString.index(inString.endIndex, offsetBy: -1)
-//            inString = inString.substring(to: endIndex)
-//            
-//            let tempDict = trie.getPossibilities(seq: inString, rootNode: trie.rootNode)
-//            print(tempDict.sorted(by: { (a, b) in (a.value) < (b.value) }))
-//        } else {
-//            while textDocumentProxy.hasText {
-//                let tempDocText = textDocumentProxy.documentContextBeforeInput
-//                if tempDocText?.characters.last == " " {
-//                    textDocumentProxy.deleteBackward()
-//                    return
-//                } else {
-//                    textDocumentProxy.deleteBackward()
-//                }
-//            }
-//        }
-//    }
-    
-    
+    func displaySuggestions(results: [(key:String,value:UInt64)]) {
+        // TODO: make it work with for loop and array of buttons
+        if results.count >= 1 {
+            let word = results[0].key
+            // only the first button will show capitalizations.
+            word1?.setTitle(seq.addCapitalization(word: word), for: .normal)
+        } else {
+            word1?.setTitle("", for: .normal)
+        }
+        if results.count >= 2 {
+            word2?.setTitle(results[1].key, for: .normal)
+        } else {
+            word2?.setTitle("", for: .normal)
+        }
+        if results.count >= 3 {
+            word3?.setTitle(results[2].key, for: .normal)
+        } else {
+            word3?.setTitle("", for: .normal)
+        }
+    }
     
 }
 
