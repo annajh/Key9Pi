@@ -9,7 +9,8 @@
 import UIKit
 
 let path = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
-var trie = Trie(fileName: path!)
+var trie = Trie()
+var inString = ""
 
 class KeyboardViewController: UIInputViewController {
 
@@ -118,6 +119,8 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        trie.loadTrie(fileName: path!)
         
         //let defaults = UserDefaults.standard
         //let dict = defaults.object(forKey: "resultsDict")
