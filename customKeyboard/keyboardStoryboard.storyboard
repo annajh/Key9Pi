@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHf-vm-ori" userLabel="symbolsPink">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHf-vm-ori" userLabel="symbolsPink">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="309"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -209,7 +209,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.013317681350000001" green="0.01320430375" blue="0.01222351862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZL-8J-TUd" userLabel="numGreen">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZL-8J-TUd" userLabel="numGreen">
                                 <rect key="frame" x="2" y="0.0" width="373" height="299"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -418,6 +418,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="SwR-Xd-jVQ"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="kAr-lv-fzc"/>
                                         </connections>
                                     </button>
@@ -429,6 +430,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="xlB-uD-Dxc"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="QGb-id-Dbb"/>
                                         </connections>
                                     </button>
@@ -440,6 +442,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="NNa-XZ-7mw"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="7IB-Lm-WWZ"/>
                                         </connections>
                                     </button>
@@ -451,6 +454,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="9zg-d6-W9N"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="5P2-XH-gYt"/>
                                         </connections>
                                     </button>
@@ -462,6 +466,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="awv-Eo-u2P"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="XMG-Vr-GWp"/>
                                         </connections>
                                     </button>
@@ -485,6 +490,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="tWb-No-Pr0"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="59i-Ht-Zk7"/>
                                         </connections>
                                     </button>
@@ -496,6 +502,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="alW-Sc-fuV"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="G5N-5e-XOG"/>
                                         </connections>
                                     </button>
@@ -540,7 +547,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="backspacePressed:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="bJV-BL-QW0"/>
+                                            <action selector="backspacePress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="B7i-hp-ftN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="EUi-Qr-oUB">
@@ -760,12 +767,6 @@
                             <constraint firstItem="uhc-ix-wGT" firstAttribute="top" secondItem="LPN-ak-rz9" secondAttribute="bottom" id="i3a-uX-JW6"/>
                             <constraint firstItem="uhc-ix-wGT" firstAttribute="centerX" secondItem="Q2e-g2-3ve" secondAttribute="centerX" id="oBo-Ba-1dj"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="vHf-vm-ori"/>
-                                <exclude reference="aZL-8J-TUd"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="numView" destination="aZL-8J-TUd" id="QxV-ar-ZTI"/>
