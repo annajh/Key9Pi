@@ -32,6 +32,7 @@ class KeyboardViewController: UIInputViewController {
     
     
     @IBOutlet var wordButtons: [UIButton]!
+    //above is the array of the word buttons
     
     @IBAction func wordPress(_ sender: UIButton) {
         // TODO: make it work with array of buttons
@@ -113,7 +114,7 @@ class KeyboardViewController: UIInputViewController {
             str =  str.uppercased()
             enterPressed = false
         }
-        (textDocumentProxy as UIKeyInput).insertText(str)
+        //(textDocumentProxy as UIKeyInput).insertText(str)
         
     }
     

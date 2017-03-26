@@ -28,7 +28,7 @@ class Node {
 class Trie {
     
     var rootNode = Node()
-    var dict = [String:UInt64]()
+   // var dict = [String:UInt64]()
     
     func loadTrie(fileName:String) {
         var common:UInt64 = 0
