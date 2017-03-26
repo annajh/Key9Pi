@@ -418,8 +418,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="yBZ-lQ-NrO"/>
-                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="7dC-5f-D8e"/>
+                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="kAr-lv-fzc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQJ-a0-ShP">
@@ -430,8 +429,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="xps-RM-04Z"/>
-                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="if1-EX-cgC"/>
+                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="QGb-id-Dbb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2r-Q2-pRb">
@@ -442,8 +440,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="jce-tE-aej"/>
-                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="QeE-Hd-Ae4"/>
+                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="7IB-Lm-WWZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShT-aF-4pa">
@@ -454,8 +451,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="iqU-60-8l0"/>
-                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="B2i-ZZ-N82"/>
+                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="5P2-XH-gYt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4l-mr-yS5">
@@ -466,8 +462,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="iaN-Zx-oaU"/>
-                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="O4b-S0-gY4"/>
+                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="XMG-Vr-GWp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enw-Ly-T0K">
@@ -490,8 +485,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Q6o-yj-yyK"/>
-                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="6TM-Uy-i5v"/>
+                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="59i-Ht-Zk7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5f-9C-nSi">
@@ -502,8 +496,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Y02-be-Usn"/>
-                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="vDk-fo-xO0"/>
+                                            <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="G5N-5e-XOG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8v5-Gp-ga0">
@@ -609,6 +602,9 @@
                                         <state key="normal" title="Word1">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="wordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="qk7-dr-B6I"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ume-fj-j4D">
                                         <rect key="frame" x="114" y="3" width="103" height="30"/>
@@ -621,6 +617,9 @@
                                         <state key="normal" title="Word2">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="wordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="f4r-s7-TjU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1h-Jc-9lV">
                                         <rect key="frame" x="219" y="3" width="103" height="30"/>
@@ -629,6 +628,9 @@
                                         <state key="normal" title="Word3">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="wordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="xPU-77-ayB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEk-GA-ntH">
                                         <rect key="frame" x="325" y="3" width="45" height="30"/>
@@ -770,6 +772,9 @@
                         <outlet property="shiftButton" destination="8v5-Gp-ga0" id="iZ0-6s-ccM"/>
                         <outlet property="symView" destination="vHf-vm-ori" id="kHr-Gj-ybq"/>
                         <outlet property="textView" destination="uhc-ix-wGT" id="KXY-Qc-KTN"/>
+                        <outlet property="word1" destination="0ka-BM-GRG" id="tls-bt-pAW"/>
+                        <outlet property="word2" destination="Ume-fj-j4D" id="Ixn-LH-vvT"/>
+                        <outlet property="word3" destination="e1h-Jc-9lV" id="yvX-qK-oXo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOI-VO-ngD" userLabel="First Responder" sceneMemberID="firstResponder"/>
