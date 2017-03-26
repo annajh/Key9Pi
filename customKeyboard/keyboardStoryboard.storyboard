@@ -773,14 +773,17 @@
                         <outlet property="shiftButton" destination="8v5-Gp-ga0" id="iZ0-6s-ccM"/>
                         <outlet property="symView" destination="vHf-vm-ori" id="kHr-Gj-ybq"/>
                         <outlet property="textView" destination="uhc-ix-wGT" id="KXY-Qc-KTN"/>
-                        <outlet property="word1" destination="0ka-BM-GRG" id="tls-bt-pAW"/>
                         <outlet property="word2" destination="Ume-fj-j4D" id="Ixn-LH-vvT"/>
                         <outlet property="word3" destination="e1h-Jc-9lV" id="yvX-qK-oXo"/>
+                        <outletCollection property="wordButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="SWZ-cR-PyY"/>
+                        <outletCollection property="wordButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="EaB-UN-M32"/>
+                        <outletCollection property="wordButtons" destination="Ume-fj-j4D" collectionClass="NSMutableArray" id="ozx-Jl-eNK"/>
+                        <outletCollection property="wordButtons" destination="e1h-Jc-9lV" collectionClass="NSMutableArray" id="16R-pv-Yx3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOI-VO-ngD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="-332"/>
+            <point key="canvasLocation" x="-342" y="-332"/>
         </scene>
     </scenes>
 </document>

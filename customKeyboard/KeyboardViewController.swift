@@ -30,6 +30,9 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var word2: UIButton!
     @IBOutlet weak var word3: UIButton!
     
+    
+    @IBOutlet var wordButtons: [UIButton]!
+    
     @IBAction func wordPress(_ sender: UIButton) {
         // TODO: make it work with array of buttons
         let str = sender.currentTitle!
@@ -100,11 +103,11 @@ class KeyboardViewController: UIInputViewController {
         let index = str.startIndex
         str = (String(str[index])).lowercased()
         //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
-//        if shiftPressed {
-//            str =  str.uppercased()
-//            shiftPressed = false
-//            shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
-//        }
+       if shiftPressed {
+            str =  str.uppercased()
+           shiftPressed = false
+            shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
+        }
         if enterPressed {
             str =  str.uppercased()
             enterPressed = false
