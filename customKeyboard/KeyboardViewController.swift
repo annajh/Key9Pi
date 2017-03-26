@@ -86,7 +86,7 @@ class KeyboardViewController: UIInputViewController {
         if shiftPressed {
             str =  str.uppercased()
             shiftPressed = false
-            shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
+            shiftButton.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1);
         }
         if enterPressed {
             str =  str.uppercased()
