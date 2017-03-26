@@ -106,7 +106,8 @@ class KeyboardViewController: UIInputViewController {
        if shiftPressed {
             str =  str.uppercased()
            shiftPressed = false
-            shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
+            //shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
+            shiftButton.backgroundColor = UIColor.white
         }
         if enterPressed {
             str =  str.uppercased()
@@ -117,7 +118,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func shiftPress(_ sender: UIButton) {
-        shiftPressed = !shiftPressed
+        shiftPressed = true;
         if shiftPressed {
             shiftButton.backgroundColor = UIColor.cyan;
         } else {
@@ -135,7 +136,10 @@ class KeyboardViewController: UIInputViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
+        
+        self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
+        self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
         trie.loadTrie(fileName: path!)
         
