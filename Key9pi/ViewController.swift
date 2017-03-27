@@ -9,11 +9,15 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewControllerMy: UIViewController {
+    
+    @IBOutlet weak var wordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+  
+//        wordTextField.layer.borderColor = UIColor.black.cgColor;
+//        wordTextField.layer.borderWidth = 2;
         
 //        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
 //        let fileURL = documentsURL?.appendingPathComponent("test.sqlite")
@@ -27,7 +31,15 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
+   
 
+    @IBAction func goBack(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: {});
+    }
+    
+    
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

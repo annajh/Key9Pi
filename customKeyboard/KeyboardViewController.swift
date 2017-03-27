@@ -114,7 +114,7 @@ class KeyboardViewController: UIInputViewController {
             str =  str.uppercased()
             enterPressed = false
         }
-        //(textDocumentProxy as UIKeyInput).insertText(str)
+        (textDocumentProxy as UIKeyInput).insertText(str)
         
     }
     

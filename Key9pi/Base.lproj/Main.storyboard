@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller My-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Key9pi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewControllerMy" customModule="Key9pi" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,54 +22,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtF-N8-p2g">
-                                <rect key="frame" x="16" y="182" width="343" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                <state key="normal" title="Add word">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7st-Ik-dhK">
-                                <rect key="frame" x="16" y="605" width="343" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                <state key="normal" title="Go to change color scheme">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter text: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yg-K1-Odo">
-                                <rect key="frame" x="16" y="232" width="188" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Zk-wE-AWq">
-                                <rect key="frame" x="16" y="302" width="160" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9t-BK-dJg">
-                                <rect key="frame" x="198" y="296" width="151" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                <state key="normal" title="Add word">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feN-K9-lLn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRQ-5v-Hkg">
+                                        <rect key="frame" x="16" y="194" width="343" height="42"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <state key="normal" title="Add word">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-WI-s73">
+                                        <rect key="frame" x="16" y="617" width="343" height="42"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <state key="normal" title="Go to change color scheme">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="quq-ng-DBg" kind="presentation" id="tt3-aX-8Vd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter text: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37f-UH-zmZ">
+                                        <rect key="frame" x="16" y="244" width="188" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="188" id="LGD-Fe-ruK"/>
+                                            <constraint firstAttribute="height" constant="62" id="y5m-uV-aCN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2L-IU-NIz">
+                                        <rect key="frame" x="16" y="314" width="160" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-yO-7xe">
+                                        <rect key="frame" x="198" y="308" width="151" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="151" id="pAf-SM-xX2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <state key="normal" title="Add word">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Mms-WI-s73" firstAttribute="bottom" secondItem="feN-K9-lLn" secondAttribute="bottomMargin" id="1mV-Hk-30a"/>
+                                    <constraint firstAttribute="trailing" secondItem="wRQ-5v-Hkg" secondAttribute="trailing" constant="16" id="Bur-YC-My4"/>
+                                    <constraint firstItem="A2L-IU-NIz" firstAttribute="centerY" secondItem="UJa-yO-7xe" secondAttribute="centerY" id="D57-IY-RTD"/>
+                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="leading" secondItem="37f-UH-zmZ" secondAttribute="leading" id="E9V-hr-uKe"/>
+                                    <constraint firstItem="37f-UH-zmZ" firstAttribute="top" secondItem="wRQ-5v-Hkg" secondAttribute="bottom" constant="8" symbolic="YES" id="GM4-d1-dJO"/>
+                                    <constraint firstItem="Mms-WI-s73" firstAttribute="top" secondItem="feN-K9-lLn" secondAttribute="top" constant="617" id="GQz-lN-znE"/>
+                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="leading" secondItem="feN-K9-lLn" secondAttribute="leading" constant="16" id="HuZ-0r-AtV"/>
+                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="top" secondItem="feN-K9-lLn" secondAttribute="top" constant="194" id="S1C-lz-0A9"/>
+                                    <constraint firstAttribute="trailing" secondItem="UJa-yO-7xe" secondAttribute="trailing" constant="26" id="X3y-m4-5Ko"/>
+                                    <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="A2L-IU-NIz" secondAttribute="leading" id="fO5-dW-QYM"/>
+                                    <constraint firstItem="A2L-IU-NIz" firstAttribute="leading" secondItem="Mms-WI-s73" secondAttribute="leading" id="hfK-gu-4lF"/>
+                                    <constraint firstItem="UJa-yO-7xe" firstAttribute="leading" secondItem="A2L-IU-NIz" secondAttribute="trailing" constant="22" id="mub-MF-L5X"/>
+                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="centerX" secondItem="feN-K9-lLn" secondAttribute="centerX" id="w18-V9-gCQ"/>
+                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="trailing" secondItem="Mms-WI-s73" secondAttribute="trailing" id="ypB-c1-e8I"/>
+                                    <constraint firstItem="A2L-IU-NIz" firstAttribute="top" secondItem="37f-UH-zmZ" secondAttribute="bottom" constant="8" symbolic="YES" id="zV9-o1-qMq"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="feN-K9-lLn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UJB-Le-zMA"/>
+                            <constraint firstItem="feN-K9-lLn" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="YyV-ZV-G77"/>
+                            <constraint firstItem="feN-K9-lLn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kBg-IA-5XE"/>
+                            <constraint firstAttribute="trailing" secondItem="feN-K9-lLn" secondAttribute="trailing" id="pt6-TN-JOP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="wordTextField" destination="A2L-IU-NIz" id="iNW-8B-gcg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
+            <point key="canvasLocation" x="37.600000000000001" y="130.88455772113943"/>
+        </scene>
+        <!--View Controller My-->
+        <scene sceneID="ynw-eV-LWj">
+            <objects>
+                <viewController id="quq-ng-DBg" customClass="ViewControllerMy" customModule="Key9pi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hQl-nU-tVJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMf-0N-U5S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UXw-ij-Ebg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="there's nothing here yet :( " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGI-Fy-mBC">
+                                <rect key="frame" x="71" y="307" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAE-oD-fFP">
+                                <rect key="frame" x="161" y="360" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back "/>
+                                <connections>
+                                    <action selector="goBack:" destination="quq-ng-DBg" eventType="touchUpInside" id="ZtR-HG-nYu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRM-pf-TfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="144"/>
         </scene>
     </scenes>
 </document>
