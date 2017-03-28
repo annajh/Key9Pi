@@ -99,6 +99,26 @@ class Trie {
         insertWordIntoList(nodeToAddWord: nodeToAddWord)
     }
     
+    func deleteWord(word: String, rootNode: Node) {
+        var keyNum = -1
+        var currNode = rootNode
+        
+        for letter in word.characters {
+            if letter == "-" { continue }
+            keyNum = alphaToNumeric[String(letter)]!
+            
+            if currNode.children.index(forKey: keyNum) != nil {
+                currNode = currNode.children[keyNum]!
+            }
+        }
+        
+        for key in currNode.wordList.keys {
+            if key == word {
+                currNode.wordList.removeValue(forKey: key)
+            }
+        }
+    }
+    
     func getSize(rootNode: Node) -> UInt64 {
         return UInt64(rootNode.size);
     }

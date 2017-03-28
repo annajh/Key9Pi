@@ -10,9 +10,22 @@ import UIKit
 import CoreData
 
 class ViewControllerMy: UIViewController {
-    
+
     @IBOutlet weak var wordTextField: UITextField!
     
+    @IBAction func addWordsPressed(_ sender: Any) {
+        let lowercase = wordTextField.text?.lowercased()
+        if (lowercase?.isEmpty)! { return }
+
+        if trie.isEmpty(rootNode: trie.rootNode) {
+            trie.loadTrie(fileName: "comm-dict")
+        }
+        let wordlist = lowercase?.words
+        for word in wordlist! {
+            trie.insert(word: word, freq: 0, rootNode: trie.rootNode)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
   
@@ -37,7 +50,6 @@ class ViewControllerMy: UIViewController {
     self.dismiss(animated: true, completion: {});
     }
     
-    
    
     
     override func didReceiveMemoryWarning() {
@@ -45,4 +57,16 @@ class ViewControllerMy: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
+
+// Found this on stackoverflow, split by words.
+extension String {
+    var words: [String] {
+        return components(separatedBy: .punctuationCharacters)
+            .joined()
+            .components(separatedBy: " ")
+            .filter{!$0.isEmpty}
+    }
+}
+
 

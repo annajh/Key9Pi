@@ -418,7 +418,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="SwR-Xd-jVQ"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="kAr-lv-fzc"/>
                                         </connections>
                                     </button>
@@ -430,7 +429,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="xlB-uD-Dxc"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="QGb-id-Dbb"/>
                                         </connections>
                                     </button>
@@ -442,7 +440,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="NNa-XZ-7mw"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="7IB-Lm-WWZ"/>
                                         </connections>
                                     </button>
@@ -454,7 +451,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="9zg-d6-W9N"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="5P2-XH-gYt"/>
                                         </connections>
                                     </button>
@@ -466,7 +462,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="awv-Eo-u2P"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="XMG-Vr-GWp"/>
                                         </connections>
                                     </button>
@@ -478,7 +473,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="mD2-QV-cLk"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="kIh-0H-RJK"/>
                                         </connections>
                                     </button>
@@ -490,7 +484,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="tWb-No-Pr0"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="59i-Ht-Zk7"/>
                                         </connections>
                                     </button>
@@ -502,7 +495,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="alW-Sc-fuV"/>
                                             <action selector="letterKeyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="G5N-5e-XOG"/>
                                         </connections>
                                     </button>
@@ -606,7 +598,7 @@
                                         <rect key="frame" x="7" y="3" width="103" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <state key="normal" title="Word1">
+                                        <state key="normal">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -621,7 +613,7 @@
                                             <constraint firstAttribute="width" constant="103" id="gB3-ih-5ZE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <state key="normal" title="Word2">
+                                        <state key="normal">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -632,7 +624,7 @@
                                         <rect key="frame" x="219" y="3" width="103" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <state key="normal" title="Word3">
+                                        <state key="normal">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -773,6 +765,7 @@
                         <outlet property="shiftButton" destination="8v5-Gp-ga0" id="iZ0-6s-ccM"/>
                         <outlet property="symView" destination="vHf-vm-ori" id="kHr-Gj-ybq"/>
                         <outlet property="textView" destination="uhc-ix-wGT" id="KXY-Qc-KTN"/>
+                        <outlet property="word1" destination="0ka-BM-GRG" id="i3g-oB-R8P"/>
                         <outlet property="word2" destination="Ume-fj-j4D" id="Ixn-LH-vvT"/>
                         <outlet property="word3" destination="e1h-Jc-9lV" id="yvX-qK-oXo"/>
                         <outletCollection property="wordButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="SWZ-cR-PyY"/>

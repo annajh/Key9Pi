@@ -24,6 +24,16 @@ class KeyboardViewController: UIInputViewController {
     var shiftPressed = false
     var enterPressed = false
     
+    func shiftOn() {
+        shiftPressed = true;
+        shiftButton.backgroundColor = UIColor.cyan;
+    }
+    
+    func shiftOff() {
+        shiftPressed = false;
+        shiftButton.backgroundColor = UIColor.white
+    }
+    
     @IBOutlet weak var shiftButton: UIButton!
     
     @IBOutlet weak var word1: UIButton!
@@ -89,6 +99,7 @@ class KeyboardViewController: UIInputViewController {
     @IBAction func enterPress(_ sender: UIButton) {
         (textDocumentProxy as UIKeyInput).insertText("\n")
         enterPressed = true
+        shiftOn()
     }
     
     
@@ -104,28 +115,25 @@ class KeyboardViewController: UIInputViewController {
         let index = str.startIndex
         str = (String(str[index])).lowercased()
         //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
-       if shiftPressed {
+        if shiftPressed {
             str =  str.uppercased()
-           shiftPressed = false
+            shiftPressed = false
             //shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
             shiftButton.backgroundColor = UIColor.white
         }
-        if enterPressed {
-            str =  str.uppercased()
-            enterPressed = false
-        }
+//        if enterPressed {
+//            str =  str.uppercased()
+//            enterPressed = false
+//        }
         (textDocumentProxy as UIKeyInput).insertText(str)
+        if str == "." || str == "!" || str == "?" {
+            shiftOn()
+        }
         
     }
     
     @IBAction func shiftPress(_ sender: UIButton) {
-        shiftPressed = true;
-        if shiftPressed {
-            shiftButton.backgroundColor = UIColor.cyan;
-        } else {
-            shiftButton.backgroundColor = UIColor.white
-        }
-        
+        shiftPressed ? shiftOff() : shiftOn()
     }
     
     
