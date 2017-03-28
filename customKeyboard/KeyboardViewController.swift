@@ -150,6 +150,7 @@ class KeyboardViewController: UIInputViewController {
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
+        shiftOn()
         trie.loadTrie(fileName: path!)
         
         //let defaults = UserDefaults.standard
