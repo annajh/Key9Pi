@@ -22,6 +22,8 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var symView: UIView!
     @IBOutlet weak var numView: UIView!
     
+    
+    
     var shiftPressed = false
     var enterPressed = false
     var charCounter = 0
@@ -165,6 +167,8 @@ class KeyboardViewController: UIInputViewController {
         
         shiftOn()
         trie.loadTrie(fileName: path!)
+        
+        
         
         //let defaults = UserDefaults.standard
         //let dict = defaults.object(forKey: "resultsDict")

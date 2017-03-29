@@ -13,6 +13,7 @@ class ViewControllerMy: UIViewController {
 
     @IBOutlet weak var wordTextField: UITextField!
     
+
     @IBAction func addWordsPressed(_ sender: UIButton) {
         if (wordTextField.text?.isEmpty)! { return }
         let lowercase = wordTextField.text?.lowercased()
@@ -49,6 +50,8 @@ class ViewControllerMy: UIViewController {
             userDefaults.set(2 as AnyObject, forKey: "other")
             userDefaults.synchronize()
         }
+        
+    self.hideKeyboardWhenTappedAround()
   
 //        wordTextField.layer.borderColor = UIColor.black.cgColor;
 //        wordTextField.layer.borderWidth = 2;
@@ -86,6 +89,22 @@ extension String {
         return components(separatedBy: .punctuationCharacters).joined()
             .components(separatedBy: " ")
             .filter{!$0.isEmpty}
+    }
+}
+
+
+//found this on stack overflow
+// http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 
