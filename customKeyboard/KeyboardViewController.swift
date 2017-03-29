@@ -54,8 +54,10 @@ class KeyboardViewController: UIInputViewController {
         
         // TODO: make it work with array of buttons
         let str = sender.currentTitle!
-        (textDocumentProxy as UIKeyInput).insertText(str)
+        (textDocumentProxy as UIKeyInput).insertText(str + " ")
         seq.reset()
+        
+        trie.incrementFreq(word: str, rootNode: trie.rootNode)
         
         // Reset
         word1?.setTitle("", for: .normal)
@@ -136,7 +138,7 @@ class KeyboardViewController: UIInputViewController {
 //            str =  str.uppercased()
 //            enterPressed = false
 //        }
-        (textDocumentProxy as UIKeyInput).insertText(str)
+        (textDocumentProxy as UIKeyInput).insertText(str + " ")
         if str == "." || str == "!" || str == "?" {
             shiftOn()
         }
@@ -232,7 +234,7 @@ class KeyboardViewController: UIInputViewController {
         print(seq.numSeq)
         
         let tempDict = trie.getPossibilities(seq: seq.numSeq, rootNode: trie.rootNode, maxDepth: 1)
-        let sorted = tempDict.sorted(by: { (a, b) in (a.value) < (b.value) })
+        let sorted = tempDict.sorted(by: { (a, b) in (a.key.characters.count - a.value) < (b.key.characters.count - b.value) })
         print(sorted)
         displaySuggestions(results: sorted)
         
@@ -253,7 +255,7 @@ class KeyboardViewController: UIInputViewController {
             }
             
             let tempDict = trie.getPossibilities(seq: seq.numSeq, rootNode: trie.rootNode, maxDepth: 1)
-            let sorted = tempDict.sorted(by: { (a, b) in (a.value) < (b.value) })
+            let sorted = tempDict.sorted(by: { (a, b) in (a.key.characters.count - a.value) < (b.key.characters.count - b.value) })
             print(sorted)
             displaySuggestions(results: sorted)
         } else {
@@ -270,7 +272,7 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
-    func displaySuggestions(results: [(key:String,value:UInt64)]) {
+    func displaySuggestions(results: [(key:String,value:Int)]) {
         // TODO: make it work with for loop and array of buttons
         if results.count >= 1 {
             let word = results[0].key

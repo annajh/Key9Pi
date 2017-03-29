@@ -20,15 +20,15 @@ var alphaToNumeric: [String:Int] = [
 ]
 
 class Node {
-    var wordList: [String:UInt64] = [:]
+    var wordList: [String:Int] = [:]
     var children: [Int:Node] = [:]
-    var size: UInt64 = 0 //only for root node to track Trie size
+    var size: Int = 0 //only for root node to track Trie size
 }
 
 class Trie {
     
     var rootNode = Node()
-   // var dict = [String:UInt64]()
+   // var dict = [String:Int]()
     
     func loadTrie(fileName:String) {
         
@@ -64,7 +64,7 @@ class Trie {
         }
     }
     
-    func insert(word: String, freq: UInt64, rootNode: Node) {
+    func insert(word: String, freq: Int, rootNode: Node) {
         rootNode.size += 1
         var currNode = rootNode
         
@@ -86,7 +86,6 @@ class Trie {
             return currNode
         }
         
-        //TODO add frequency ordering for Beta
         func insertWordIntoList(nodeToAddWord: Node) {
             nodeToAddWord.wordList[word] = freq
         }
@@ -133,18 +132,18 @@ class Trie {
         return currNode
     }
     
-    func getSize(rootNode: Node) -> UInt64 {
-        return UInt64(rootNode.size);
+    func getSize(rootNode: Node) -> Int {
+        return Int(rootNode.size);
     }
     
     func isEmpty(rootNode: Node) -> Bool {
         //print(rootNode.size)
-        if UInt64(rootNode.size) == 0 {return true}
+        if Int(rootNode.size) == 0 {return true}
         
         return false;
     }
     
-    func getPossibilities(seq: String, rootNode: Node, maxDepth: Int) -> [String:UInt64] {
+    func getPossibilities(seq: String, rootNode: Node, maxDepth: Int) -> [String:Int] {
         var currNode = rootNode
         
         for number in seq.characters {

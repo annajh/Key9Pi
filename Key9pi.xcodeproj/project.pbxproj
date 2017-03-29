@@ -26,6 +26,8 @@
 		4C6BAB211E70EDD8002F3EEC /* large-dict.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C61422D1E6E8DE900C53130 /* large-dict.txt */; };
 		4C7C2D8E1E7F1CCF0099D256 /* comm-dict.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C7C2D8D1E7F1CCF0099D256 /* comm-dict.txt */; };
 		4C7C2D8F1E7F1CDD0099D256 /* comm-dict.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C7C2D8D1E7F1CCF0099D256 /* comm-dict.txt */; };
+		4CB19A261E8C4E6E00E5C6DA /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB19A251E8C4E6E00E5C6DA /* ColorPicker.swift */; };
+		4CB19A271E8C4E6E00E5C6DA /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB19A251E8C4E6E00E5C6DA /* ColorPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,7 @@
 		4C6142311E6E935900C53130 /* Key9pi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Key9pi.entitlements; sourceTree = "<group>"; };
 		4C6142321E6E937100C53130 /* customKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = customKeyboard.entitlements; sourceTree = "<group>"; };
 		4C7C2D8D1E7F1CCF0099D256 /* comm-dict.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "comm-dict.txt"; sourceTree = "<group>"; };
+		4CB19A251E8C4E6E00E5C6DA /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 				4C61420A1E6E8BCA00C53130 /* Main.storyboard */,
 				4C6142101E6E8BCA00C53130 /* Assets.xcassets */,
 				4C6142121E6E8BCA00C53130 /* LaunchScreen.storyboard */,
+				4CB19A251E8C4E6E00E5C6DA /* ColorPicker.swift */,
 				4C6142151E6E8BCA00C53130 /* Info.plist */,
 				4C61420D1E6E8BCA00C53130 /* Key9pi.xcdatamodeld */,
 			);
@@ -261,6 +265,7 @@
 			files = (
 				0BC1E0F51E86F6BB009298A7 /* SequenceModel.swift in Sources */,
 				4C61420F1E6E8BCA00C53130 /* Key9pi.xcdatamodeld in Sources */,
+				4CB19A261E8C4E6E00E5C6DA /* ColorPicker.swift in Sources */,
 				4C6142091E6E8BCA00C53130 /* ViewController.swift in Sources */,
 				4C6142071E6E8BCA00C53130 /* AppDelegate.swift in Sources */,
 				4C6BAB1F1E70EDCD002F3EEC /* KeyboardViewController.swift in Sources */,
@@ -274,6 +279,7 @@
 			files = (
 				0BC1E0F61E86FFF2009298A7 /* SequenceModel.swift in Sources */,
 				4C6BAB1B1E70EDB2002F3EEC /* AppDelegate.swift in Sources */,
+				4CB19A271E8C4E6E00E5C6DA /* ColorPicker.swift in Sources */,
 				4C6142221E6E8BE400C53130 /* KeyboardViewController.swift in Sources */,
 				4C6142301E6E8E1800C53130 /* DictionaryModel.swift in Sources */,
 			);

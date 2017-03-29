@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         if let filepath = Bundle.main.path(forResource: "comm-dict", ofType: "txt") {
             
-            var allWords: [String:UInt64] = [:]
+            var allWords: [String:Int] = [:]
             func getWordList(node: Node) {
                 if node.children.count == 0 {
                     return

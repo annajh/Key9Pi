@@ -43,6 +43,12 @@ class ViewControllerMy: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let userDefaults = UserDefaults(suiteName: "group.k9") {
+            userDefaults.set("default" as AnyObject, forKey: "color")
+            userDefaults.set(2 as AnyObject, forKey: "other")
+            userDefaults.synchronize()
+        }
   
 //        wordTextField.layer.borderColor = UIColor.black.cgColor;
 //        wordTextField.layer.borderWidth = 2;
