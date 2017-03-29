@@ -15,14 +15,15 @@ class ViewControllerMy: UIViewController {
     
 
     @IBAction func addWordsPressed(_ sender: UIButton) {
-        if (wordTextField.text?.isEmpty)! { return }
-        let lowercase = wordTextField.text?.lowercased()
+        let text = wordTextField.text ?? ""
+        if (text.isEmpty) { return }
 
+        let lowercase = text.lowercased()
         if trie.isEmpty(rootNode: trie.rootNode) {
             trie.loadTrie(fileName: "comm-dict")
         }
-        let wordlist = lowercase?.words
-        for word in wordlist! {
+        let wordlist = lowercase.words
+        for word in wordlist {  // TODO: check for duplicates
             trie.insert(word: word, freq: 0, rootNode: trie.rootNode)
         }
     }
@@ -40,6 +41,9 @@ class ViewControllerMy: UIViewController {
         for word in wordlist! {
             trie.deleteWord(word: word, rootNode: trie.rootNode)
         }
+    }
+
+    @IBAction func savePressed(_ sender: UIButton) {
     }
 
     override func viewDidLoad() {
