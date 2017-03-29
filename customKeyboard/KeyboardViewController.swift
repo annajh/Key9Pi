@@ -23,6 +23,9 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var numView: UIView!
     
     
+    @IBOutlet var allTextButtons: [UIButton]!
+    
+    
     
     var shiftPressed = false
     var enterPressed = false
@@ -165,6 +168,12 @@ class KeyboardViewController: UIInputViewController {
         shiftOn()
         trie.loadTrie(fileName: path!)
         
+        let myBlue = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+       // var white = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+       // var black = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        let maize = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+
+
 
         if let userDefaults = UserDefaults(suiteName: "group.k9") {
             let background = userDefaults.string(forKey: "background")
@@ -172,33 +181,56 @@ class KeyboardViewController: UIInputViewController {
             let text = userDefaults.string(forKey: "text")
             
             if background == "White" {
-                textView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+                textView.backgroundColor = UIColor.white
             } else if background == "Black" {
-                textView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+                textView.backgroundColor = UIColor.black
             } else if background == "Blue" {
-                textView.backgroundColor = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+                textView.backgroundColor = myBlue
             } else if background == "Maize" {
-                textView.backgroundColor = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+                textView.backgroundColor = maize
             }
             
             if button == "White" {
-                //textView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+               
+                for button in allTextButtons{
+                    button.backgroundColor = UIColor.white
+                }
+                
             } else if button == "Black" {
-                //textView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+            
+                for button in allTextButtons{
+                    button.backgroundColor = UIColor.black
+                }
             } else if button == "Blue" {
-                //textView.backgroundColor = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+             
+                for button in allTextButtons{
+                    button.backgroundColor = myBlue
+                }
             } else if button == "Maize" {
-                //textView.backgroundColor = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+               
+                for button in allTextButtons{
+                    button.backgroundColor = maize
+                }
             }
             
             if text == "White" {
-                //textView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+                for button in allTextButtons{
+                    button.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+
             } else if text == "Black" {
-                //textView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+                for button in allTextButtons{
+                    button.setTitleColor(UIColor.black, for: UIControlState.normal)
+                }
             } else if text == "Blue" {
-                //textView.backgroundColor = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+                for button in allTextButtons{
+                    button.setTitleColor(myBlue, for: .normal)
+                }
+
             } else if text == "Maize" {
-                //textView.backgroundColor = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+                for button in allTextButtons{
+                    button.setTitleColor(maize, for: .normal)
+                }
             }
             
             
