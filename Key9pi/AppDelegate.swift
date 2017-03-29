@@ -31,6 +31,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        if let filepath = Bundle.main.path(forResource: "comm-dict", ofType: "txt") {
+            
+            var allWords: [String:UInt64] = [:]
+            func getWordList(node: Node) {
+                if node.children.count == 0 {
+                    return
+                }
+                for word in node.wordList {
+                    allWords[word.key] = word.value
+                }
+                for child in node.children {
+                    getWordList(node: child.value)
+                }
+            }
+            
+            //writing
+            do {
+                // TODO: get all words from trie and write to filepath
+                // ALSO, THERE'S GOTTA BE A BETTER WAY 😡
+                for word in allWords {
+                    try word.key.write(toFile: filepath, atomically: false, encoding: String.Encoding.unicode)
+                }
+            }
+            catch {
+                print("contents could not be stored")
+            }
+        }
+
     }
     
     

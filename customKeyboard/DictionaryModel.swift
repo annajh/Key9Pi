@@ -31,7 +31,6 @@ class Trie {
    // var dict = [String:UInt64]()
     
     func loadTrie(fileName:String) {
-        var common:UInt64 = 0
         
         DispatchQueue.global(qos: .background).async {
             print("This is run on the background queue")
@@ -45,8 +44,7 @@ class Trie {
                     for line in lines {
                         print(line)
                         let trimmedLine = line.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                        self.insert(word: trimmedLine.lowercased(), freq: common, rootNode: self.rootNode)
-                        common += 1
+                        self.insert(word: trimmedLine.lowercased(), freq: 0, rootNode: self.rootNode)
                     }
                 }
                 catch
@@ -97,6 +95,42 @@ class Trie {
         nodeToAddWord = traverseAddingNodes()
         
         insertWordIntoList(nodeToAddWord: nodeToAddWord)
+    }
+    
+    func deleteWord(word: String, rootNode: Node) {
+        let deleteNode = self.findNode(word: word, rootNode: rootNode)
+        
+        for key in deleteNode.wordList.keys {
+            if key == word {
+                deleteNode.wordList.removeValue(forKey: key)
+            }
+        }
+    }
+    
+    func incrementFreq(word: String, rootNode: Node) {
+        let freqNode = self.findNode(word: word, rootNode: rootNode)
+        
+        for key in freqNode.wordList.keys {
+            if key == word {
+                freqNode.wordList[key] = (freqNode.wordList[key]! + 1)
+            }
+        }
+    }
+    
+    func findNode(word: String, rootNode: Node) -> Node {
+        var keyNum = -1
+        var currNode = rootNode
+        
+        for letter in word.characters {
+            if letter == "-" { continue }
+            keyNum = alphaToNumeric[String(letter)]!
+            
+            if currNode.children.index(forKey: keyNum) != nil {
+                currNode = currNode.children[keyNum]!
+            }
+        }
+        
+        return currNode
     }
     
     func getSize(rootNode: Node) -> UInt64 {

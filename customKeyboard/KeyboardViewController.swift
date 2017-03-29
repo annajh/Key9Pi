@@ -11,6 +11,7 @@ import UIKit
 let path = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
 var trie = Trie()
 var seq = SequenceModel()
+let letters = CharacterSet.letters
 
 class KeyboardViewController: UIInputViewController {
 
@@ -24,6 +25,16 @@ class KeyboardViewController: UIInputViewController {
     var shiftPressed = false
     var enterPressed = false
     var charCounter = 0
+    
+    func shiftOn() {
+        shiftPressed = true;
+        shiftButton.backgroundColor = UIColor.cyan;
+    }
+    
+    func shiftOff() {
+        shiftPressed = false;
+        shiftButton.backgroundColor = UIColor.white
+    }
     
     @IBOutlet weak var shiftButton: UIButton!
     
@@ -114,9 +125,9 @@ class KeyboardViewController: UIInputViewController {
         charCounter = charCounter + 1
         print(charCounter)
         //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
-       if shiftPressed {
+        if shiftPressed {
             str =  str.uppercased()
-           shiftPressed = false
+            shiftPressed = false
             //shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
             shiftButton.backgroundColor = UIColor.white
         }
@@ -126,17 +137,14 @@ class KeyboardViewController: UIInputViewController {
             
         }
         (textDocumentProxy as UIKeyInput).insertText(str)
+        if str == "." || str == "!" || str == "?" {
+            shiftOn()
+        }
         
     }
     
     @IBAction func shiftPress(_ sender: UIButton) {
-        shiftPressed = true;
-        if shiftPressed {
-            shiftButton.backgroundColor = UIColor.cyan;
-        } else {
-            shiftButton.backgroundColor = UIColor.white
-        }
-        
+        shiftPressed ? shiftOff() : shiftOn()
     }
     
     
@@ -153,6 +161,7 @@ class KeyboardViewController: UIInputViewController {
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
+        shiftOn()
         trie.loadTrie(fileName: path!)
         
         //let defaults = UserDefaults.standard
@@ -226,6 +235,8 @@ class KeyboardViewController: UIInputViewController {
         let sorted = tempDict.sorted(by: { (a, b) in (a.value) < (b.value) })
         print(sorted)
         displaySuggestions(results: sorted)
+        
+        shiftOff()
     }
 
     
@@ -246,13 +257,14 @@ class KeyboardViewController: UIInputViewController {
             print(sorted)
             displaySuggestions(results: sorted)
         } else {
-            while textDocumentProxy.hasText {
+            while textDocumentProxy.hasText {  // Delete whole words.
                 let tempDocText = textDocumentProxy.documentContextBeforeInput
-                if tempDocText?.characters.last == " " {
+                if letters.contains((tempDocText?.unicodeScalars.last)!) {
+                    // Delete one character at a time if symbol/number.
                     textDocumentProxy.deleteBackward()
-                    return
                 } else {
                     textDocumentProxy.deleteBackward()
+                    return
                 }
             }
         }
