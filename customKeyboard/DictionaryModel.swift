@@ -173,4 +173,16 @@ class Trie {
         
         return results
     }
+    
+    func wordInTrie(searchWord: String, rootNode: Node) -> Bool {
+        let searchNode = self.findNode(word: searchWord, rootNode: rootNode)
+        
+        for word in searchNode.wordList {
+            if searchWord == word.key {
+                return true
+            }
+        }
+        
+        return false
+    }
 }
