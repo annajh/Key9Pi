@@ -65,6 +65,9 @@ class Trie {
     }
     
     func insert(word: String, freq: Int, rootNode: Node) {
+        
+        if wordInTrie(searchWord: word, rootNode: rootNode) { return }
+        
         rootNode.size += 1
         var currNode = rootNode
         
