@@ -59,7 +59,7 @@ class KeyboardViewController: UIInputViewController {
         (textDocumentProxy as UIKeyInput).insertText(str + " ")
         seq.reset()
         
-        trie.incrementFreq(word: str, rootNode: trie.rootNode)
+        trie.incrementFreq(word: str.lowercased(), rootNode: trie.rootNode)
         
         // Reset
         word1?.setTitle("", for: .normal)
@@ -286,12 +286,16 @@ class KeyboardViewController: UIInputViewController {
             word1?.setTitle("", for: .normal)
         }
         if results.count >= 2 {
-            word2?.setTitle(results[1].key, for: .normal)
+            let word = results[1].key
+            // only the first button will show capitalizations.
+            word2?.setTitle(seq.addCapitalization(word: word), for: .normal)
         } else {
             word2?.setTitle("", for: .normal)
         }
         if results.count >= 3 {
-            word3?.setTitle(results[2].key, for: .normal)
+            let word = results[2].key
+            // only the first button will show capitalizations.
+            word3?.setTitle(seq.addCapitalization(word: word), for: .normal)
         } else {
             word3?.setTitle("", for: .normal)
         }
