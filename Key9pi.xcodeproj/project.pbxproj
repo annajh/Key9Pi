@@ -56,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		0BC1E0F41E86F6BB009298A7 /* SequenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceModel.swift; sourceTree = "<group>"; };
+		15E75CD51E8C65F8009E45D9 /* DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = DS_Store; sourceTree = "<group>"; };
 		4C6142031E6E8BCA00C53130 /* Key9pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Key9pi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6142061E6E8BCA00C53130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C6142081E6E8BCA00C53130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 				4C6142051E6E8BCA00C53130 /* Key9pi */,
 				4C6142201E6E8BE400C53130 /* customKeyboard */,
 				4C6142041E6E8BCA00C53130 /* Products */,
+				15E75CD51E8C65F8009E45D9 /* DS_Store */,
 			);
 			sourceTree = "<group>";
 		};
