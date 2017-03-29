@@ -23,6 +23,7 @@ class KeyboardViewController: UIInputViewController {
     
     var shiftPressed = false
     var enterPressed = false
+    var charCounter = 0
     
     @IBOutlet weak var shiftButton: UIButton!
     
@@ -35,6 +36,11 @@ class KeyboardViewController: UIInputViewController {
     //above is the array of the word buttons
     
     @IBAction func wordPress(_ sender: UIButton) {
+//        while(charCounter>0){
+//            textDocumentProxy.deleteBackward()
+//            charCounter = charCounter - 1
+//        }
+        
         // TODO: make it work with array of buttons
         let str = sender.currentTitle!
         (textDocumentProxy as UIKeyInput).insertText(str)
@@ -89,12 +95,14 @@ class KeyboardViewController: UIInputViewController {
     @IBAction func enterPress(_ sender: UIButton) {
         (textDocumentProxy as UIKeyInput).insertText("\n")
         enterPressed = true
+        //charCounter = 0
     }
     
     
     @IBAction func spacePress(_ button: UIButton) {
         
         (textDocumentProxy as UIKeyInput).insertText(" ")
+        //charCounter = 0
         
     }
     
@@ -103,6 +111,8 @@ class KeyboardViewController: UIInputViewController {
         var str = button.titleLabel!.text!
         let index = str.startIndex
         str = (String(str[index])).lowercased()
+        charCounter = charCounter + 1
+        print(charCounter)
         //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
        if shiftPressed {
             str =  str.uppercased()
@@ -113,6 +123,7 @@ class KeyboardViewController: UIInputViewController {
         if enterPressed {
             str =  str.uppercased()
             enterPressed = false
+            
         }
         (textDocumentProxy as UIKeyInput).insertText(str)
         
@@ -219,6 +230,7 @@ class KeyboardViewController: UIInputViewController {
 
     
     @IBAction func backspacePress(_ sender: UIButton) {
+        //update charCounter here too
         if !seq.isEmpty() {
             seq.pop()
             if seq.isEmpty() {
