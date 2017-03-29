@@ -13,9 +13,9 @@ class ViewControllerMy: UIViewController {
 
     @IBOutlet weak var wordTextField: UITextField!
     
-    @IBAction func addWordsPressed(_ sender: Any) {
+    @IBAction func addWordsPressed(_ sender: UIButton) {
+        if (wordTextField.text?.isEmpty)! { return }
         let lowercase = wordTextField.text?.lowercased()
-        if (lowercase?.isEmpty)! { return }
 
         if trie.isEmpty(rootNode: trie.rootNode) {
             trie.loadTrie(fileName: "comm-dict")
@@ -23,6 +23,21 @@ class ViewControllerMy: UIViewController {
         let wordlist = lowercase?.words
         for word in wordlist! {
             trie.insert(word: word, freq: 0, rootNode: trie.rootNode)
+        }
+    }
+    
+    
+    // TODO: add button
+    @IBAction func delWordsPressed(_ sender: UIButton) {
+        if (wordTextField.text?.isEmpty)! { return }
+        let lowercase = wordTextField.text?.lowercased()
+        
+        if trie.isEmpty(rootNode: trie.rootNode) {
+            trie.loadTrie(fileName: "comm-dict")
+        }
+        let wordlist = lowercase?.words
+        for word in wordlist! {
+            trie.deleteWord(word: word, rootNode: trie.rootNode)
         }
     }
 
@@ -59,11 +74,10 @@ class ViewControllerMy: UIViewController {
 }
 
 
-// Found this on stackoverflow, split by words.
+// Found this on stackoverflow, split by words, gets rid of punctuation and numbers.
 extension String {
     var words: [String] {
-        return components(separatedBy: .punctuationCharacters)
-            .joined()
+        return components(separatedBy: .punctuationCharacters).joined()
             .components(separatedBy: " ")
             .filter{!$0.isEmpty}
     }

@@ -11,6 +11,7 @@ import UIKit
 let path = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
 var trie = Trie()
 var seq = SequenceModel()
+let letters = CharacterSet.letters
 
 class KeyboardViewController: UIInputViewController {
 
@@ -224,6 +225,8 @@ class KeyboardViewController: UIInputViewController {
         let sorted = tempDict.sorted(by: { (a, b) in (a.value) < (b.value) })
         print(sorted)
         displaySuggestions(results: sorted)
+        
+        shiftOff()
     }
 
     
@@ -243,13 +246,14 @@ class KeyboardViewController: UIInputViewController {
             print(sorted)
             displaySuggestions(results: sorted)
         } else {
-            while textDocumentProxy.hasText {
+            while textDocumentProxy.hasText {  // Delete whole words.
                 let tempDocText = textDocumentProxy.documentContextBeforeInput
-                if tempDocText?.characters.last == " " {
+                if letters.contains((tempDocText?.unicodeScalars.last)!) {
+                    // Delete one character at a time if symbol/number.
                     textDocumentProxy.deleteBackward()
-                    return
                 } else {
                     textDocumentProxy.deleteBackward()
+                    return
                 }
             }
         }
