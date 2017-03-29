@@ -74,7 +74,7 @@ class ViewControllerMy: UIViewController {
 }
 
 
-// Found this on stackoverflow, split by words, gets rid of punctuation and numbers.
+ //Found this on stackoverflow, split by words, gets rid of punctuation and numbers.
 extension String {
     var words: [String] {
         return components(separatedBy: .punctuationCharacters).joined()

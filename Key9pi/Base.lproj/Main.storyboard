@@ -22,94 +22,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feN-K9-lLn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRQ-5v-Hkg">
-                                        <rect key="frame" x="16" y="194" width="343" height="42"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                        <state key="normal" title="Add word">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-WI-s73">
-                                        <rect key="frame" x="16" y="617" width="343" height="42"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                        <state key="normal" title="Go to change color scheme">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="quq-ng-DBg" kind="presentation" id="tt3-aX-8Vd"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter text: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37f-UH-zmZ">
-                                        <rect key="frame" x="16" y="244" width="188" height="62"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="188" id="LGD-Fe-ruK"/>
-                                            <constraint firstAttribute="height" constant="62" id="y5m-uV-aCN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2L-IU-NIz">
-                                        <rect key="frame" x="16" y="314" width="160" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-yO-7xe">
-                                        <rect key="frame" x="198" y="308" width="151" height="42"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="151" id="pAf-SM-xX2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                        <state key="normal" title="Add words">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addWordsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qje-27-ASr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRQ-5v-Hkg">
+                                <rect key="frame" x="16" y="180" width="343" height="42"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="Add word">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-WI-s73">
+                                <rect key="frame" x="16" y="617" width="343" height="42"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="Go to change color scheme">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="quq-ng-DBg" kind="presentation" id="tt3-aX-8Vd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2L-IU-NIz">
+                                <rect key="frame" x="16" y="300" width="160" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter text: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37f-UH-zmZ">
+                                <rect key="frame" x="16" y="230" width="188" height="62"/>
                                 <constraints>
-                                    <constraint firstItem="Mms-WI-s73" firstAttribute="bottom" secondItem="feN-K9-lLn" secondAttribute="bottomMargin" id="1mV-Hk-30a"/>
-                                    <constraint firstAttribute="trailing" secondItem="wRQ-5v-Hkg" secondAttribute="trailing" constant="16" id="Bur-YC-My4"/>
-                                    <constraint firstItem="A2L-IU-NIz" firstAttribute="centerY" secondItem="UJa-yO-7xe" secondAttribute="centerY" id="D57-IY-RTD"/>
-                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="leading" secondItem="37f-UH-zmZ" secondAttribute="leading" id="E9V-hr-uKe"/>
-                                    <constraint firstItem="37f-UH-zmZ" firstAttribute="top" secondItem="wRQ-5v-Hkg" secondAttribute="bottom" constant="8" symbolic="YES" id="GM4-d1-dJO"/>
-                                    <constraint firstItem="Mms-WI-s73" firstAttribute="top" secondItem="feN-K9-lLn" secondAttribute="top" constant="617" id="GQz-lN-znE"/>
-                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="leading" secondItem="feN-K9-lLn" secondAttribute="leading" constant="16" id="HuZ-0r-AtV"/>
-                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="top" secondItem="feN-K9-lLn" secondAttribute="top" constant="194" id="S1C-lz-0A9"/>
-                                    <constraint firstAttribute="trailing" secondItem="UJa-yO-7xe" secondAttribute="trailing" constant="26" id="X3y-m4-5Ko"/>
-                                    <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="A2L-IU-NIz" secondAttribute="leading" id="fO5-dW-QYM"/>
-                                    <constraint firstItem="A2L-IU-NIz" firstAttribute="leading" secondItem="Mms-WI-s73" secondAttribute="leading" id="hfK-gu-4lF"/>
-                                    <constraint firstItem="UJa-yO-7xe" firstAttribute="leading" secondItem="A2L-IU-NIz" secondAttribute="trailing" constant="22" id="mub-MF-L5X"/>
-                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="centerX" secondItem="feN-K9-lLn" secondAttribute="centerX" id="w18-V9-gCQ"/>
-                                    <constraint firstItem="wRQ-5v-Hkg" firstAttribute="trailing" secondItem="Mms-WI-s73" secondAttribute="trailing" id="ypB-c1-e8I"/>
-                                    <constraint firstItem="A2L-IU-NIz" firstAttribute="top" secondItem="37f-UH-zmZ" secondAttribute="bottom" constant="8" symbolic="YES" id="zV9-o1-qMq"/>
+                                    <constraint firstAttribute="width" constant="188" id="LGD-Fe-ruK"/>
+                                    <constraint firstAttribute="height" constant="62" id="y5m-uV-aCN"/>
                                 </constraints>
-                            </scrollView>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-yO-7xe">
+                                <rect key="frame" x="208" y="294" width="151" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="pAf-SM-xX2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="Add words">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addWordsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAo-l0-IfT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="feN-K9-lLn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UJB-Le-zMA"/>
-                            <constraint firstItem="feN-K9-lLn" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="YyV-ZV-G77"/>
-                            <constraint firstItem="feN-K9-lLn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kBg-IA-5XE"/>
-                            <constraint firstAttribute="trailing" secondItem="feN-K9-lLn" secondAttribute="trailing" id="pt6-TN-JOP"/>
+                            <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0ST-11-xpM"/>
+                            <constraint firstItem="Mms-WI-s73" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5LN-ue-Bnc"/>
+                            <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="Mms-WI-s73" secondAttribute="leading" id="62r-PH-ZlL"/>
+                            <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="wRQ-5v-Hkg" secondAttribute="leading" id="MI5-W4-119"/>
+                            <constraint firstItem="37f-UH-zmZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="230" id="MPD-8N-Z54"/>
+                            <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="A2L-IU-NIz" secondAttribute="leading" id="NS5-FK-7Gy"/>
+                            <constraint firstItem="Mms-WI-s73" firstAttribute="trailing" secondItem="wRQ-5v-Hkg" secondAttribute="trailing" id="Vso-VU-N5Q"/>
+                            <constraint firstItem="UJa-yO-7xe" firstAttribute="leading" secondItem="A2L-IU-NIz" secondAttribute="trailing" constant="32" id="WXB-M8-kJz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mms-WI-s73" secondAttribute="bottom" constant="8" symbolic="YES" id="bJQ-Uk-liu"/>
+                            <constraint firstItem="UJa-yO-7xe" firstAttribute="centerY" secondItem="A2L-IU-NIz" secondAttribute="centerY" id="iqS-5G-cZp"/>
+                            <constraint firstItem="Mms-WI-s73" firstAttribute="trailing" secondItem="UJa-yO-7xe" secondAttribute="trailing" id="kaC-bT-cap"/>
+                            <constraint firstItem="A2L-IU-NIz" firstAttribute="top" secondItem="37f-UH-zmZ" secondAttribute="bottom" constant="8" symbolic="YES" id="sBj-92-ASa"/>
+                            <constraint firstItem="37f-UH-zmZ" firstAttribute="top" secondItem="wRQ-5v-Hkg" secondAttribute="bottom" constant="8" symbolic="YES" id="ssQ-cZ-EVr"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="text" destination="D57-IY-RTD" id="bNc-ew-NZz"/>
-                        <outlet property="wordTextField" destination="A2L-IU-NIz" id="iNW-8B-gcg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="130.88455772113943"/>
+            <point key="canvasLocation" x="39" y="187"/>
         </scene>
         <!--View Controller My-->
         <scene sceneID="ynw-eV-LWj">
