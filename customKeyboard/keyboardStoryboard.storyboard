@@ -792,6 +792,59 @@
                         <outletCollection property="allTextButtons" destination="iXo-xM-5k6" collectionClass="NSMutableArray" id="USH-fT-afk"/>
                         <outletCollection property="allTextButtons" destination="xCz-kY-6Qh" collectionClass="NSMutableArray" id="sJd-gK-J92"/>
                         <outletCollection property="allTextButtons" destination="EUi-Qr-oUB" collectionClass="NSMutableArray" id="VWl-oQ-89g"/>
+                        <outletCollection property="allButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="Ukw-KC-0QL"/>
+                        <outletCollection property="allButtons" destination="Ume-fj-j4D" collectionClass="NSMutableArray" id="aC1-Mu-cma"/>
+                        <outletCollection property="allButtons" destination="e1h-Jc-9lV" collectionClass="NSMutableArray" id="7to-mX-lUo"/>
+                        <outletCollection property="allButtons" destination="Utc-h4-xs8" collectionClass="NSMutableArray" id="gUh-ut-K4i"/>
+                        <outletCollection property="allButtons" destination="TAv-0t-KFC" collectionClass="NSMutableArray" id="Zg8-mp-UqA"/>
+                        <outletCollection property="allButtons" destination="2dC-O8-sIR" collectionClass="NSMutableArray" id="DsT-Dt-XfC"/>
+                        <outletCollection property="allButtons" destination="4Xw-C5-YqB" collectionClass="NSMutableArray" id="EeU-73-9dV"/>
+                        <outletCollection property="allButtons" destination="EEk-GA-ntH" collectionClass="NSMutableArray" id="h81-Mx-yYr"/>
+                        <outletCollection property="allButtons" destination="9pj-lJ-FkA" collectionClass="NSMutableArray" id="Ab1-6R-wRZ"/>
+                        <outletCollection property="allButtons" destination="enw-Ly-T0K" collectionClass="NSMutableArray" id="Qmt-6n-18U"/>
+                        <outletCollection property="allButtons" destination="8eo-tg-qqd" collectionClass="NSMutableArray" id="Sf5-zz-swN"/>
+                        <outletCollection property="allButtons" destination="l5f-9C-nSi" collectionClass="NSMutableArray" id="JRN-AF-5ef"/>
+                        <outletCollection property="allButtons" destination="7aY-xz-LIg" collectionClass="NSMutableArray" id="QiP-X7-aqK"/>
+                        <outletCollection property="allButtons" destination="I1J-QU-KcC" collectionClass="NSMutableArray" id="E8p-w7-TRx"/>
+                        <outletCollection property="allButtons" destination="ShT-aF-4pa" collectionClass="NSMutableArray" id="9aJ-xk-gUS"/>
+                        <outletCollection property="allButtons" destination="E4l-mr-yS5" collectionClass="NSMutableArray" id="Trt-Xk-Q5V"/>
+                        <outletCollection property="allButtons" destination="8v5-Gp-ga0" collectionClass="NSMutableArray" id="owY-zg-K4A"/>
+                        <outletCollection property="allButtons" destination="vQJ-a0-ShP" collectionClass="NSMutableArray" id="lyu-Sm-FMm"/>
+                        <outletCollection property="allButtons" destination="K2r-Q2-pRb" collectionClass="NSMutableArray" id="ZBt-cF-RNb"/>
+                        <outletCollection property="allButtons" destination="l6N-wI-740" collectionClass="NSMutableArray" id="5wa-aH-Yaa"/>
+                        <outletCollection property="allButtons" destination="iXo-xM-5k6" collectionClass="NSMutableArray" id="XeE-og-oPW"/>
+                        <outletCollection property="allButtons" destination="xCz-kY-6Qh" collectionClass="NSMutableArray" id="5pb-7E-inB"/>
+                        <outletCollection property="allButtons" destination="EUi-Qr-oUB" collectionClass="NSMutableArray" id="HFQ-zg-Sx9"/>
+                        <outletCollection property="allButtons" destination="EFh-Md-nKZ" collectionClass="NSMutableArray" id="Zwq-q6-dCP"/>
+                        <outletCollection property="allButtons" destination="COp-aI-yRc" collectionClass="NSMutableArray" id="DYs-Uw-f3r"/>
+                        <outletCollection property="allButtons" destination="nT4-Ji-BLc" collectionClass="NSMutableArray" id="yNE-yI-WAb"/>
+                        <outletCollection property="allButtons" destination="Eax-9H-50x" collectionClass="NSMutableArray" id="mYz-qd-whH"/>
+                        <outletCollection property="allButtons" destination="ldr-TT-ymc" collectionClass="NSMutableArray" id="xnQ-pT-nCq"/>
+                        <outletCollection property="allButtons" destination="wQ4-kT-bxh" collectionClass="NSMutableArray" id="PeX-Qh-u99"/>
+                        <outletCollection property="allButtons" destination="sz7-Ol-kNW" collectionClass="NSMutableArray" id="Day-db-kCl"/>
+                        <outletCollection property="allButtons" destination="o9x-bl-DMD" collectionClass="NSMutableArray" id="gOm-o3-Ofp"/>
+                        <outletCollection property="allButtons" destination="oWY-rb-td1" collectionClass="NSMutableArray" id="a4n-xw-OsD"/>
+                        <outletCollection property="allButtons" destination="yd9-Lx-6Ri" collectionClass="NSMutableArray" id="bIp-AS-MwD"/>
+                        <outletCollection property="allButtons" destination="9Nq-Bx-ccY" collectionClass="NSMutableArray" id="5u4-mb-OGp"/>
+                        <outletCollection property="allButtons" destination="exB-xN-3Gb" collectionClass="NSMutableArray" id="sVM-sH-nBG"/>
+                        <outletCollection property="allButtons" destination="9cA-4v-y6Q" collectionClass="NSMutableArray" id="d1l-XJ-m4u"/>
+                        <outletCollection property="allButtons" destination="5GF-1y-wM0" collectionClass="NSMutableArray" id="u4a-6N-z5A"/>
+                        <outletCollection property="allButtons" destination="mBC-BF-pY3" collectionClass="NSMutableArray" id="a7k-YH-t5v"/>
+                        <outletCollection property="allButtons" destination="f8s-ng-PUs" collectionClass="NSMutableArray" id="N3r-PH-o7G"/>
+                        <outletCollection property="allButtons" destination="j4E-OH-8ee" collectionClass="NSMutableArray" id="FL1-KU-DEF"/>
+                        <outletCollection property="allButtons" destination="mgW-Hw-s6C" collectionClass="NSMutableArray" id="bva-aa-75r"/>
+                        <outletCollection property="allButtons" destination="nzL-D9-Tid" collectionClass="NSMutableArray" id="TW9-1C-E6p"/>
+                        <outletCollection property="allButtons" destination="rux-an-mOY" collectionClass="NSMutableArray" id="PDv-aM-8fJ"/>
+                        <outletCollection property="allButtons" destination="jhc-EB-oiJ" collectionClass="NSMutableArray" id="IOf-8x-AUP"/>
+                        <outletCollection property="allButtons" destination="Zwt-Ag-ZVm" collectionClass="NSMutableArray" id="VSv-qE-Axm"/>
+                        <outletCollection property="allButtons" destination="1kP-N7-T0f" collectionClass="NSMutableArray" id="otk-rl-iwX"/>
+                        <outletCollection property="allButtons" destination="aRc-QC-dU7" collectionClass="NSMutableArray" id="XUk-Xs-YZ4"/>
+                        <outletCollection property="allButtons" destination="VV4-g7-7PH" collectionClass="NSMutableArray" id="0Xw-01-YvD"/>
+                        <outletCollection property="allButtons" destination="qPt-v1-Dyg" collectionClass="NSMutableArray" id="gIf-9S-Gu6"/>
+                        <outletCollection property="allButtons" destination="PZB-WE-u8B" collectionClass="NSMutableArray" id="LNx-O0-YNP"/>
+                        <outletCollection property="allButtons" destination="Biy-nG-nbx" collectionClass="NSMutableArray" id="fCf-xY-7GW"/>
+                        <outletCollection property="allButtons" destination="V03-U5-qyB" collectionClass="NSMutableArray" id="qvN-2T-91b"/>
+                        <outletCollection property="allButtons" destination="w0p-L9-3i1" collectionClass="NSMutableArray" id="XHH-CX-bia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOI-VO-ngD" userLabel="First Responder" sceneMemberID="firstResponder"/>
