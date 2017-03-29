@@ -23,6 +23,9 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var numView: UIView!
     
     
+    @IBOutlet var allTextButtons: [UIButton]!
+    
+    
     
     var shiftPressed = false
     var enterPressed = false
@@ -183,12 +186,25 @@ class KeyboardViewController: UIInputViewController {
             
             if button == "White" {
                 //textView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+                for button in allTextButtons{
+                    button.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+                }
+                
             } else if button == "Black" {
                 //textView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+                for button in allTextButtons{
+                    button.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+                }
             } else if button == "Blue" {
                 //textView.backgroundColor = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+                for button in allTextButtons{
+                    button.backgroundColor = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+                }
             } else if button == "Maize" {
                 //textView.backgroundColor = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+                for button in allTextButtons{
+                    button.backgroundColor = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+                }
             }
             
             if text == "White" {
