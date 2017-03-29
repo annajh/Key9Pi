@@ -165,7 +165,44 @@ class KeyboardViewController: UIInputViewController {
         shiftOn()
         trie.loadTrie(fileName: path!)
         
-        
+
+        if let userDefaults = UserDefaults(suiteName: "group.k9") {
+            let background = userDefaults.string(forKey: "background")
+            let button = userDefaults.string(forKey: "button")
+            let text = userDefaults.string(forKey: "text")
+            
+            if background == "White" {
+                textView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+            } else if background == "Black" {
+                textView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+            } else if background == "Blue" {
+                textView.backgroundColor = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+            } else if background == "Maize" {
+                textView.backgroundColor = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+            }
+            
+            if button == "White" {
+                //textView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+            } else if button == "Black" {
+                //textView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+            } else if button == "Blue" {
+                //textView.backgroundColor = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+            } else if button == "Maize" {
+                //textView.backgroundColor = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+            }
+            
+            if text == "White" {
+                //textView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+            } else if text == "Black" {
+                //textView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+            } else if text == "Blue" {
+                //textView.backgroundColor = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+            } else if text == "Maize" {
+                //textView.backgroundColor = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+            }
+            
+            
+        }
         
         //let defaults = UserDefaults.standard
         //let dict = defaults.object(forKey: "resultsDict")

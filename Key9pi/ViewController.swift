@@ -45,6 +45,7 @@ class ViewControllerMy: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         if let userDefaults = UserDefaults(suiteName: "group.k9") {
             userDefaults.set("default" as AnyObject, forKey: "color")
             userDefaults.set(2 as AnyObject, forKey: "other")
@@ -52,6 +53,7 @@ class ViewControllerMy: UIViewController {
         }
         
     self.hideKeyboardWhenTappedAround()
+
   
 //        wordTextField.layer.borderColor = UIColor.black.cgColor;
 //        wordTextField.layer.borderWidth = 2;
@@ -80,6 +82,31 @@ class ViewControllerMy: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func backgroundPress(_ sender: UIButton) {
+        if let userDefaults = UserDefaults(suiteName: "group.k9") {
+            print(sender.currentTitle!)
+            userDefaults.set(sender.currentTitle! as AnyObject, forKey: "background")
+            userDefaults.synchronize()
+        }
+    }
+    
+    @IBAction func buttonPress(_ sender: UIButton) {
+        if let userDefaults = UserDefaults(suiteName: "group.k9") {
+            print(sender.currentTitle!)
+            userDefaults.set(sender.currentTitle! as AnyObject, forKey: "button")
+            userDefaults.synchronize()
+        }
+    }
+    
+    @IBAction func textPress(_ sender: UIButton) {
+        if let userDefaults = UserDefaults(suiteName: "group.k9") {
+            print(sender.currentTitle!)
+            userDefaults.set(sender.currentTitle! as AnyObject, forKey: "text")
+            userDefaults.synchronize()
+        }
+    }
+    
 }
 
 

@@ -116,6 +116,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreGraphics;
 @import CoreData;
 #endif
 
@@ -136,31 +137,80 @@ SWIFT_CLASS("_TtC6Key9pi11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIColor;
+@protocol colorDelegate;
+@class UITouch;
+@class UIEvent;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC6Key9pi11ColorPicker")
+@interface ColorPicker : UIView
+@property (nonatomic) CGFloat currentSelectionX;
+@property (nonatomic, strong) UIColor * _Null_unspecified selectedColor;
+@property (nonatomic, strong) id <colorDelegate> _Null_unspecified delegate;
+- (void)drawRect:(CGRect)rect;
+- (void)selectedColorWithSColor:(UIColor * _Nonnull)sColor;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (void)updateColorWithTouch:(UITouch * _Nonnull)touch;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSLayoutConstraint;
 @class UIButton;
 @protocol UITextInput;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC6Key9pi22KeyboardViewController")
 @interface KeyboardViewController : UIInputViewController
-@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified nextKeyboardButton;
+@property (nonatomic, strong) NSLayoutConstraint * _Null_unspecified heightConstraint;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified textView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified symView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified numView;
+@property (nonatomic) BOOL shiftPressed;
+@property (nonatomic) BOOL enterPressed;
+@property (nonatomic) NSInteger charCounter;
+- (void)shiftOn;
+- (void)shiftOff;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified shiftButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word1;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word2;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word3;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified wordButtons;
+- (IBAction)wordPress:(UIButton * _Nonnull)sender;
+- (IBAction)goToNum:(UIButton * _Nonnull)sender;
+- (IBAction)goToSym:(UIButton * _Nonnull)sender;
+- (IBAction)goToText:(UIButton * _Nonnull)sender;
+- (IBAction)globePress:(UIButton * _Nonnull)sender;
+- (IBAction)enterPress:(UIButton * _Nonnull)sender;
+- (IBAction)spacePress:(UIButton * _Nonnull)button;
+- (IBAction)keyPress:(UIButton * _Nonnull)button;
+- (IBAction)shiftPress:(UIButton * _Nonnull)sender;
 - (void)updateViewConstraints;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)textWillChange:(id <UITextInput> _Nullable)textInput;
 - (void)textDidChange:(id <UITextInput> _Nullable)textInput;
+- (void)setUpHeightConstraint;
 - (IBAction)letterKeyPress:(UIButton * _Nonnull)sender;
 - (IBAction)backspacePress:(UIButton * _Nonnull)sender;
-- (IBAction)spacePress:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITextField;
 
-SWIFT_CLASS("_TtC6Key9pi14ViewController")
-@interface ViewController : UIViewController
+SWIFT_CLASS("_TtC6Key9pi16ViewControllerMy")
+@interface ViewControllerMy : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified wordTextField;
+- (IBAction)addWordsPressed:(UIButton * _Nonnull)sender;
+- (IBAction)delWordsPressed:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
+- (IBAction)goBack:(UIButton * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
+- (IBAction)backgroundPress:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -176,6 +226,13 @@ SWIFT_CLASS_NAMED("Word")
 
 @interface Word (SWIFT_EXTENSION(Key9pi))
 @property (nonatomic, copy) NSString * _Nullable text;
+@end
+
+
+SWIFT_PROTOCOL("_TtP6Key9pi13colorDelegate_")
+@protocol colorDelegate
+@optional
+- (void)pickedColorWithColor:(UIColor * _Nonnull)color;
 @end
 
 #pragma clang diagnostic pop
