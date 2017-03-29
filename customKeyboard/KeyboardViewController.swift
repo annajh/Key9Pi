@@ -38,12 +38,13 @@ class KeyboardViewController: UIInputViewController {
         shiftButton.backgroundColor = UIColor.white
     }
     
+    func resetSuggestions() {
+        for button in wordButtons {
+            button.setTitle("", for: .normal)
+        }
+    }
+    
     @IBOutlet weak var shiftButton: UIButton!
-    
-    @IBOutlet weak var word1: UIButton!
-    @IBOutlet weak var word2: UIButton!
-    @IBOutlet weak var word3: UIButton!
-    
     
     @IBOutlet var wordButtons: [UIButton]!
     //above is the array of the word buttons
@@ -53,18 +54,14 @@ class KeyboardViewController: UIInputViewController {
 //            textDocumentProxy.deleteBackward()
 //            charCounter = charCounter - 1
 //        }
-        
-        // TODO: make it work with array of buttons
+
         let str = sender.currentTitle!
         (textDocumentProxy as UIKeyInput).insertText(str + " ")
         seq.reset()
         
         trie.incrementFreq(word: str.lowercased(), rootNode: trie.rootNode)
-        
-        // Reset
-        word1?.setTitle("", for: .normal)
-        word2?.setTitle("", for: .normal)
-        word3?.setTitle("", for: .normal)
+
+        resetSuggestions()
     }
     
     
@@ -251,10 +248,7 @@ class KeyboardViewController: UIInputViewController {
         if !seq.isEmpty() {
             seq.pop()
             if seq.isEmpty() {
-                // TODO: refactor when button array is implemented.
-                word1?.setTitle("", for: .normal)
-                word2?.setTitle("", for: .normal)
-                word3?.setTitle("", for: .normal)
+                resetSuggestions()
                 return
             }
             
@@ -277,27 +271,14 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func displaySuggestions(results: [(key:String,value:Int)]) {
-        // TODO: make it work with for loop and array of buttons
-        if results.count >= 1 {
-            let word = results[0].key
-            // only the first button will show capitalizations.
-            word1?.setTitle(seq.addCapitalization(word: word), for: .normal)
-        } else {
-            word1?.setTitle("", for: .normal)
-        }
-        if results.count >= 2 {
-            let word = results[1].key
-            // only the first button will show capitalizations.
-            word2?.setTitle(seq.addCapitalization(word: word), for: .normal)
-        } else {
-            word2?.setTitle("", for: .normal)
-        }
-        if results.count >= 3 {
-            let word = results[2].key
-            // only the first button will show capitalizations.
-            word3?.setTitle(seq.addCapitalization(word: word), for: .normal)
-        } else {
-            word3?.setTitle("", for: .normal)
+        resetSuggestions()
+
+        var wordcount = 0
+        for button in wordButtons {
+            if wordcount >= results.count { return }
+            let word = results[wordcount].key
+            button.setTitle(seq.addCapitalization(word: word), for: .normal)
+            wordcount += 1
         }
     }
     
