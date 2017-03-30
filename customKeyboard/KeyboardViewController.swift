@@ -18,6 +18,10 @@ class KeyboardViewController: UIInputViewController {
    // @IBOutlet var nextKeyboardButton: UIButton!
     var heightConstraint: NSLayoutConstraint!
     
+    let myBlue = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
+    let maize = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
+    
+    
     @IBOutlet weak var textView: UIView!
     @IBOutlet weak var symView: UIView!
     @IBOutlet weak var numView: UIView!
@@ -25,6 +29,8 @@ class KeyboardViewController: UIInputViewController {
     
     @IBOutlet var allTextButtons: [UIButton]!
     
+   
+    @IBOutlet weak var shiftButton: UIButton!
     
     @IBOutlet var allButtons: [UIButton]!
     
@@ -33,15 +39,31 @@ class KeyboardViewController: UIInputViewController {
     var shiftPressed = false
     var enterPressed = false
     var charCounter = 0
+    lazy var shiftColor = UIColor()
     
     func shiftOn() {
         shiftPressed = true;
-        shiftButton.backgroundColor = UIColor.cyan;
+        //shiftButton.backgroundColor = UIColor.cyan;
+        //shiftColor = shiftButton.backgroundColor!
+        if(shiftButton.backgroundColor == UIColor.black){
+            shiftButton.backgroundColor = UIColor.blue
+        }
+        else if (shiftButton.backgroundColor == UIColor.white){
+            shiftButton.backgroundColor = UIColor.cyan
+        }
+        else if (shiftButton.backgroundColor == myBlue){
+            shiftButton.backgroundColor = UIColor.black
+        }
+        else{
+            //button is maize
+            shiftButton.backgroundColor = UIColor.cyan
+        }
     }
     
     func shiftOff() {
         shiftPressed = false;
-        shiftButton.backgroundColor = UIColor.white
+
+        shiftButton.backgroundColor = shiftColor
     }
     
     func resetSuggestions() {
@@ -50,7 +72,7 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
-    @IBOutlet weak var shiftButton: UIButton!
+    
     
     @IBOutlet var wordButtons: [UIButton]!
     //above is the array of the word buttons
@@ -134,16 +156,23 @@ class KeyboardViewController: UIInputViewController {
         print(charCounter)
         //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
         if shiftPressed {
-            str =  str.uppercased()
-            shiftPressed = false
+            //str =  str.uppercased()
+            //shiftPressed = false
             //shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
-            shiftButton.backgroundColor = UIColor.white
+            //shiftButton.backgroundColor = UIColor.white
+            shiftOff()
         }
 //        if enterPressed {
 //            str =  str.uppercased()
 //            enterPressed = false
 //        }
-        (textDocumentProxy as UIKeyInput).insertText(str + " ")
+        if (numView.isHidden == false){
+            (textDocumentProxy as UIKeyInput).insertText(str)
+        }
+        else{
+            (textDocumentProxy as UIKeyInput).insertText(str + " ")
+        }
+        
         if str == "." || str == "!" || str == "?" {
             shiftOn()
         }
@@ -165,18 +194,13 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
         shiftOn()
         trie.loadTrie(fileName: path!)
         
-        let myBlue = UIColor(red: 14/255, green: 0/255, blue: 211/255, alpha: 1)
-       // var white = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-       // var black = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-        let maize = UIColor(red: 255/255, green: 250/255, blue: 0/255, alpha: 1)
-
-
 
         if let userDefaults = UserDefaults(suiteName: "group.k9") {
             let background = userDefaults.string(forKey: "background")
@@ -246,6 +270,9 @@ class KeyboardViewController: UIInputViewController {
             
             
         }
+        shiftColor = shiftButton.backgroundColor!
+        print("color of shift")
+        print(shiftColor)
         
         //let defaults = UserDefaults.standard
         //let dict = defaults.object(forKey: "resultsDict")
