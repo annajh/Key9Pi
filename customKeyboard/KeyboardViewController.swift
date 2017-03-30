@@ -201,11 +201,22 @@ class KeyboardViewController: UIInputViewController {
         shiftOn()
         trie.loadTrie(fileName: path!)
         
-
         if let userDefaults = UserDefaults(suiteName: "group.k9") {
             let background = userDefaults.string(forKey: "background")
             let button = userDefaults.string(forKey: "button")
             let text = userDefaults.string(forKey: "text")
+            
+            let addWords = userDefaults.object(forKey: "addWords") as? [String] ?? [String]()
+            let delWords = userDefaults.object(forKey: "delWords") as? [String] ?? [String]()
+            
+            for word in addWords {
+                trie.insert(word: word, freq: 1, rootNode: trie.rootNode)
+            }
+            
+            for word in delWords {
+                trie.deleteWord(word: word, rootNode: trie.rootNode)
+            }
+            
             
             if background == "White" {
                 textView.backgroundColor = UIColor.white

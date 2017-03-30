@@ -7,8 +7,8 @@ provides-member:
 - ["C6Key9pi4Word", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Word"
 - "NSManagedObject"
+- "Word"
 depends-member:
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", ""]

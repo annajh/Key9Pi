@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 
 class ViewControllerMy: UIViewController {
+    
+    let userDefaults = UserDefaults(suiteName: "group.k9")
 
     @IBOutlet weak var wordTextField: UITextField!
     
@@ -21,48 +23,46 @@ class ViewControllerMy: UIViewController {
     @IBOutlet var textButtons: [UIButton]!
 
     @IBAction func addWordsPressed(_ sender: UIButton) {
-        let text = wordTextField.text ?? ""
-        if (text.isEmpty) { return }
-
-        let lowercase = text.lowercased()
-        if trie.isEmpty(rootNode: trie.rootNode) {
-            trie.loadTrie(fileName: "comm-dict")
+        if wordTextField.text! != "" {
+            let text = wordTextField.text!.lowercased()
+            
+            if userDefaults?.object(forKey: "addWords") as? [String] != nil {
+                var temp = userDefaults?.object(forKey: "addWords") as? [String] ?? [String]()
+                temp.append(text)
+                userDefaults?.set(temp, forKey: "addWords")
+                userDefaults?.synchronize()
+            } else {
+                let arrayAdd = [text]
+                userDefaults?.set(arrayAdd, forKey: "addWords")
+                userDefaults?.synchronize()
+            }
         }
-        let wordlist = lowercase.words
-        for word in wordlist {  // TODO: check for duplicates
-            trie.insert(word: word, freq: 0, rootNode: trie.rootNode)
-        }
-        
     }
     
     
-    // TODO: add button
+
     @IBAction func delWordsPressed(_ sender: UIButton) {
-        if (wordTextField.text?.isEmpty)! { return }
-        let lowercase = wordTextField.text?.lowercased()
-        
-        if trie.isEmpty(rootNode: trie.rootNode) {
-            trie.loadTrie(fileName: "comm-dict")
-        }
-        let wordlist = lowercase?.words
-        for word in wordlist! {
-            trie.deleteWord(word: word, rootNode: trie.rootNode)
+        if wordTextField.text! != "" {
+            let text = wordTextField.text!.lowercased()
+            
+            if userDefaults?.object(forKey: "delWords") as? [String] != nil {
+                var temp = userDefaults?.object(forKey: "delWords") as? [String] ?? [String]()
+                temp.append(text)
+                userDefaults?.set(temp, forKey: "delWords")
+                userDefaults?.synchronize()
+                print(userDefaults?.object(forKey: "delWords") as? [String] ?? [String]())
+            } else {
+                let arrayDel = [text]
+                userDefaults?.set(arrayDel, forKey: "delWords")
+                userDefaults?.synchronize()
+            }
         }
     }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        if let userDefaults = UserDefaults(suiteName: "group.k9") {
-            userDefaults.set("default" as AnyObject, forKey: "color")
-            userDefaults.set(2 as AnyObject, forKey: "other")
-            userDefaults.synchronize()
-        }
-        
-    self.hideKeyboardWhenTappedAround()
-
+        self.hideKeyboardWhenTappedAround()
   
 //        wordTextField.layer.borderColor = UIColor.black.cgColor;
 //        wordTextField.layer.borderWidth = 2;
@@ -93,11 +93,8 @@ class ViewControllerMy: UIViewController {
     }
     
     @IBAction func backgroundPress(_ sender: UIButton) {
-        if let userDefaults = UserDefaults(suiteName: "group.k9") {
-            print(sender.currentTitle!)
-            userDefaults.set(sender.currentTitle! as AnyObject, forKey: "background")
-            userDefaults.synchronize()
-        }
+        userDefaults?.set(sender.currentTitle! as AnyObject, forKey: "background")
+        userDefaults?.synchronize()
         
         //change color of pressed button
         for button in backgroundButtons{
@@ -109,11 +106,8 @@ class ViewControllerMy: UIViewController {
     }
     
     @IBAction func buttonPress(_ sender: UIButton) {
-        if let userDefaults = UserDefaults(suiteName: "group.k9") {
-            print(sender.currentTitle!)
-            userDefaults.set(sender.currentTitle! as AnyObject, forKey: "button")
-            userDefaults.synchronize()
-        }
+        userDefaults?.set(sender.currentTitle! as AnyObject, forKey: "button")
+        userDefaults?.synchronize()
         
         //change color of pressed button
         for button in buttonsButtons{
@@ -125,11 +119,9 @@ class ViewControllerMy: UIViewController {
     }
     
     @IBAction func textPress(_ sender: UIButton) {
-        if let userDefaults = UserDefaults(suiteName: "group.k9") {
-            print(sender.currentTitle!)
-            userDefaults.set(sender.currentTitle! as AnyObject, forKey: "text")
-            userDefaults.synchronize()
-        }
+        userDefaults?.set(sender.currentTitle! as AnyObject, forKey: "text")
+        userDefaults?.synchronize()
+        
         
         //change color of pressed button
         for button in textButtons{

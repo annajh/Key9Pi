@@ -6,17 +6,17 @@ provides-nominal:
 provides-member:
 - ["C14customKeyboard11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidBecomeActive"
 - "window"
 - "applicationWillEnterForeground"
+- "applicationDidBecomeActive"
 - "application"
-- "applicationDidEnterBackground"
 - "applicationWillTerminate"
 - "applicationWillResignActive"
+- "applicationDidEnterBackground"
 depends-top-level:
 - "UIWindow"
-- !private "BooleanLiteralType"
 - "AppDelegate"
+- !private "BooleanLiteralType"
 - "UIApplication"
 - "UIApplicationLaunchOptionsKey"
 - "UIResponder"

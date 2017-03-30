@@ -166,18 +166,21 @@ SWIFT_CLASS("_TtC6Key9pi11ColorPicker")
 SWIFT_CLASS("_TtC6Key9pi22KeyboardViewController")
 @interface KeyboardViewController : UIInputViewController
 @property (nonatomic, strong) NSLayoutConstraint * _Null_unspecified heightConstraint;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull myBlue;
+@property (nonatomic, readonly, strong) UIColor * _Nonnull maize;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified textView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified symView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified numView;
 @property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified allTextButtons;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified shiftButton;
 @property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified allButtons;
 @property (nonatomic) BOOL shiftPressed;
 @property (nonatomic) BOOL enterPressed;
 @property (nonatomic) NSInteger charCounter;
+@property (nonatomic, strong) UIColor * _Nonnull shiftColor;
 - (void)shiftOn;
 - (void)shiftOff;
 - (void)resetSuggestions;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified shiftButton;
 @property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified wordButtons;
 - (IBAction)wordPress:(UIButton * _Nonnull)sender;
 - (IBAction)goToNum:(UIButton * _Nonnull)sender;
@@ -206,14 +209,18 @@ SWIFT_CLASS("_TtC6Key9pi22KeyboardViewController")
 - (void)dismissKeyboard;
 @end
 
+@class NSUserDefaults;
 @class UITextField;
 
 SWIFT_CLASS("_TtC6Key9pi16ViewControllerMy")
 @interface ViewControllerMy : UIViewController
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nullable userDefaults;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified wordTextField;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified backgroundButtons;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified buttonsButtons;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified textButtons;
 - (IBAction)addWordsPressed:(UIButton * _Nonnull)sender;
 - (IBAction)delWordsPressed:(UIButton * _Nonnull)sender;
-- (IBAction)savePressed:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (IBAction)goBack:(UIButton * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;

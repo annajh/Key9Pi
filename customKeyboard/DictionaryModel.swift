@@ -59,6 +59,13 @@ class Trie {
             
             DispatchQueue.main.async {
                 print("This is run on the main queue, after the previous code in outer block")
+                if let userDefaults = UserDefaults(suiteName: "group.k9") {
+                    let delWords = userDefaults.object(forKey: "delWords") as? [String] ?? [String]()
+                    
+                    for word in delWords {
+                        trie.deleteWord(word: word, rootNode: trie.rootNode)
+                    }
+                }
                 print(self.getSize(rootNode: self.rootNode))
             }
         }
@@ -102,9 +109,12 @@ class Trie {
     func deleteWord(word: String, rootNode: Node) {
         let deleteNode = self.findNode(word: word, rootNode: rootNode)
         
+        print("wvbowbvfbvfbnvf", deleteNode.wordList)
+        
         for key in deleteNode.wordList.keys {
             if key == word {
                 deleteNode.wordList.removeValue(forKey: key)
+                return
             }
         }
     }

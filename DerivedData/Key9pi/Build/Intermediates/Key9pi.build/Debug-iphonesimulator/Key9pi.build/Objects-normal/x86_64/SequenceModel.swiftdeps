@@ -8,20 +8,20 @@ provides-member:
 - ["C6Key9pi13SequenceModel", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "SequenceModel"
-- !private "-"
-- !private "Character"
-- "StringLiteralType"
-- "String"
 - "Bool"
+- "AssignmentPrecedence"
+- "UnicodeScalarType"
+- "SequenceModel"
+- !private "..."
+- !private "print"
+- "String"
+- "StringLiteralType"
+- !private "-"
 - "buttonToNumber"
 - !private "Array"
-- "UnicodeScalarType"
 - !private "+="
-- !private "..."
 - "Dictionary"
-- !private "print"
-- "AssignmentPrecedence"
+- !private "Character"
 depends-member:
 - !private ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "Character"]

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -778,7 +779,6 @@
                         <outlet property="symView" destination="vHf-vm-ori" id="kHr-Gj-ybq"/>
                         <outlet property="textView" destination="uhc-ix-wGT" id="KXY-Qc-KTN"/>
                         <outletCollection property="wordButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="SWZ-cR-PyY"/>
-                        <outletCollection property="wordButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="EaB-UN-M32"/>
                         <outletCollection property="wordButtons" destination="Ume-fj-j4D" collectionClass="NSMutableArray" id="ozx-Jl-eNK"/>
                         <outletCollection property="wordButtons" destination="e1h-Jc-9lV" collectionClass="NSMutableArray" id="16R-pv-Yx3"/>
                         <outletCollection property="allTextButtons" destination="Utc-h4-xs8" collectionClass="NSMutableArray" id="R4y-jp-Awf"/>

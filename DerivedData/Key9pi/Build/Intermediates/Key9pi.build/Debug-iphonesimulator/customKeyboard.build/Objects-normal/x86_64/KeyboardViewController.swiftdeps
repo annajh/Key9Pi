@@ -10,82 +10,87 @@ provides-nominal:
 provides-member:
 - ["C14customKeyboard22KeyboardViewController", ""]
 provides-dynamic-lookup:
-- "symView"
+- "shiftButton"
+- "myBlue"
 - "shiftOn"
+- "wordPress"
+- "textWillChange"
+- "textDidChange"
+- "globePress"
+- "shiftOff"
+- "keyPress"
+- "goToNum"
+- "allButtons"
+- "updateViewConstraints"
+- "textView"
+- "enterPressed"
+- "letterKeyPress"
+- "goToSym"
+- "wordButtons"
+- "didReceiveMemoryWarning"
+- "enterPress"
+- "shiftPressed"
+- "backspacePress"
+- "setUpHeightConstraint"
+- "maize"
+- "symView"
+- "viewDidLoad"
+- "resetSuggestions"
+- "heightConstraint"
+- "allTextButtons"
+- "shiftColor"
 - "shiftPress"
 - "charCounter"
-- "keyPress"
-- "letterKeyPress"
-- "globePress"
-- "resetSuggestions"
-- "didReceiveMemoryWarning"
-- "goToNum"
 - "numView"
-- "allTextButtons"
-- "updateViewConstraints"
-- "allButtons"
-- "heightConstraint"
-- "backspacePress"
-- "wordButtons"
-- "textDidChange"
-- "goToSym"
-- "wordPress"
-- "shiftButton"
-- "enterPress"
-- "textView"
-- "setUpHeightConstraint"
-- "enterPressed"
 - "spacePress"
-- "textWillChange"
-- "shiftOff"
-- "shiftPressed"
-- "viewDidLoad"
 - "goToText"
 depends-top-level:
-- !private "<"
-- !private "=="
-- !private "-"
-- !private "UIColor"
-- "String"
-- !private "UIKeyInput"
-- "UIInputViewController"
-- "SequenceModel"
-- "Bundle"
-- "StringLiteralType"
-- "seq"
-- "letters"
-- "UIView"
-- "BooleanLiteralType"
-- !private "UIControlState"
-- "UITextInput"
-- !private "+="
-- !private "||"
-- "UIButton"
-- !private "UILayoutPriority"
-- "CharacterSet"
-- "TernaryPrecedence"
-- "NSLayoutConstraint"
-- !private "UILayoutPriorityRequired"
-- "trie"
-- !private "/"
-- !private "UserDefaults"
-- "Trie"
-- !private "+"
-- !private "UIScreen"
-- !private "UnicodeScalarType"
-- "Int"
-- !private "!"
+- "/"
 - !private "print"
-- !private ">="
+- "CharacterSet"
+- !private "??"
+- "UIInputViewController"
+- "trie"
+- "NSLayoutConstraint"
+- "BooleanLiteralType"
+- !private "UIScreen"
+- "Int"
+- "UIView"
+- !private "+"
+- "Trie"
+- !private "UnicodeScalarType"
+- "StringLiteralType"
+- !private "-"
+- "UIColor"
+- "UITextInput"
 - "path"
-- "AssignmentPrecedence"
+- "String"
 - "KeyboardViewController"
+- "SequenceModel"
+- !private "UIControlState"
+- "UIButton"
+- "AssignmentPrecedence"
+- "Bundle"
+- !private "UserDefaults"
+- !private "=="
+- !private "+="
 - "CastingPrecedence"
+- !private "UIKeyInput"
+- !private "||"
+- "seq"
+- !private "<"
+- !private "UILayoutPriority"
+- "letters"
+- "TernaryPrecedence"
+- !private ">="
+- !private "!"
+- !private "UILayoutPriorityRequired"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "NSLayoutConstraint"]
+- !private ["Ps9AnyObject", "RawValue"]
 - !private ["Ps9AnyObject", "String"]
-- !private ["Ps9AnyObject", "UIColor"]
+- ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIControlState"]
 - !private ["Ps9AnyObject", "UILayoutPriority"]
 - !private ["Ps9AnyObject", "UILayoutPriorityRequired"]
@@ -99,6 +104,7 @@ depends-member:
 - !private ["Ps9AnyObject", "backgroundColor"]
 - ["Ps9AnyObject", "backspacePress"]
 - !private ["Ps9AnyObject", "black"]
+- !private ["Ps9AnyObject", "blue"]
 - !private ["Ps9AnyObject", "bottomAnchor"]
 - !private ["Ps9AnyObject", "bounds"]
 - ["Ps9AnyObject", "charCounter"]
@@ -107,6 +113,7 @@ depends-member:
 - !private ["Ps9AnyObject", "constraint"]
 - !private ["Ps9AnyObject", "currentTitle"]
 - !private ["Ps9AnyObject", "cyan"]
+- !private ["Ps9AnyObject", "deleteWord"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - ["Ps9AnyObject", "displaySuggestions"]
 - ["Ps9AnyObject", "enterPress"]
@@ -119,6 +126,7 @@ depends-member:
 - ["Ps9AnyObject", "heightConstraint"]
 - !private ["Ps9AnyObject", "incrementFreq"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "insert"]
 - !private ["Ps9AnyObject", "isActive"]
 - !private ["Ps9AnyObject", "isEmpty"]
 - !private ["Ps9AnyObject", "isHidden"]
@@ -128,8 +136,11 @@ depends-member:
 - !private ["Ps9AnyObject", "loadTrie"]
 - !private ["Ps9AnyObject", "lowercased"]
 - ["Ps9AnyObject", "main"]
+- ["Ps9AnyObject", "maize"]
+- ["Ps9AnyObject", "myBlue"]
 - !private ["Ps9AnyObject", "numSeq"]
 - ["Ps9AnyObject", "numView"]
+- !private ["Ps9AnyObject", "object"]
 - ["Ps9AnyObject", "path"]
 - !private ["Ps9AnyObject", "pop"]
 - !private ["Ps9AnyObject", "print"]
@@ -143,6 +154,8 @@ depends-member:
 - !private ["Ps9AnyObject", "setTitleColor"]
 - ["Ps9AnyObject", "setUpHeightConstraint"]
 - ["Ps9AnyObject", "shiftButton"]
+- ["Ps9AnyObject", "shiftColor"]
+- ["Ps9AnyObject", "shiftColor.storage"]
 - ["Ps9AnyObject", "shiftOff"]
 - ["Ps9AnyObject", "shiftOn"]
 - ["Ps9AnyObject", "shiftPress"]
@@ -161,7 +174,6 @@ depends-member:
 - !private ["Ps9AnyObject", "trie"]
 - !private ["Ps9AnyObject", "unicodeScalars"]
 - ["Ps9AnyObject", "updateViewConstraints"]
-- !private ["Ps9AnyObject", "uppercased"]
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - !private ["Ps9AnyObject", "white"]
@@ -175,6 +187,7 @@ depends-member:
 - !private ["Sa", "_Element"]
 - !private ["Sa", "count"]
 - ["Sa", "deinit"]
+- !private ["Sa", "init"]
 - !private ["Sa", "subscript"]
 - !private ["Ps23BidirectionalCollection", "Index"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
@@ -183,6 +196,7 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "SubSequence"]
 - !private ["Ps23BidirectionalCollection", "_Element"]
 - !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "init"]
 - !private ["Ps23BidirectionalCollection", "last"]
 - !private ["Ps23BidirectionalCollection", "subscript"]
 - !private ["Ps22BidirectionalIndexable", "Index"]
@@ -192,6 +206,7 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "SubSequence"]
 - !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps22BidirectionalIndexable", "count"]
+- !private ["Ps22BidirectionalIndexable", "init"]
 - !private ["Ps22BidirectionalIndexable", "last"]
 - !private ["Ps22BidirectionalIndexable", "subscript"]
 - !private ["Vs18BidirectionalSlice", "Index"]
@@ -226,10 +241,11 @@ depends-member:
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
 - !private ["Ps7CVarArg", "Iterator"]
 - !private ["Ps7CVarArg", "NSLayoutConstraint"]
+- !private ["Ps7CVarArg", "RawValue"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "SubSequence"]
-- !private ["Ps7CVarArg", "UIColor"]
+- ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UIControlState"]
 - !private ["Ps7CVarArg", "UILayoutPriority"]
 - !private ["Ps7CVarArg", "UILayoutPriorityRequired"]
@@ -244,6 +260,7 @@ depends-member:
 - !private ["Ps7CVarArg", "backgroundColor"]
 - ["Ps7CVarArg", "backspacePress"]
 - !private ["Ps7CVarArg", "black"]
+- !private ["Ps7CVarArg", "blue"]
 - !private ["Ps7CVarArg", "bottomAnchor"]
 - !private ["Ps7CVarArg", "bounds"]
 - ["Ps7CVarArg", "charCounter"]
@@ -270,7 +287,10 @@ depends-member:
 - !private ["Ps7CVarArg", "letters"]
 - !private ["Ps7CVarArg", "lowercased"]
 - ["Ps7CVarArg", "main"]
+- ["Ps7CVarArg", "maize"]
+- ["Ps7CVarArg", "myBlue"]
 - ["Ps7CVarArg", "numView"]
+- !private ["Ps7CVarArg", "object"]
 - ["Ps7CVarArg", "path"]
 - !private ["Ps7CVarArg", "print"]
 - !private ["Ps7CVarArg", "priority"]
@@ -280,6 +300,8 @@ depends-member:
 - !private ["Ps7CVarArg", "setTitleColor"]
 - ["Ps7CVarArg", "setUpHeightConstraint"]
 - ["Ps7CVarArg", "shiftButton"]
+- ["Ps7CVarArg", "shiftColor"]
+- ["Ps7CVarArg", "shiftColor.storage"]
 - ["Ps7CVarArg", "shiftOff"]
 - ["Ps7CVarArg", "shiftOn"]
 - ["Ps7CVarArg", "shiftPress"]
@@ -299,7 +321,6 @@ depends-member:
 - !private ["Ps7CVarArg", "trie"]
 - !private ["Ps7CVarArg", "unicodeScalars"]
 - ["Ps7CVarArg", "updateViewConstraints"]
-- !private ["Ps7CVarArg", "uppercased"]
 - !private ["Ps7CVarArg", "view"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - !private ["Ps7CVarArg", "white"]
@@ -320,6 +341,7 @@ depends-member:
 - !private ["Ps10Collection", "SubSequence"]
 - !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "init"]
 - !private ["Ps10Collection", "last"]
 - !private ["Ps10Collection", "sorted"]
 - !private ["Ps10Collection", "subscript"]
@@ -332,14 +354,14 @@ depends-member:
 - !private ["Ps10Comparable", "startIndex"]
 - !private ["Ps10Comparable", "subscript"]
 - !private ["Ps10Comparable", "unicodeScalars"]
-- !private ["Ps10Comparable", "uppercased"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - !private ["Ps28CustomDebugStringConvertible", "NSLayoutConstraint"]
+- !private ["Ps28CustomDebugStringConvertible", "RawValue"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
-- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
 - !private ["Ps28CustomDebugStringConvertible", "UILayoutPriority"]
 - !private ["Ps28CustomDebugStringConvertible", "UILayoutPriorityRequired"]
@@ -353,6 +375,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - ["Ps28CustomDebugStringConvertible", "backspacePress"]
 - !private ["Ps28CustomDebugStringConvertible", "black"]
+- !private ["Ps28CustomDebugStringConvertible", "blue"]
 - !private ["Ps28CustomDebugStringConvertible", "bottomAnchor"]
 - !private ["Ps28CustomDebugStringConvertible", "bounds"]
 - ["Ps28CustomDebugStringConvertible", "charCounter"]
@@ -382,7 +405,10 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "letters"]
 - !private ["Ps28CustomDebugStringConvertible", "lowercased"]
 - ["Ps28CustomDebugStringConvertible", "main"]
+- ["Ps28CustomDebugStringConvertible", "maize"]
+- ["Ps28CustomDebugStringConvertible", "myBlue"]
 - ["Ps28CustomDebugStringConvertible", "numView"]
+- !private ["Ps28CustomDebugStringConvertible", "object"]
 - ["Ps28CustomDebugStringConvertible", "path"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "priority"]
@@ -392,6 +418,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "setTitleColor"]
 - ["Ps28CustomDebugStringConvertible", "setUpHeightConstraint"]
 - ["Ps28CustomDebugStringConvertible", "shiftButton"]
+- ["Ps28CustomDebugStringConvertible", "shiftColor"]
+- ["Ps28CustomDebugStringConvertible", "shiftColor.storage"]
 - ["Ps28CustomDebugStringConvertible", "shiftOff"]
 - ["Ps28CustomDebugStringConvertible", "shiftOn"]
 - ["Ps28CustomDebugStringConvertible", "shiftPress"]
@@ -411,7 +439,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "trie"]
 - !private ["Ps28CustomDebugStringConvertible", "unicodeScalars"]
 - ["Ps28CustomDebugStringConvertible", "updateViewConstraints"]
-- !private ["Ps28CustomDebugStringConvertible", "uppercased"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - !private ["Ps28CustomDebugStringConvertible", "white"]
@@ -431,7 +458,6 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "startIndex"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "subscript"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "unicodeScalars"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "uppercased"]
 - !private ["Ps17CustomReflectable", "Element"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
@@ -452,16 +478,16 @@ depends-member:
 - !private ["Ps17CustomReflectable", "startIndex"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps17CustomReflectable", "unicodeScalars"]
-- !private ["Ps17CustomReflectable", "uppercased"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "Iterator"]
 - !private ["Ps23CustomStringConvertible", "NSLayoutConstraint"]
+- !private ["Ps23CustomStringConvertible", "RawValue"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
-- !private ["Ps23CustomStringConvertible", "UIColor"]
+- ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UIControlState"]
 - !private ["Ps23CustomStringConvertible", "UILayoutPriority"]
 - !private ["Ps23CustomStringConvertible", "UILayoutPriorityRequired"]
@@ -477,6 +503,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "backgroundColor"]
 - ["Ps23CustomStringConvertible", "backspacePress"]
 - !private ["Ps23CustomStringConvertible", "black"]
+- !private ["Ps23CustomStringConvertible", "blue"]
 - !private ["Ps23CustomStringConvertible", "bottomAnchor"]
 - !private ["Ps23CustomStringConvertible", "bounds"]
 - ["Ps23CustomStringConvertible", "charCounter"]
@@ -505,7 +532,10 @@ depends-member:
 - ["Ps23CustomStringConvertible", "letters"]
 - !private ["Ps23CustomStringConvertible", "lowercased"]
 - ["Ps23CustomStringConvertible", "main"]
+- ["Ps23CustomStringConvertible", "maize"]
+- ["Ps23CustomStringConvertible", "myBlue"]
 - ["Ps23CustomStringConvertible", "numView"]
+- !private ["Ps23CustomStringConvertible", "object"]
 - ["Ps23CustomStringConvertible", "path"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "priority"]
@@ -515,6 +545,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "setTitleColor"]
 - ["Ps23CustomStringConvertible", "setUpHeightConstraint"]
 - ["Ps23CustomStringConvertible", "shiftButton"]
+- ["Ps23CustomStringConvertible", "shiftColor"]
+- ["Ps23CustomStringConvertible", "shiftColor.storage"]
 - ["Ps23CustomStringConvertible", "shiftOff"]
 - ["Ps23CustomStringConvertible", "shiftOn"]
 - ["Ps23CustomStringConvertible", "shiftPress"]
@@ -534,7 +566,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "trie"]
 - !private ["Ps23CustomStringConvertible", "unicodeScalars"]
 - ["Ps23CustomStringConvertible", "updateViewConstraints"]
-- !private ["Ps23CustomStringConvertible", "uppercased"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - !private ["Ps23CustomStringConvertible", "white"]
@@ -557,9 +588,10 @@ depends-member:
 - !private ["Vs18DictionaryIterator", "Element"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "NSLayoutConstraint"]
+- !private ["Ps9Equatable", "RawValue"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "String"]
-- !private ["Ps9Equatable", "UIColor"]
+- ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIControlState"]
 - !private ["Ps9Equatable", "UILayoutPriority"]
 - !private ["Ps9Equatable", "UILayoutPriorityRequired"]
@@ -574,6 +606,7 @@ depends-member:
 - !private ["Ps9Equatable", "backgroundColor"]
 - ["Ps9Equatable", "backspacePress"]
 - !private ["Ps9Equatable", "black"]
+- !private ["Ps9Equatable", "blue"]
 - !private ["Ps9Equatable", "bottomAnchor"]
 - !private ["Ps9Equatable", "bounds"]
 - ["Ps9Equatable", "charCounter"]
@@ -602,9 +635,12 @@ depends-member:
 - ["Ps9Equatable", "letters"]
 - !private ["Ps9Equatable", "lowercased"]
 - ["Ps9Equatable", "main"]
+- ["Ps9Equatable", "maize"]
+- ["Ps9Equatable", "myBlue"]
 - !private ["Ps9Equatable", "normal"]
 - !private ["Ps9Equatable", "notAnAttribute"]
 - ["Ps9Equatable", "numView"]
+- !private ["Ps9Equatable", "object"]
 - ["Ps9Equatable", "path"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "priority"]
@@ -614,6 +650,8 @@ depends-member:
 - !private ["Ps9Equatable", "setTitleColor"]
 - ["Ps9Equatable", "setUpHeightConstraint"]
 - ["Ps9Equatable", "shiftButton"]
+- ["Ps9Equatable", "shiftColor"]
+- ["Ps9Equatable", "shiftColor.storage"]
 - ["Ps9Equatable", "shiftOff"]
 - ["Ps9Equatable", "shiftOn"]
 - ["Ps9Equatable", "shiftPress"]
@@ -632,7 +670,6 @@ depends-member:
 - !private ["Ps9Equatable", "trie"]
 - !private ["Ps9Equatable", "unicodeScalars"]
 - ["Ps9Equatable", "updateViewConstraints"]
-- !private ["Ps9Equatable", "uppercased"]
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
 - !private ["Ps9Equatable", "white"]
@@ -646,6 +683,7 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "contains"]
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "init"]
 - ["Ps25ExpressibleByArrayLiteral", "letters"]
 - !private ["Ps25ExpressibleByArrayLiteral", "normal"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
@@ -658,7 +696,6 @@ depends-member:
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "startIndex"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "subscript"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "unicodeScalars"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "uppercased"]
 - !private ["Ps25ExpressibleByFloatLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
@@ -671,29 +708,27 @@ depends-member:
 - !private ["Ps32ExpressibleByStringInterpolation", "startIndex"]
 - !private ["Ps32ExpressibleByStringInterpolation", "subscript"]
 - !private ["Ps32ExpressibleByStringInterpolation", "unicodeScalars"]
-- !private ["Ps32ExpressibleByStringInterpolation", "uppercased"]
 - !private ["Ps26ExpressibleByStringLiteral", "characters"]
 - ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "lowercased"]
 - !private ["Ps26ExpressibleByStringLiteral", "startIndex"]
 - !private ["Ps26ExpressibleByStringLiteral", "subscript"]
 - !private ["Ps26ExpressibleByStringLiteral", "unicodeScalars"]
-- !private ["Ps26ExpressibleByStringLiteral", "uppercased"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "characters"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "lowercased"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "startIndex"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "subscript"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "unicodeScalars"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "uppercased"]
 - ["Sf", "deinit"]
 - !private ["Sf", "init"]
 - !private ["Ps13FloatingPoint", "init"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "NSLayoutConstraint"]
+- !private ["Ps8Hashable", "RawValue"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "String"]
-- !private ["Ps8Hashable", "UIColor"]
+- ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIControlState"]
 - !private ["Ps8Hashable", "UILayoutPriority"]
 - !private ["Ps8Hashable", "UILayoutPriorityRequired"]
@@ -708,6 +743,7 @@ depends-member:
 - !private ["Ps8Hashable", "backgroundColor"]
 - ["Ps8Hashable", "backspacePress"]
 - !private ["Ps8Hashable", "black"]
+- !private ["Ps8Hashable", "blue"]
 - !private ["Ps8Hashable", "bottomAnchor"]
 - !private ["Ps8Hashable", "bounds"]
 - ["Ps8Hashable", "charCounter"]
@@ -736,8 +772,11 @@ depends-member:
 - ["Ps8Hashable", "letters"]
 - !private ["Ps8Hashable", "lowercased"]
 - ["Ps8Hashable", "main"]
+- ["Ps8Hashable", "maize"]
+- ["Ps8Hashable", "myBlue"]
 - !private ["Ps8Hashable", "notAnAttribute"]
 - ["Ps8Hashable", "numView"]
+- !private ["Ps8Hashable", "object"]
 - ["Ps8Hashable", "path"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "priority"]
@@ -747,6 +786,8 @@ depends-member:
 - !private ["Ps8Hashable", "setTitleColor"]
 - ["Ps8Hashable", "setUpHeightConstraint"]
 - ["Ps8Hashable", "shiftButton"]
+- ["Ps8Hashable", "shiftColor"]
+- ["Ps8Hashable", "shiftColor.storage"]
 - ["Ps8Hashable", "shiftOff"]
 - ["Ps8Hashable", "shiftOn"]
 - ["Ps8Hashable", "shiftPress"]
@@ -765,7 +806,6 @@ depends-member:
 - !private ["Ps8Hashable", "trie"]
 - !private ["Ps8Hashable", "unicodeScalars"]
 - ["Ps8Hashable", "updateViewConstraints"]
-- !private ["Ps8Hashable", "uppercased"]
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
 - !private ["Ps8Hashable", "white"]
@@ -782,6 +822,7 @@ depends-member:
 - !private ["Ps9Indexable", "SubSequence"]
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "last"]
 - !private ["Ps9Indexable", "sorted"]
 - !private ["Ps9Indexable", "subscript"]
@@ -792,6 +833,7 @@ depends-member:
 - !private ["Ps13IndexableBase", "SubSequence"]
 - !private ["Ps13IndexableBase", "_Element"]
 - !private ["Ps13IndexableBase", "count"]
+- !private ["Ps13IndexableBase", "init"]
 - !private ["Ps13IndexableBase", "last"]
 - !private ["Ps13IndexableBase", "sorted"]
 - !private ["Ps13IndexableBase", "subscript"]
@@ -812,7 +854,7 @@ depends-member:
 - ["C14customKeyboard22KeyboardViewController", "NSLayoutConstraint"]
 - ["C14customKeyboard22KeyboardViewController", "String"]
 - ["C14customKeyboard22KeyboardViewController", "UIButton"]
-- !private ["C14customKeyboard22KeyboardViewController", "UIColor"]
+- ["C14customKeyboard22KeyboardViewController", "UIColor"]
 - !private ["C14customKeyboard22KeyboardViewController", "UIControlState"]
 - !private ["C14customKeyboard22KeyboardViewController", "UIKeyInput"]
 - !private ["C14customKeyboard22KeyboardViewController", "UILayoutPriority"]
@@ -840,6 +882,8 @@ depends-member:
 - ["C14customKeyboard22KeyboardViewController", "keyPress"]
 - ["C14customKeyboard22KeyboardViewController", "letterKeyPress"]
 - !private ["C14customKeyboard22KeyboardViewController", "letters"]
+- ["C14customKeyboard22KeyboardViewController", "maize"]
+- ["C14customKeyboard22KeyboardViewController", "myBlue"]
 - ["C14customKeyboard22KeyboardViewController", "numView"]
 - !private ["C14customKeyboard22KeyboardViewController", "path"]
 - !private ["C14customKeyboard22KeyboardViewController", "print"]
@@ -847,6 +891,8 @@ depends-member:
 - !private ["C14customKeyboard22KeyboardViewController", "seq"]
 - ["C14customKeyboard22KeyboardViewController", "setUpHeightConstraint"]
 - ["C14customKeyboard22KeyboardViewController", "shiftButton"]
+- ["C14customKeyboard22KeyboardViewController", "shiftColor"]
+- !private ["C14customKeyboard22KeyboardViewController", "shiftColor.storage"]
 - ["C14customKeyboard22KeyboardViewController", "shiftOff"]
 - ["C14customKeyboard22KeyboardViewController", "shiftOn"]
 - ["C14customKeyboard22KeyboardViewController", "shiftPress"]
@@ -870,7 +916,6 @@ depends-member:
 - !private ["Ps25LosslessStringConvertible", "startIndex"]
 - !private ["Ps25LosslessStringConvertible", "subscript"]
 - !private ["Ps25LosslessStringConvertible", "unicodeScalars"]
-- !private ["Ps25LosslessStringConvertible", "uppercased"]
 - !private ["Ps10MirrorPath", "IntegerLiteralType"]
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
@@ -880,13 +925,13 @@ depends-member:
 - !private ["Ps10MirrorPath", "startIndex"]
 - !private ["Ps10MirrorPath", "subscript"]
 - !private ["Ps10MirrorPath", "unicodeScalars"]
-- !private ["Ps10MirrorPath", "uppercased"]
 - !private ["Ps17MutableCollection", "Index"]
 - !private ["Ps17MutableCollection", "IndexDistance"]
 - !private ["Ps17MutableCollection", "Iterator"]
 - !private ["Ps17MutableCollection", "SubSequence"]
 - !private ["Ps17MutableCollection", "_Element"]
 - !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "init"]
 - !private ["Ps17MutableCollection", "subscript"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
@@ -894,11 +939,13 @@ depends-member:
 - !private ["Ps16MutableIndexable", "SubSequence"]
 - !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableIndexable", "init"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - ["CSo7NSCoder", "deinit"]
 - !private ["PSo8NSCoding", "NSLayoutConstraint"]
+- !private ["PSo8NSCoding", "RawValue"]
 - !private ["PSo8NSCoding", "String"]
-- !private ["PSo8NSCoding", "UIColor"]
+- ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIControlState"]
 - !private ["PSo8NSCoding", "UILayoutPriority"]
 - !private ["PSo8NSCoding", "UILayoutPriorityRequired"]
@@ -911,6 +958,7 @@ depends-member:
 - !private ["PSo8NSCoding", "backgroundColor"]
 - ["PSo8NSCoding", "backspacePress"]
 - !private ["PSo8NSCoding", "black"]
+- !private ["PSo8NSCoding", "blue"]
 - !private ["PSo8NSCoding", "bottomAnchor"]
 - ["PSo8NSCoding", "charCounter"]
 - !private ["PSo8NSCoding", "characters"]
@@ -931,6 +979,8 @@ depends-member:
 - ["PSo8NSCoding", "letterKeyPress"]
 - !private ["PSo8NSCoding", "letters"]
 - !private ["PSo8NSCoding", "lowercased"]
+- ["PSo8NSCoding", "maize"]
+- ["PSo8NSCoding", "myBlue"]
 - ["PSo8NSCoding", "numView"]
 - !private ["PSo8NSCoding", "path"]
 - !private ["PSo8NSCoding", "print"]
@@ -940,6 +990,8 @@ depends-member:
 - !private ["PSo8NSCoding", "setTitleColor"]
 - ["PSo8NSCoding", "setUpHeightConstraint"]
 - ["PSo8NSCoding", "shiftButton"]
+- ["PSo8NSCoding", "shiftColor"]
+- ["PSo8NSCoding", "shiftColor.storage"]
 - ["PSo8NSCoding", "shiftOff"]
 - ["PSo8NSCoding", "shiftOn"]
 - ["PSo8NSCoding", "shiftPress"]
@@ -957,14 +1009,15 @@ depends-member:
 - !private ["PSo8NSCoding", "trie"]
 - !private ["PSo8NSCoding", "unicodeScalars"]
 - ["PSo8NSCoding", "updateViewConstraints"]
-- !private ["PSo8NSCoding", "uppercased"]
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - !private ["PSo8NSCoding", "white"]
 - ["PSo8NSCoding", "wordButtons"]
 - ["PSo8NSCoding", "wordPress"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "RawValue"]
 - !private ["PSo9NSCopying", "black"]
+- !private ["PSo9NSCopying", "blue"]
 - !private ["PSo9NSCopying", "characters"]
 - !private ["PSo9NSCopying", "cyan"]
 - ["PSo9NSCopying", "init"]
@@ -972,11 +1025,10 @@ depends-member:
 - !private ["PSo9NSCopying", "startIndex"]
 - !private ["PSo9NSCopying", "subscript"]
 - !private ["PSo9NSCopying", "unicodeScalars"]
-- !private ["PSo9NSCopying", "uppercased"]
 - !private ["PSo9NSCopying", "white"]
 - !private ["PSo26NSExtensionRequestHandling", "NSLayoutConstraint"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
-- !private ["PSo26NSExtensionRequestHandling", "UIColor"]
+- ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIControlState"]
 - !private ["PSo26NSExtensionRequestHandling", "UILayoutPriority"]
 - !private ["PSo26NSExtensionRequestHandling", "UILayoutPriorityRequired"]
@@ -1000,6 +1052,8 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "keyPress"]
 - ["PSo26NSExtensionRequestHandling", "letterKeyPress"]
 - !private ["PSo26NSExtensionRequestHandling", "letters"]
+- ["PSo26NSExtensionRequestHandling", "maize"]
+- ["PSo26NSExtensionRequestHandling", "myBlue"]
 - ["PSo26NSExtensionRequestHandling", "numView"]
 - !private ["PSo26NSExtensionRequestHandling", "path"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
@@ -1007,6 +1061,8 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "seq"]
 - ["PSo26NSExtensionRequestHandling", "setUpHeightConstraint"]
 - ["PSo26NSExtensionRequestHandling", "shiftButton"]
+- ["PSo26NSExtensionRequestHandling", "shiftColor"]
+- ["PSo26NSExtensionRequestHandling", "shiftColor.storage"]
 - ["PSo26NSExtensionRequestHandling", "shiftOff"]
 - ["PSo26NSExtensionRequestHandling", "shiftOn"]
 - ["PSo26NSExtensionRequestHandling", "shiftPress"]
@@ -1043,12 +1099,12 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "startIndex"]
 - !private ["PSo16NSMutableCopying", "subscript"]
 - !private ["PSo16NSMutableCopying", "unicodeScalars"]
-- !private ["PSo16NSMutableCopying", "uppercased"]
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "NSLayoutConstraint"]
+- !private ["CSo8NSObject", "RawValue"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIButton"]
-- !private ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "UIColor"]
 - !private ["CSo8NSObject", "UIControlState"]
 - !private ["CSo8NSObject", "UIKeyInput"]
 - !private ["CSo8NSObject", "UILayoutPriority"]
@@ -1064,6 +1120,7 @@ depends-member:
 - !private ["CSo8NSObject", "backgroundColor"]
 - ["CSo8NSObject", "backspacePress"]
 - !private ["CSo8NSObject", "black"]
+- !private ["CSo8NSObject", "blue"]
 - !private ["CSo8NSObject", "bottomAnchor"]
 - !private ["CSo8NSObject", "bounds"]
 - ["CSo8NSObject", "charCounter"]
@@ -1090,7 +1147,10 @@ depends-member:
 - !private ["CSo8NSObject", "letters"]
 - !private ["CSo8NSObject", "lowercased"]
 - ["CSo8NSObject", "main"]
+- ["CSo8NSObject", "maize"]
+- ["CSo8NSObject", "myBlue"]
 - ["CSo8NSObject", "numView"]
+- !private ["CSo8NSObject", "object"]
 - ["CSo8NSObject", "path"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "priority"]
@@ -1100,6 +1160,8 @@ depends-member:
 - !private ["CSo8NSObject", "setTitleColor"]
 - ["CSo8NSObject", "setUpHeightConstraint"]
 - ["CSo8NSObject", "shiftButton"]
+- ["CSo8NSObject", "shiftColor"]
+- ["CSo8NSObject", "shiftColor.storage"]
 - ["CSo8NSObject", "shiftOff"]
 - ["CSo8NSObject", "shiftOn"]
 - ["CSo8NSObject", "shiftPress"]
@@ -1118,15 +1180,15 @@ depends-member:
 - !private ["CSo8NSObject", "trie"]
 - !private ["CSo8NSObject", "unicodeScalars"]
 - ["CSo8NSObject", "updateViewConstraints"]
-- !private ["CSo8NSObject", "uppercased"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["CSo8NSObject", "white"]
 - ["CSo8NSObject", "wordButtons"]
 - ["CSo8NSObject", "wordPress"]
 - !private ["PSo16NSObjectProtocol", "NSLayoutConstraint"]
+- !private ["PSo16NSObjectProtocol", "RawValue"]
 - !private ["PSo16NSObjectProtocol", "String"]
-- !private ["PSo16NSObjectProtocol", "UIColor"]
+- ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIControlState"]
 - !private ["PSo16NSObjectProtocol", "UILayoutPriority"]
 - !private ["PSo16NSObjectProtocol", "UILayoutPriorityRequired"]
@@ -1139,6 +1201,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - ["PSo16NSObjectProtocol", "backspacePress"]
 - !private ["PSo16NSObjectProtocol", "black"]
+- !private ["PSo16NSObjectProtocol", "blue"]
 - !private ["PSo16NSObjectProtocol", "bottomAnchor"]
 - !private ["PSo16NSObjectProtocol", "bounds"]
 - ["PSo16NSObjectProtocol", "charCounter"]
@@ -1168,7 +1231,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "letters"]
 - !private ["PSo16NSObjectProtocol", "lowercased"]
 - ["PSo16NSObjectProtocol", "main"]
+- ["PSo16NSObjectProtocol", "maize"]
+- ["PSo16NSObjectProtocol", "myBlue"]
 - ["PSo16NSObjectProtocol", "numView"]
+- !private ["PSo16NSObjectProtocol", "object"]
 - ["PSo16NSObjectProtocol", "path"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "priority"]
@@ -1178,6 +1244,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "setTitleColor"]
 - ["PSo16NSObjectProtocol", "setUpHeightConstraint"]
 - ["PSo16NSObjectProtocol", "shiftButton"]
+- ["PSo16NSObjectProtocol", "shiftColor"]
+- ["PSo16NSObjectProtocol", "shiftColor.storage"]
 - ["PSo16NSObjectProtocol", "shiftOff"]
 - ["PSo16NSObjectProtocol", "shiftOn"]
 - ["PSo16NSObjectProtocol", "shiftPress"]
@@ -1196,14 +1264,15 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "trie"]
 - !private ["PSo16NSObjectProtocol", "unicodeScalars"]
 - ["PSo16NSObjectProtocol", "updateViewConstraints"]
-- !private ["PSo16NSObjectProtocol", "uppercased"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "white"]
 - ["PSo16NSObjectProtocol", "wordButtons"]
 - ["PSo16NSObjectProtocol", "wordPress"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "RawValue"]
 - !private ["PSo14NSSecureCoding", "black"]
+- !private ["PSo14NSSecureCoding", "blue"]
 - !private ["PSo14NSSecureCoding", "characters"]
 - !private ["PSo14NSSecureCoding", "cyan"]
 - ["PSo14NSSecureCoding", "init"]
@@ -1211,7 +1280,6 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "startIndex"]
 - !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["PSo14NSSecureCoding", "unicodeScalars"]
-- !private ["PSo14NSSecureCoding", "uppercased"]
 - !private ["PSo14NSSecureCoding", "white"]
 - !private ["CSo8NSString", "characters"]
 - ["CSo8NSString", "init"]
@@ -1219,7 +1287,6 @@ depends-member:
 - !private ["CSo8NSString", "startIndex"]
 - !private ["CSo8NSString", "subscript"]
 - !private ["CSo8NSString", "unicodeScalars"]
-- !private ["CSo8NSString", "uppercased"]
 - !private ["Ps9OptionSet", "normal"]
 - ["Sq", "deinit"]
 - !private ["Ps22RandomAccessCollection", "Index"]
@@ -1229,6 +1296,7 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "SubSequence"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "init"]
 - !private ["Ps22RandomAccessCollection", "subscript"]
 - !private ["Ps21RandomAccessIndexable", "Index"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
@@ -1237,6 +1305,7 @@ depends-member:
 - !private ["Ps21RandomAccessIndexable", "SubSequence"]
 - !private ["Ps21RandomAccessIndexable", "_Element"]
 - !private ["Ps21RandomAccessIndexable", "count"]
+- !private ["Ps21RandomAccessIndexable", "init"]
 - !private ["Ps21RandomAccessIndexable", "subscript"]
 - !private ["Vs17RandomAccessSlice", "Index"]
 - !private ["Vs17RandomAccessSlice", "IndexDistance"]
@@ -1250,6 +1319,7 @@ depends-member:
 - !private ["Ps26RangeReplaceableCollection", "SubSequence"]
 - !private ["Ps26RangeReplaceableCollection", "_Element"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "init"]
 - !private ["Ps26RangeReplaceableCollection", "last"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
 - !private ["Ps25RangeReplaceableIndexable", "Index"]
@@ -1258,6 +1328,7 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "SubSequence"]
 - !private ["Ps25RangeReplaceableIndexable", "_Element"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
+- !private ["Ps25RangeReplaceableIndexable", "init"]
 - !private ["Ps25RangeReplaceableIndexable", "last"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
 - !private ["Ps16RawRepresentable", "equal"]
@@ -1274,6 +1345,7 @@ depends-member:
 - !private ["Ps8Sequence", "SubSequence"]
 - !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "init"]
 - !private ["Ps8Sequence", "last"]
 - !private ["Ps8Sequence", "sorted"]
 - !private ["Ps8Sequence", "subscript"]
@@ -1310,25 +1382,24 @@ depends-member:
 - !private ["SS", "startIndex"]
 - !private ["SS", "subscript"]
 - !private ["SS", "unicodeScalars"]
-- !private ["SS", "uppercased"]
 - !private ["Ps16TextOutputStream", "characters"]
 - ["Ps16TextOutputStream", "init"]
 - !private ["Ps16TextOutputStream", "lowercased"]
 - !private ["Ps16TextOutputStream", "startIndex"]
 - !private ["Ps16TextOutputStream", "subscript"]
 - !private ["Ps16TextOutputStream", "unicodeScalars"]
-- !private ["Ps16TextOutputStream", "uppercased"]
 - !private ["Ps20TextOutputStreamable", "characters"]
 - ["Ps20TextOutputStreamable", "init"]
 - !private ["Ps20TextOutputStreamable", "lowercased"]
 - !private ["Ps20TextOutputStreamable", "startIndex"]
 - !private ["Ps20TextOutputStreamable", "subscript"]
 - !private ["Ps20TextOutputStreamable", "unicodeScalars"]
-- !private ["Ps20TextOutputStreamable", "uppercased"]
 - ["C14customKeyboard4Trie", "deinit"]
+- !private ["C14customKeyboard4Trie", "deleteWord"]
 - !private ["C14customKeyboard4Trie", "getPossibilities"]
 - !private ["C14customKeyboard4Trie", "incrementFreq"]
 - ["C14customKeyboard4Trie", "init"]
+- !private ["C14customKeyboard4Trie", "insert"]
 - !private ["C14customKeyboard4Trie", "loadTrie"]
 - !private ["C14customKeyboard4Trie", "rootNode"]
 - !private ["PSo29UIAccessibilityIdentification", "addConstraint"]
@@ -1351,7 +1422,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "titleLabel"]
 - !private ["PSo21UIAppearanceContainer", "NSLayoutConstraint"]
 - !private ["PSo21UIAppearanceContainer", "String"]
-- !private ["PSo21UIAppearanceContainer", "UIColor"]
+- ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIControlState"]
 - !private ["PSo21UIAppearanceContainer", "UILayoutPriority"]
 - !private ["PSo21UIAppearanceContainer", "UILayoutPriorityRequired"]
@@ -1380,6 +1451,8 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "keyPress"]
 - ["PSo21UIAppearanceContainer", "letterKeyPress"]
 - !private ["PSo21UIAppearanceContainer", "letters"]
+- ["PSo21UIAppearanceContainer", "maize"]
+- ["PSo21UIAppearanceContainer", "myBlue"]
 - ["PSo21UIAppearanceContainer", "numView"]
 - !private ["PSo21UIAppearanceContainer", "path"]
 - !private ["PSo21UIAppearanceContainer", "print"]
@@ -1389,6 +1462,8 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "setTitleColor"]
 - ["PSo21UIAppearanceContainer", "setUpHeightConstraint"]
 - ["PSo21UIAppearanceContainer", "shiftButton"]
+- ["PSo21UIAppearanceContainer", "shiftColor"]
+- ["PSo21UIAppearanceContainer", "shiftColor.storage"]
 - ["PSo21UIAppearanceContainer", "shiftOff"]
 - ["PSo21UIAppearanceContainer", "shiftOn"]
 - ["PSo21UIAppearanceContainer", "shiftPress"]
@@ -1414,14 +1489,16 @@ depends-member:
 - !private ["CSo8UIButton", "setTitle"]
 - !private ["CSo8UIButton", "setTitleColor"]
 - !private ["CSo8UIButton", "titleLabel"]
+- !private ["CSo7UIColor", "RawValue"]
 - !private ["CSo7UIColor", "black"]
+- !private ["CSo7UIColor", "blue"]
 - !private ["CSo7UIColor", "cyan"]
 - ["CSo7UIColor", "deinit"]
-- !private ["CSo7UIColor", "init"]
+- ["CSo7UIColor", "init"]
 - !private ["CSo7UIColor", "white"]
 - !private ["PSo18UIContentContainer", "NSLayoutConstraint"]
 - !private ["PSo18UIContentContainer", "String"]
-- !private ["PSo18UIContentContainer", "UIColor"]
+- ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIControlState"]
 - !private ["PSo18UIContentContainer", "UILayoutPriority"]
 - !private ["PSo18UIContentContainer", "UILayoutPriorityRequired"]
@@ -1445,6 +1522,8 @@ depends-member:
 - ["PSo18UIContentContainer", "keyPress"]
 - ["PSo18UIContentContainer", "letterKeyPress"]
 - !private ["PSo18UIContentContainer", "letters"]
+- ["PSo18UIContentContainer", "maize"]
+- ["PSo18UIContentContainer", "myBlue"]
 - ["PSo18UIContentContainer", "numView"]
 - !private ["PSo18UIContentContainer", "path"]
 - !private ["PSo18UIContentContainer", "print"]
@@ -1452,6 +1531,8 @@ depends-member:
 - !private ["PSo18UIContentContainer", "seq"]
 - ["PSo18UIContentContainer", "setUpHeightConstraint"]
 - ["PSo18UIContentContainer", "shiftButton"]
+- ["PSo18UIContentContainer", "shiftColor"]
+- ["PSo18UIContentContainer", "shiftColor.storage"]
 - ["PSo18UIContentContainer", "shiftOff"]
 - ["PSo18UIContentContainer", "shiftOn"]
 - ["PSo18UIContentContainer", "shiftPress"]
@@ -1497,7 +1578,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "titleLabel"]
 - !private ["PSo18UIFocusEnvironment", "NSLayoutConstraint"]
 - !private ["PSo18UIFocusEnvironment", "String"]
-- !private ["PSo18UIFocusEnvironment", "UIColor"]
+- ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIControlState"]
 - !private ["PSo18UIFocusEnvironment", "UILayoutPriority"]
 - !private ["PSo18UIFocusEnvironment", "UILayoutPriorityRequired"]
@@ -1526,6 +1607,8 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "keyPress"]
 - ["PSo18UIFocusEnvironment", "letterKeyPress"]
 - !private ["PSo18UIFocusEnvironment", "letters"]
+- ["PSo18UIFocusEnvironment", "maize"]
+- ["PSo18UIFocusEnvironment", "myBlue"]
 - ["PSo18UIFocusEnvironment", "numView"]
 - !private ["PSo18UIFocusEnvironment", "path"]
 - !private ["PSo18UIFocusEnvironment", "print"]
@@ -1535,6 +1618,8 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "setTitleColor"]
 - ["PSo18UIFocusEnvironment", "setUpHeightConstraint"]
 - ["PSo18UIFocusEnvironment", "shiftButton"]
+- ["PSo18UIFocusEnvironment", "shiftColor"]
+- ["PSo18UIFocusEnvironment", "shiftColor.storage"]
 - ["PSo18UIFocusEnvironment", "shiftOff"]
 - ["PSo18UIFocusEnvironment", "shiftOn"]
 - ["PSo18UIFocusEnvironment", "shiftPress"]
@@ -1567,7 +1652,7 @@ depends-member:
 - ["CSo21UIInputViewController", "NSLayoutConstraint"]
 - ["CSo21UIInputViewController", "String"]
 - ["CSo21UIInputViewController", "UIButton"]
-- !private ["CSo21UIInputViewController", "UIColor"]
+- ["CSo21UIInputViewController", "UIColor"]
 - !private ["CSo21UIInputViewController", "UIControlState"]
 - !private ["CSo21UIInputViewController", "UIKeyInput"]
 - !private ["CSo21UIInputViewController", "UILayoutPriority"]
@@ -1595,6 +1680,8 @@ depends-member:
 - ["CSo21UIInputViewController", "keyPress"]
 - ["CSo21UIInputViewController", "letterKeyPress"]
 - !private ["CSo21UIInputViewController", "letters"]
+- ["CSo21UIInputViewController", "maize"]
+- ["CSo21UIInputViewController", "myBlue"]
 - ["CSo21UIInputViewController", "numView"]
 - !private ["CSo21UIInputViewController", "path"]
 - !private ["CSo21UIInputViewController", "print"]
@@ -1602,6 +1689,8 @@ depends-member:
 - !private ["CSo21UIInputViewController", "seq"]
 - ["CSo21UIInputViewController", "setUpHeightConstraint"]
 - ["CSo21UIInputViewController", "shiftButton"]
+- ["CSo21UIInputViewController", "shiftColor"]
+- ["CSo21UIInputViewController", "shiftColor.storage"]
 - ["CSo21UIInputViewController", "shiftOff"]
 - ["CSo21UIInputViewController", "shiftOn"]
 - ["CSo21UIInputViewController", "shiftPress"]
@@ -1630,7 +1719,7 @@ depends-member:
 - ["CSo11UIResponder", "NSLayoutConstraint"]
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIButton"]
-- !private ["CSo11UIResponder", "UIColor"]
+- ["CSo11UIResponder", "UIColor"]
 - !private ["CSo11UIResponder", "UIControlState"]
 - !private ["CSo11UIResponder", "UIKeyInput"]
 - !private ["CSo11UIResponder", "UILayoutPriority"]
@@ -1662,6 +1751,8 @@ depends-member:
 - ["CSo11UIResponder", "keyPress"]
 - ["CSo11UIResponder", "letterKeyPress"]
 - !private ["CSo11UIResponder", "letters"]
+- ["CSo11UIResponder", "maize"]
+- ["CSo11UIResponder", "myBlue"]
 - ["CSo11UIResponder", "numView"]
 - !private ["CSo11UIResponder", "path"]
 - !private ["CSo11UIResponder", "print"]
@@ -1671,6 +1762,8 @@ depends-member:
 - !private ["CSo11UIResponder", "setTitleColor"]
 - ["CSo11UIResponder", "setUpHeightConstraint"]
 - ["CSo11UIResponder", "shiftButton"]
+- ["CSo11UIResponder", "shiftColor"]
+- ["CSo11UIResponder", "shiftColor.storage"]
 - ["CSo11UIResponder", "shiftOff"]
 - ["CSo11UIResponder", "shiftOn"]
 - ["CSo11UIResponder", "shiftPress"]
@@ -1691,7 +1784,7 @@ depends-member:
 - ["CSo11UIResponder", "wordPress"]
 - !private ["PSo30UIResponderStandardEditActions", "NSLayoutConstraint"]
 - !private ["PSo30UIResponderStandardEditActions", "String"]
-- !private ["PSo30UIResponderStandardEditActions", "UIColor"]
+- ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "UIControlState"]
 - !private ["PSo30UIResponderStandardEditActions", "UILayoutPriority"]
 - !private ["PSo30UIResponderStandardEditActions", "UILayoutPriorityRequired"]
@@ -1720,6 +1813,8 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "keyPress"]
 - ["PSo30UIResponderStandardEditActions", "letterKeyPress"]
 - !private ["PSo30UIResponderStandardEditActions", "letters"]
+- ["PSo30UIResponderStandardEditActions", "maize"]
+- ["PSo30UIResponderStandardEditActions", "myBlue"]
 - ["PSo30UIResponderStandardEditActions", "numView"]
 - !private ["PSo30UIResponderStandardEditActions", "path"]
 - !private ["PSo30UIResponderStandardEditActions", "print"]
@@ -1729,6 +1824,8 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "setTitleColor"]
 - ["PSo30UIResponderStandardEditActions", "setUpHeightConstraint"]
 - ["PSo30UIResponderStandardEditActions", "shiftButton"]
+- ["PSo30UIResponderStandardEditActions", "shiftColor"]
+- ["PSo30UIResponderStandardEditActions", "shiftColor.storage"]
 - ["PSo30UIResponderStandardEditActions", "shiftOff"]
 - ["PSo30UIResponderStandardEditActions", "shiftOn"]
 - ["PSo30UIResponderStandardEditActions", "shiftPress"]
@@ -1753,7 +1850,7 @@ depends-member:
 - !private ["CSo8UIScreen", "main"]
 - !private ["PSo16UIStateRestoring", "NSLayoutConstraint"]
 - !private ["PSo16UIStateRestoring", "String"]
-- !private ["PSo16UIStateRestoring", "UIColor"]
+- ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIControlState"]
 - !private ["PSo16UIStateRestoring", "UILayoutPriority"]
 - !private ["PSo16UIStateRestoring", "UILayoutPriorityRequired"]
@@ -1777,6 +1874,8 @@ depends-member:
 - ["PSo16UIStateRestoring", "keyPress"]
 - ["PSo16UIStateRestoring", "letterKeyPress"]
 - !private ["PSo16UIStateRestoring", "letters"]
+- ["PSo16UIStateRestoring", "maize"]
+- ["PSo16UIStateRestoring", "myBlue"]
 - ["PSo16UIStateRestoring", "numView"]
 - !private ["PSo16UIStateRestoring", "path"]
 - !private ["PSo16UIStateRestoring", "print"]
@@ -1784,6 +1883,8 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "seq"]
 - ["PSo16UIStateRestoring", "setUpHeightConstraint"]
 - ["PSo16UIStateRestoring", "shiftButton"]
+- ["PSo16UIStateRestoring", "shiftColor"]
+- ["PSo16UIStateRestoring", "shiftColor.storage"]
 - ["PSo16UIStateRestoring", "shiftOff"]
 - ["PSo16UIStateRestoring", "shiftOn"]
 - ["PSo16UIStateRestoring", "shiftPress"]
@@ -1807,7 +1908,7 @@ depends-member:
 - !private ["PSo19UITextDocumentProxy", "hasText"]
 - !private ["PSo19UITextInputDelegate", "NSLayoutConstraint"]
 - !private ["PSo19UITextInputDelegate", "String"]
-- !private ["PSo19UITextInputDelegate", "UIColor"]
+- ["PSo19UITextInputDelegate", "UIColor"]
 - !private ["PSo19UITextInputDelegate", "UIControlState"]
 - !private ["PSo19UITextInputDelegate", "UILayoutPriority"]
 - !private ["PSo19UITextInputDelegate", "UILayoutPriorityRequired"]
@@ -1831,6 +1932,8 @@ depends-member:
 - ["PSo19UITextInputDelegate", "keyPress"]
 - ["PSo19UITextInputDelegate", "letterKeyPress"]
 - !private ["PSo19UITextInputDelegate", "letters"]
+- ["PSo19UITextInputDelegate", "maize"]
+- ["PSo19UITextInputDelegate", "myBlue"]
 - ["PSo19UITextInputDelegate", "numView"]
 - !private ["PSo19UITextInputDelegate", "path"]
 - !private ["PSo19UITextInputDelegate", "print"]
@@ -1838,6 +1941,8 @@ depends-member:
 - !private ["PSo19UITextInputDelegate", "seq"]
 - ["PSo19UITextInputDelegate", "setUpHeightConstraint"]
 - ["PSo19UITextInputDelegate", "shiftButton"]
+- ["PSo19UITextInputDelegate", "shiftColor"]
+- ["PSo19UITextInputDelegate", "shiftColor.storage"]
 - ["PSo19UITextInputDelegate", "shiftOff"]
 - ["PSo19UITextInputDelegate", "shiftOn"]
 - ["PSo19UITextInputDelegate", "shiftPress"]
@@ -1861,7 +1966,7 @@ depends-member:
 - !private ["PSo17UITextInputTraits", "insertText"]
 - !private ["PSo18UITraitEnvironment", "NSLayoutConstraint"]
 - !private ["PSo18UITraitEnvironment", "String"]
-- !private ["PSo18UITraitEnvironment", "UIColor"]
+- ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIControlState"]
 - !private ["PSo18UITraitEnvironment", "UILayoutPriority"]
 - !private ["PSo18UITraitEnvironment", "UILayoutPriorityRequired"]
@@ -1892,6 +1997,8 @@ depends-member:
 - ["PSo18UITraitEnvironment", "letterKeyPress"]
 - !private ["PSo18UITraitEnvironment", "letters"]
 - !private ["PSo18UITraitEnvironment", "main"]
+- ["PSo18UITraitEnvironment", "maize"]
+- ["PSo18UITraitEnvironment", "myBlue"]
 - ["PSo18UITraitEnvironment", "numView"]
 - !private ["PSo18UITraitEnvironment", "path"]
 - !private ["PSo18UITraitEnvironment", "print"]
@@ -1901,6 +2008,8 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "setTitleColor"]
 - ["PSo18UITraitEnvironment", "setUpHeightConstraint"]
 - ["PSo18UITraitEnvironment", "shiftButton"]
+- ["PSo18UITraitEnvironment", "shiftColor"]
+- ["PSo18UITraitEnvironment", "shiftColor.storage"]
 - ["PSo18UITraitEnvironment", "shiftOff"]
 - ["PSo18UITraitEnvironment", "shiftOn"]
 - ["PSo18UITraitEnvironment", "shiftPress"]
@@ -1933,7 +2042,7 @@ depends-member:
 - ["CSo16UIViewController", "NSLayoutConstraint"]
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIButton"]
-- !private ["CSo16UIViewController", "UIColor"]
+- ["CSo16UIViewController", "UIColor"]
 - !private ["CSo16UIViewController", "UIControlState"]
 - !private ["CSo16UIViewController", "UIKeyInput"]
 - !private ["CSo16UIViewController", "UILayoutPriority"]
@@ -1960,6 +2069,8 @@ depends-member:
 - ["CSo16UIViewController", "keyPress"]
 - ["CSo16UIViewController", "letterKeyPress"]
 - !private ["CSo16UIViewController", "letters"]
+- ["CSo16UIViewController", "maize"]
+- ["CSo16UIViewController", "myBlue"]
 - ["CSo16UIViewController", "numView"]
 - !private ["CSo16UIViewController", "path"]
 - !private ["CSo16UIViewController", "print"]
@@ -1967,6 +2078,8 @@ depends-member:
 - !private ["CSo16UIViewController", "seq"]
 - ["CSo16UIViewController", "setUpHeightConstraint"]
 - ["CSo16UIViewController", "shiftButton"]
+- ["CSo16UIViewController", "shiftColor"]
+- ["CSo16UIViewController", "shiftColor.storage"]
 - ["CSo16UIViewController", "shiftOff"]
 - ["CSo16UIViewController", "shiftOn"]
 - ["CSo16UIViewController", "shiftPress"]
@@ -1989,6 +2102,7 @@ depends-member:
 - !private ["VSS17UnicodeScalarView", "last"]
 - ["CSo12UserDefaults", "deinit"]
 - !private ["CSo12UserDefaults", "init"]
+- !private ["CSo12UserDefaults", "object"]
 - !private ["CSo12UserDefaults", "string"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
@@ -1996,6 +2110,7 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "SubSequence"]
 - !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "init"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
 - !private ["Ps15_CVarArgAligned", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
@@ -2014,6 +2129,7 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "characters"]
@@ -2022,7 +2138,6 @@ depends-member:
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "startIndex"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "subscript"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "unicodeScalars"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "uppercased"]
 - !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
@@ -2034,24 +2149,23 @@ depends-member:
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "startIndex"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "subscript"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "unicodeScalars"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "uppercased"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "characters"]
 - ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "lowercased"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "startIndex"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "subscript"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "unicodeScalars"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "uppercased"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "characters"]
 - ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "lowercased"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "startIndex"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "subscript"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "unicodeScalars"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "uppercased"]
+- !private ["Ps26_ExpressibleByColorLiteral", "RawValue"]
 - !private ["Ps26_ExpressibleByColorLiteral", "black"]
+- !private ["Ps26_ExpressibleByColorLiteral", "blue"]
 - !private ["Ps26_ExpressibleByColorLiteral", "cyan"]
-- !private ["Ps26_ExpressibleByColorLiteral", "init"]
+- ["Ps26_ExpressibleByColorLiteral", "init"]
 - !private ["Ps26_ExpressibleByColorLiteral", "white"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "characters"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
@@ -2059,12 +2173,12 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "startIndex"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "subscript"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "unicodeScalars"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "uppercased"]
 - !private ["Ps9_Hashable", "IntegerLiteralType"]
 - !private ["Ps9_Hashable", "NSLayoutConstraint"]
+- !private ["Ps9_Hashable", "RawValue"]
 - !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "String"]
-- !private ["Ps9_Hashable", "UIColor"]
+- ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UIControlState"]
 - !private ["Ps9_Hashable", "UILayoutPriority"]
 - !private ["Ps9_Hashable", "UILayoutPriorityRequired"]
@@ -2079,6 +2193,7 @@ depends-member:
 - !private ["Ps9_Hashable", "backgroundColor"]
 - ["Ps9_Hashable", "backspacePress"]
 - !private ["Ps9_Hashable", "black"]
+- !private ["Ps9_Hashable", "blue"]
 - !private ["Ps9_Hashable", "bottomAnchor"]
 - !private ["Ps9_Hashable", "bounds"]
 - ["Ps9_Hashable", "charCounter"]
@@ -2107,8 +2222,11 @@ depends-member:
 - ["Ps9_Hashable", "letters"]
 - !private ["Ps9_Hashable", "lowercased"]
 - ["Ps9_Hashable", "main"]
+- ["Ps9_Hashable", "maize"]
+- ["Ps9_Hashable", "myBlue"]
 - !private ["Ps9_Hashable", "notAnAttribute"]
 - ["Ps9_Hashable", "numView"]
+- !private ["Ps9_Hashable", "object"]
 - ["Ps9_Hashable", "path"]
 - !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "priority"]
@@ -2118,6 +2236,8 @@ depends-member:
 - !private ["Ps9_Hashable", "setTitleColor"]
 - ["Ps9_Hashable", "setUpHeightConstraint"]
 - ["Ps9_Hashable", "shiftButton"]
+- ["Ps9_Hashable", "shiftColor"]
+- ["Ps9_Hashable", "shiftColor.storage"]
 - ["Ps9_Hashable", "shiftOff"]
 - ["Ps9_Hashable", "shiftOn"]
 - ["Ps9_Hashable", "shiftPress"]
@@ -2136,7 +2256,6 @@ depends-member:
 - !private ["Ps9_Hashable", "trie"]
 - !private ["Ps9_Hashable", "unicodeScalars"]
 - ["Ps9_Hashable", "updateViewConstraints"]
-- !private ["Ps9_Hashable", "uppercased"]
 - !private ["Ps9_Hashable", "view"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - !private ["Ps9_Hashable", "white"]
@@ -2174,7 +2293,6 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "startIndex"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps21_ObjectiveCBridgeable", "unicodeScalars"]
-- !private ["Ps21_ObjectiveCBridgeable", "uppercased"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - !private ["Ps14_SignedInteger", "IntegerLiteralType"]
 - !private ["Ps14_SignedInteger", "Stride"]
@@ -2315,7 +2433,7 @@ depends-nominal:
 - "Ps34_ExpressibleByBuiltinStringLiteral"
 - "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- !private "Ps26_ExpressibleByColorLiteral"
+- "Ps26_ExpressibleByColorLiteral"
 - "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
 - !private "Ps14_Incrementable"
@@ -2338,4 +2456,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "9692cd03a54f37674e289a302741b39b"
+interface-hash: "af0a8636d87070e0e36a232536fb3920"

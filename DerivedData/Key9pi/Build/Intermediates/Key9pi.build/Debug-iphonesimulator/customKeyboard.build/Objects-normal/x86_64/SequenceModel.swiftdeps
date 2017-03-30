@@ -9,19 +9,19 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "Dictionary"
-- "AssignmentPrecedence"
 - !private "..."
-- "Bool"
-- !private "+="
-- !private "print"
-- "SequenceModel"
-- "UnicodeScalarType"
-- !private "Character"
-- !private "Array"
-- "String"
-- "buttonToNumber"
 - "StringLiteralType"
+- !private "+="
+- "UnicodeScalarType"
+- !private "print"
+- "buttonToNumber"
 - !private "-"
+- "SequenceModel"
+- "AssignmentPrecedence"
+- "String"
+- !private "Character"
+- "Bool"
+- !private "Array"
 depends-member:
 - !private ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "Character"]
