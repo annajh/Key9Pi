@@ -766,7 +766,6 @@
                         <outlet property="symView" destination="vHf-vm-ori" id="kHr-Gj-ybq"/>
                         <outlet property="textView" destination="uhc-ix-wGT" id="KXY-Qc-KTN"/>
                         <outletCollection property="wordButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="SWZ-cR-PyY"/>
-                        <outletCollection property="wordButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="EaB-UN-M32"/>
                         <outletCollection property="wordButtons" destination="Ume-fj-j4D" collectionClass="NSMutableArray" id="ozx-Jl-eNK"/>
                         <outletCollection property="wordButtons" destination="e1h-Jc-9lV" collectionClass="NSMutableArray" id="16R-pv-Yx3"/>
                         <outletCollection property="allTextButtons" destination="Utc-h4-xs8" collectionClass="NSMutableArray" id="R4y-jp-Awf"/>
