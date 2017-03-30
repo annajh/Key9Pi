@@ -169,15 +169,15 @@ SWIFT_CLASS("_TtC6Key9pi22KeyboardViewController")
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified textView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified symView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified numView;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified allTextButtons;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified allButtons;
 @property (nonatomic) BOOL shiftPressed;
 @property (nonatomic) BOOL enterPressed;
 @property (nonatomic) NSInteger charCounter;
 - (void)shiftOn;
 - (void)shiftOff;
+- (void)resetSuggestions;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified shiftButton;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word1;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word2;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word3;
 @property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified wordButtons;
 - (IBAction)wordPress:(UIButton * _Nonnull)sender;
 - (IBAction)goToNum:(UIButton * _Nonnull)sender;
@@ -200,6 +200,12 @@ SWIFT_CLASS("_TtC6Key9pi22KeyboardViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface UIViewController (SWIFT_EXTENSION(Key9pi))
+- (void)hideKeyboardWhenTappedAround;
+- (void)dismissKeyboard;
+@end
+
 @class UITextField;
 
 SWIFT_CLASS("_TtC6Key9pi16ViewControllerMy")
@@ -207,10 +213,13 @@ SWIFT_CLASS("_TtC6Key9pi16ViewControllerMy")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified wordTextField;
 - (IBAction)addWordsPressed:(UIButton * _Nonnull)sender;
 - (IBAction)delWordsPressed:(UIButton * _Nonnull)sender;
+- (IBAction)savePressed:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (IBAction)goBack:(UIButton * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (IBAction)backgroundPress:(UIButton * _Nonnull)sender;
+- (IBAction)buttonPress:(UIButton * _Nonnull)sender;
+- (IBAction)textPress:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

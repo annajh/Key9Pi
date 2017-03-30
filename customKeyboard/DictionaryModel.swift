@@ -65,6 +65,9 @@ class Trie {
     }
     
     func insert(word: String, freq: Int, rootNode: Node) {
+        
+        if wordInTrie(searchWord: word, rootNode: rootNode) { return }
+        
         rootNode.size += 1
         var currNode = rootNode
         
@@ -172,5 +175,17 @@ class Trie {
         getDeeperPossibilities(startNode: currNode, maxDepth: 3, count: 0);
         
         return results
+    }
+    
+    func wordInTrie(searchWord: String, rootNode: Node) -> Bool {
+        let searchNode = self.findNode(word: searchWord, rootNode: rootNode)
+        
+        for word in searchNode.wordList {
+            if searchWord == word.key {
+                return true
+            }
+        }
+        
+        return false
     }
 }
