@@ -1,0 +1,6 @@
+To run the simulation, open xcode and choose the "check out an existing project" option.  Paste the GitHub clone URL when prompted.  
+When the project opens, click on product --> run and wait for the simulator to load.  This may take a few seconds.
+Open the Key9pi app and explore. Clicking on the text field will pull up the keyboard and you can select our custom keyboard. 
+If it is not there, you can go to settings --> general --> keyboards and add our keyboard.
+Clicking outside of the text field in the main app will dismiss the keyboard.  If you click on Go to change color scheme, you have a few options for our keyboard colors.
+We have the alpahnumeric, numbers and symbols views working.
