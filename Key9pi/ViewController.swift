@@ -50,8 +50,6 @@ class ViewControllerMy: UIViewController {
         }
     }
 
-    @IBAction func savePressed(_ sender: UIButton) {
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

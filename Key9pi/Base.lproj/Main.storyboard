@@ -71,18 +71,34 @@
                                     <action selector="addWordsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAo-l0-IfT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oE-6Q-hcM">
+                                <rect key="frame" x="208" y="344" width="151" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="fBD-Z8-SDt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="Delete word">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="delWordsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDS-iC-HWG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0ST-11-xpM"/>
                             <constraint firstItem="Mms-WI-s73" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5LN-ue-Bnc"/>
                             <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="Mms-WI-s73" secondAttribute="leading" id="62r-PH-ZlL"/>
+                            <constraint firstItem="8oE-6Q-hcM" firstAttribute="top" secondItem="UJa-yO-7xe" secondAttribute="bottom" constant="8" symbolic="YES" id="ClS-PQ-wsB"/>
                             <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="wRQ-5v-Hkg" secondAttribute="leading" id="MI5-W4-119"/>
                             <constraint firstItem="37f-UH-zmZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="230" id="MPD-8N-Z54"/>
                             <constraint firstItem="37f-UH-zmZ" firstAttribute="leading" secondItem="A2L-IU-NIz" secondAttribute="leading" id="NS5-FK-7Gy"/>
                             <constraint firstItem="Mms-WI-s73" firstAttribute="trailing" secondItem="wRQ-5v-Hkg" secondAttribute="trailing" id="Vso-VU-N5Q"/>
                             <constraint firstItem="UJa-yO-7xe" firstAttribute="leading" secondItem="A2L-IU-NIz" secondAttribute="trailing" constant="32" id="WXB-M8-kJz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mms-WI-s73" secondAttribute="bottom" constant="8" symbolic="YES" id="bJQ-Uk-liu"/>
+                            <constraint firstItem="8oE-6Q-hcM" firstAttribute="leading" secondItem="UJa-yO-7xe" secondAttribute="leading" id="e1d-hm-eYT"/>
                             <constraint firstItem="UJa-yO-7xe" firstAttribute="centerY" secondItem="A2L-IU-NIz" secondAttribute="centerY" id="iqS-5G-cZp"/>
                             <constraint firstItem="Mms-WI-s73" firstAttribute="trailing" secondItem="UJa-yO-7xe" secondAttribute="trailing" id="kaC-bT-cap"/>
                             <constraint firstItem="A2L-IU-NIz" firstAttribute="top" secondItem="37f-UH-zmZ" secondAttribute="bottom" constant="8" symbolic="YES" id="sBj-92-ASa"/>
