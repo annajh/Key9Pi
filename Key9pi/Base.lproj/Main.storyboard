@@ -283,6 +283,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outletCollection property="backgroundButtons" destination="DEr-AK-Ljh" collectionClass="NSMutableArray" id="Glp-G2-0ra"/>
+                        <outletCollection property="backgroundButtons" destination="5p6-zf-spL" collectionClass="NSMutableArray" id="Y2G-Bq-iJn"/>
+                        <outletCollection property="backgroundButtons" destination="d3n-xL-Fxy" collectionClass="NSMutableArray" id="2i1-Qq-aZ6"/>
+                        <outletCollection property="backgroundButtons" destination="q1B-19-aSJ" collectionClass="NSMutableArray" id="Vpw-4C-gvc"/>
+                        <outletCollection property="buttonsButtons" destination="90O-5O-6Bh" collectionClass="NSMutableArray" id="nQN-Fg-CTI"/>
+                        <outletCollection property="textButtons" destination="owN-Ob-Dpc" collectionClass="NSMutableArray" id="lOT-pZ-A7I"/>
+                        <outletCollection property="buttonsButtons" destination="lR3-X2-8L8" collectionClass="NSMutableArray" id="Yw7-1E-oBq"/>
+                        <outletCollection property="buttonsButtons" destination="sOH-cJ-FqD" collectionClass="NSMutableArray" id="nPi-5l-Si1"/>
+                        <outletCollection property="buttonsButtons" destination="woC-b6-DAX" collectionClass="NSMutableArray" id="fh3-RZ-biG"/>
+                        <outletCollection property="textButtons" destination="cbu-T3-3v8" collectionClass="NSMutableArray" id="Tog-Ol-I4g"/>
+                        <outletCollection property="textButtons" destination="Jcw-It-AKm" collectionClass="NSMutableArray" id="CiI-rI-pQ5"/>
+                        <outletCollection property="textButtons" destination="nTU-qI-Ed3" collectionClass="NSMutableArray" id="NMl-Bj-ZBn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRM-pf-TfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

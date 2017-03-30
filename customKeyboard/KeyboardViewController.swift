@@ -134,10 +134,11 @@ class KeyboardViewController: UIInputViewController {
         print(charCounter)
         //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
         if shiftPressed {
-            str =  str.uppercased()
+            //str =  str.uppercased()
             shiftPressed = false
             //shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
-            shiftButton.backgroundColor = UIColor.white
+            //shiftButton.backgroundColor = UIColor.white
+            shiftOff()
         }
 //        if enterPressed {
 //            str =  str.uppercased()

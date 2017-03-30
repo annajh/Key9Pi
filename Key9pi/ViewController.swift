@@ -13,6 +13,12 @@ class ViewControllerMy: UIViewController {
 
     @IBOutlet weak var wordTextField: UITextField!
     
+    
+    @IBOutlet var backgroundButtons: [UIButton]!
+    
+    @IBOutlet var buttonsButtons: [UIButton]!
+    
+    @IBOutlet var textButtons: [UIButton]!
 
     @IBAction func addWordsPressed(_ sender: UIButton) {
         let text = wordTextField.text ?? ""
@@ -26,6 +32,7 @@ class ViewControllerMy: UIViewController {
         for word in wordlist {  // TODO: check for duplicates
             trie.insert(word: word, freq: 0, rootNode: trie.rootNode)
         }
+        
     }
     
     
@@ -93,6 +100,14 @@ class ViewControllerMy: UIViewController {
             userDefaults.set(sender.currentTitle! as AnyObject, forKey: "background")
             userDefaults.synchronize()
         }
+        
+        //change color of pressed button
+        for button in backgroundButtons{
+            button.backgroundColor = UIColor.black
+           // button.setTitleColor(.white, for: .normal)
+        }
+        sender.backgroundColor = UIColor.blue
+        
     }
     
     @IBAction func buttonPress(_ sender: UIButton) {
@@ -101,6 +116,14 @@ class ViewControllerMy: UIViewController {
             userDefaults.set(sender.currentTitle! as AnyObject, forKey: "button")
             userDefaults.synchronize()
         }
+        
+        //change color of pressed button
+        for button in buttonsButtons{
+            button.backgroundColor = UIColor.black
+            // button.setTitleColor(.white, for: .normal)
+        }
+        sender.backgroundColor = UIColor.blue
+
     }
     
     @IBAction func textPress(_ sender: UIButton) {
@@ -109,6 +132,14 @@ class ViewControllerMy: UIViewController {
             userDefaults.set(sender.currentTitle! as AnyObject, forKey: "text")
             userDefaults.synchronize()
         }
+        
+        //change color of pressed button
+        for button in textButtons{
+            button.backgroundColor = UIColor.black
+            // button.setTitleColor(.white, for: .normal)
+        }
+        sender.backgroundColor = UIColor.blue
+
     }
     
 }
