@@ -762,7 +762,7 @@
                     </view>
                     <connections>
                         <outlet property="numView" destination="aZL-8J-TUd" id="QxV-ar-ZTI"/>
-                        <outlet property="shiftButton" destination="8v5-Gp-ga0" id="iZ0-6s-ccM"/>
+                        <outlet property="shiftButton" destination="8v5-Gp-ga0" id="uat-LY-j12"/>
                         <outlet property="symView" destination="vHf-vm-ori" id="kHr-Gj-ybq"/>
                         <outlet property="textView" destination="uhc-ix-wGT" id="KXY-Qc-KTN"/>
                         <outletCollection property="wordButtons" destination="0ka-BM-GRG" collectionClass="NSMutableArray" id="SWZ-cR-PyY"/>
