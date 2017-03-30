@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0BC1E0F51E86F6BB009298A7 /* SequenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC1E0F41E86F6BB009298A7 /* SequenceModel.swift */; };
 		0BC1E0F61E86FFF2009298A7 /* SequenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC1E0F41E86F6BB009298A7 /* SequenceModel.swift */; };
+		0BC2E5C81E8C8D1E00F12869 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC2E5C71E8C8D1E00F12869 /* CoreDataStack.swift */; };
+		0BC2E5C91E8C90F500F12869 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC2E5C71E8C8D1E00F12869 /* CoreDataStack.swift */; };
+		0BC2E5CD1E8CB79800F12869 /* Key9Pi.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0BC2E5CA1E8CB79800F12869 /* Key9Pi.sqlite */; };
+		0BC2E5CE1E8CB79800F12869 /* Key9Pi.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC2E5CB1E8CB79800F12869 /* Key9Pi.sqlite-shm */; };
+		0BC2E5CF1E8CB79800F12869 /* Key9Pi.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 0BC2E5CC1E8CB79800F12869 /* Key9Pi.sqlite-wal */; };
 		4C6142071E6E8BCA00C53130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6142061E6E8BCA00C53130 /* AppDelegate.swift */; };
 		4C6142091E6E8BCA00C53130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6142081E6E8BCA00C53130 /* ViewController.swift */; };
 		4C61420C1E6E8BCA00C53130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C61420A1E6E8BCA00C53130 /* Main.storyboard */; };
@@ -56,6 +61,10 @@
 
 /* Begin PBXFileReference section */
 		0BC1E0F41E86F6BB009298A7 /* SequenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceModel.swift; sourceTree = "<group>"; };
+		0BC2E5C71E8C8D1E00F12869 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		0BC2E5CA1E8CB79800F12869 /* Key9Pi.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Key9Pi.sqlite; sourceTree = "<group>"; };
+		0BC2E5CB1E8CB79800F12869 /* Key9Pi.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Key9Pi.sqlite-shm"; sourceTree = "<group>"; };
+		0BC2E5CC1E8CB79800F12869 /* Key9Pi.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Key9Pi.sqlite-wal"; sourceTree = "<group>"; };
 		4C6142031E6E8BCA00C53130 /* Key9pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Key9pi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6142061E6E8BCA00C53130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C6142081E6E8BCA00C53130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +106,10 @@
 		4C6141FA1E6E8BCA00C53130 = {
 			isa = PBXGroup;
 			children = (
+				0BC2E5CA1E8CB79800F12869 /* Key9Pi.sqlite */,
+				0BC2E5CB1E8CB79800F12869 /* Key9Pi.sqlite-shm */,
+				0BC2E5CC1E8CB79800F12869 /* Key9Pi.sqlite-wal */,
+				0BC2E5C71E8C8D1E00F12869 /* CoreDataStack.swift */,
 				4C6142051E6E8BCA00C53130 /* Key9pi */,
 				4C6142201E6E8BE400C53130 /* customKeyboard */,
 				4C6142041E6E8BCA00C53130 /* Products */,
@@ -194,7 +207,7 @@
 				TargetAttributes = {
 					4C6142021E6E8BCA00C53130 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4RW5R7ZMUW;
+						DevelopmentTeam = PR476U345F;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -204,7 +217,7 @@
 					};
 					4C61421E1E6E8BE400C53130 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4RW5R7ZMUW;
+						DevelopmentTeam = PR476U345F;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -250,8 +263,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC2E5CD1E8CB79800F12869 /* Key9Pi.sqlite in Resources */,
 				4C7C2D8E1E7F1CCF0099D256 /* comm-dict.txt in Resources */,
 				4C61422E1E6E8DE900C53130 /* large-dict.txt in Resources */,
+				0BC2E5CF1E8CB79800F12869 /* Key9Pi.sqlite-wal in Resources */,
+				0BC2E5CE1E8CB79800F12869 /* Key9Pi.sqlite-shm in Resources */,
 				4C61422C1E6E8C0B00C53130 /* keyboardStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +286,7 @@
 				4C6142071E6E8BCA00C53130 /* AppDelegate.swift in Sources */,
 				4C6BAB1F1E70EDCD002F3EEC /* KeyboardViewController.swift in Sources */,
 				4C6BAB201E70EDCF002F3EEC /* DictionaryModel.swift in Sources */,
+				0BC2E5C91E8C90F500F12869 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +297,7 @@
 				0BC1E0F61E86FFF2009298A7 /* SequenceModel.swift in Sources */,
 				4C6BAB1B1E70EDB2002F3EEC /* AppDelegate.swift in Sources */,
 				4CB19A271E8C4E6E00E5C6DA /* ColorPicker.swift in Sources */,
+				0BC2E5C81E8C8D1E00F12869 /* CoreDataStack.swift in Sources */,
 				4C6142221E6E8BE400C53130 /* KeyboardViewController.swift in Sources */,
 				4C6142301E6E8E1800C53130 /* DictionaryModel.swift in Sources */,
 			);
@@ -415,11 +433,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Key9pi/Key9pi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4RW5R7ZMUW;
+				DEVELOPMENT_TEAM = PR476U345F;
 				INFOPLIST_FILE = Key9pi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Key9pi.Key9pi;
+				PRODUCT_BUNDLE_IDENTIFIER = Key9Pi2.Key9Pi2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -433,11 +451,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Key9pi/Key9pi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4RW5R7ZMUW;
+				DEVELOPMENT_TEAM = PR476U345F;
 				INFOPLIST_FILE = Key9pi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Key9pi.Key9pi;
+				PRODUCT_BUNDLE_IDENTIFIER = Key9Pi2.Key9Pi2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -448,11 +466,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = customKeyboard/customKeyboard.entitlements;
-				DEVELOPMENT_TEAM = 4RW5R7ZMUW;
+				DEVELOPMENT_TEAM = PR476U345F;
 				INFOPLIST_FILE = customKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Key9pi.Key9pi.customKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = Key9Pi2.Key9Pi2.customKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -464,11 +482,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = customKeyboard/customKeyboard.entitlements;
-				DEVELOPMENT_TEAM = 4RW5R7ZMUW;
+				DEVELOPMENT_TEAM = PR476U345F;
 				INFOPLIST_FILE = customKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Key9pi.Key9pi.customKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = Key9Pi2.Key9Pi2.customKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

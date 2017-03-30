@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.k9</string>
+		<string>group.Key9Pi</string>
 	</array>
 </dict>
 </plist>
