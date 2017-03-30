@@ -168,15 +168,15 @@ SWIFT_CLASS("_TtC14customKeyboard22KeyboardViewController")
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified textView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified symView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified numView;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified allTextButtons;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified allButtons;
 @property (nonatomic) BOOL shiftPressed;
 @property (nonatomic) BOOL enterPressed;
 @property (nonatomic) NSInteger charCounter;
 - (void)shiftOn;
 - (void)shiftOff;
+- (void)resetSuggestions;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified shiftButton;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word1;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word2;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified word3;
 @property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified wordButtons;
 - (IBAction)wordPress:(UIButton * _Nonnull)sender;
 - (IBAction)goToNum:(UIButton * _Nonnull)sender;

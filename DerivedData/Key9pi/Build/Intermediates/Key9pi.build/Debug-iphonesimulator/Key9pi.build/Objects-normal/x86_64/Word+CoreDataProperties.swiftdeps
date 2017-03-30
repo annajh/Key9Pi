@@ -8,10 +8,10 @@ provides-member:
 provides-dynamic-lookup:
 - "text"
 depends-top-level:
-- !private "StringLiteralType"
+- "String"
 - "Word"
 - "NSFetchRequest"
-- "String"
+- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - ["Ps9AnyObject", "fetchRequest"]

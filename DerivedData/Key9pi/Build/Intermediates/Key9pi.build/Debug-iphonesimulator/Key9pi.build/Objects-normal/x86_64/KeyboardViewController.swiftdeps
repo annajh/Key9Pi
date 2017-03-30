@@ -10,80 +10,83 @@ provides-nominal:
 provides-member:
 - ["C6Key9pi22KeyboardViewController", ""]
 provides-dynamic-lookup:
-- "enterPressed"
-- "wordButtons"
-- "keyPress"
-- "viewDidLoad"
-- "word1"
-- "didReceiveMemoryWarning"
-- "heightConstraint"
-- "shiftPress"
-- "letterKeyPress"
-- "globePress"
 - "charCounter"
-- "textWillChange"
-- "wordPress"
-- "word2"
-- "shiftOff"
-- "textDidChange"
-- "numView"
-- "shiftPressed"
-- "goToNum"
+- "globePress"
+- "viewDidLoad"
 - "symView"
-- "updateViewConstraints"
-- "word3"
-- "spacePress"
-- "shiftButton"
-- "enterPress"
-- "goToSym"
-- "setUpHeightConstraint"
-- "backspacePress"
-- "textView"
+- "keyPress"
+- "textWillChange"
+- "enterPressed"
+- "resetSuggestions"
+- "shiftPress"
 - "goToText"
+- "shiftPressed"
+- "spacePress"
+- "textView"
+- "wordPress"
+- "setUpHeightConstraint"
+- "letterKeyPress"
+- "shiftButton"
+- "allButtons"
+- "enterPress"
+- "wordButtons"
+- "heightConstraint"
+- "shiftOff"
+- "backspacePress"
+- "allTextButtons"
+- "textDidChange"
+- "goToSym"
+- "didReceiveMemoryWarning"
+- "goToNum"
 - "shiftOn"
+- "numView"
+- "updateViewConstraints"
 depends-top-level:
-- !private "/"
-- "NSLayoutConstraint"
-- !private "UIScreen"
-- "StringLiteralType"
-- !private "UserDefaults"
-- "UIView"
-- !private "UIKeyInput"
-- "Bundle"
-- "UIInputViewController"
-- "BooleanLiteralType"
-- "Int"
-- !private "UIColor"
-- !private "-"
-- !private "||"
-- "path"
 - "seq"
-- "UITextInput"
-- "letters"
-- !private "!"
-- !private ">="
+- !private "+="
 - "TernaryPrecedence"
-- !private "print"
-- "CharacterSet"
-- !private "UnicodeScalarType"
 - "trie"
-- "Trie"
-- "UIButton"
-- !private "UILayoutPriority"
 - !private "+"
-- "CastingPrecedence"
-- "String"
-- !private "UILayoutPriorityRequired"
-- "KeyboardViewController"
-- "SequenceModel"
+- "Bundle"
 - !private "<"
+- "UIButton"
+- "Trie"
+- "KeyboardViewController"
+- !private "!"
+- "UIInputViewController"
+- !private "print"
+- "path"
 - "AssignmentPrecedence"
 - !private "=="
+- "CastingPrecedence"
+- !private "UserDefaults"
+- !private "UnicodeScalarType"
+- "CharacterSet"
+- "String"
+- "UIView"
+- "UITextInput"
+- "SequenceModel"
+- "Int"
+- !private ">="
+- !private "||"
+- !private "/"
+- "StringLiteralType"
+- !private "UIControlState"
+- !private "UIKeyInput"
+- "BooleanLiteralType"
+- !private "UIScreen"
+- !private "UILayoutPriorityRequired"
+- "letters"
+- !private "-"
+- !private "UILayoutPriority"
+- "NSLayoutConstraint"
+- !private "UIColor"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "NSLayoutConstraint"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UIControlState"]
 - !private ["Ps9AnyObject", "UILayoutPriority"]
 - !private ["Ps9AnyObject", "UILayoutPriorityRequired"]
 - !private ["Ps9AnyObject", "UIScreen"]
@@ -91,8 +94,11 @@ depends-member:
 - !private ["Ps9AnyObject", "addCapitalization"]
 - !private ["Ps9AnyObject", "addConstraint"]
 - !private ["Ps9AnyObject", "advanceToNextInputMode"]
+- ["Ps9AnyObject", "allButtons"]
+- ["Ps9AnyObject", "allTextButtons"]
 - !private ["Ps9AnyObject", "backgroundColor"]
 - ["Ps9AnyObject", "backspacePress"]
+- !private ["Ps9AnyObject", "black"]
 - !private ["Ps9AnyObject", "bottomAnchor"]
 - !private ["Ps9AnyObject", "bounds"]
 - ["Ps9AnyObject", "charCounter"]
@@ -130,9 +136,11 @@ depends-member:
 - !private ["Ps9AnyObject", "priority"]
 - !private ["Ps9AnyObject", "push"]
 - !private ["Ps9AnyObject", "reset"]
+- ["Ps9AnyObject", "resetSuggestions"]
 - !private ["Ps9AnyObject", "rootNode"]
 - !private ["Ps9AnyObject", "seq"]
 - !private ["Ps9AnyObject", "setTitle"]
+- !private ["Ps9AnyObject", "setTitleColor"]
 - ["Ps9AnyObject", "setUpHeightConstraint"]
 - ["Ps9AnyObject", "shiftButton"]
 - ["Ps9AnyObject", "shiftOff"]
@@ -157,15 +165,14 @@ depends-member:
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - !private ["Ps9AnyObject", "white"]
-- ["Ps9AnyObject", "word1"]
-- ["Ps9AnyObject", "word2"]
-- ["Ps9AnyObject", "word3"]
 - ["Ps9AnyObject", "wordButtons"]
 - ["Ps9AnyObject", "wordPress"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Index"]
 - !private ["Sa", "IndexDistance"]
+- !private ["Sa", "Iterator"]
 - !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
 - !private ["Sa", "count"]
 - ["Sa", "deinit"]
 - !private ["Sa", "subscript"]
@@ -208,6 +215,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "currentTitle"]
 - !private ["PSo15CALayerDelegate", "isHidden"]
 - !private ["PSo15CALayerDelegate", "setTitle"]
+- !private ["PSo15CALayerDelegate", "setTitleColor"]
 - !private ["PSo15CALayerDelegate", "text"]
 - !private ["PSo15CALayerDelegate", "titleLabel"]
 - ["V12CoreGraphics7CGFloat", "deinit"]
@@ -222,15 +230,20 @@ depends-member:
 - !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "SubSequence"]
 - !private ["Ps7CVarArg", "UIColor"]
+- !private ["Ps7CVarArg", "UIControlState"]
 - !private ["Ps7CVarArg", "UILayoutPriority"]
 - !private ["Ps7CVarArg", "UILayoutPriorityRequired"]
 - !private ["Ps7CVarArg", "UIScreen"]
 - !private ["Ps7CVarArg", "UserDefaults"]
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
+- !private ["Ps7CVarArg", "_Element"]
 - !private ["Ps7CVarArg", "addConstraint"]
 - !private ["Ps7CVarArg", "advanceToNextInputMode"]
+- ["Ps7CVarArg", "allButtons"]
+- ["Ps7CVarArg", "allTextButtons"]
 - !private ["Ps7CVarArg", "backgroundColor"]
 - ["Ps7CVarArg", "backspacePress"]
+- !private ["Ps7CVarArg", "black"]
 - !private ["Ps7CVarArg", "bottomAnchor"]
 - !private ["Ps7CVarArg", "bounds"]
 - ["Ps7CVarArg", "charCounter"]
@@ -261,8 +274,10 @@ depends-member:
 - ["Ps7CVarArg", "path"]
 - !private ["Ps7CVarArg", "print"]
 - !private ["Ps7CVarArg", "priority"]
+- ["Ps7CVarArg", "resetSuggestions"]
 - !private ["Ps7CVarArg", "seq"]
 - !private ["Ps7CVarArg", "setTitle"]
+- !private ["Ps7CVarArg", "setTitleColor"]
 - ["Ps7CVarArg", "setUpHeightConstraint"]
 - ["Ps7CVarArg", "shiftButton"]
 - ["Ps7CVarArg", "shiftOff"]
@@ -288,9 +303,6 @@ depends-member:
 - !private ["Ps7CVarArg", "view"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - !private ["Ps7CVarArg", "white"]
-- ["Ps7CVarArg", "word1"]
-- ["Ps7CVarArg", "word2"]
-- ["Ps7CVarArg", "word3"]
 - ["Ps7CVarArg", "wordButtons"]
 - ["Ps7CVarArg", "wordPress"]
 - ["Ps7CVarArg", ""]
@@ -328,14 +340,19 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
 - !private ["Ps28CustomDebugStringConvertible", "UILayoutPriority"]
 - !private ["Ps28CustomDebugStringConvertible", "UILayoutPriorityRequired"]
 - !private ["Ps28CustomDebugStringConvertible", "UIScreen"]
 - !private ["Ps28CustomDebugStringConvertible", "UserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "addConstraint"]
 - !private ["Ps28CustomDebugStringConvertible", "advanceToNextInputMode"]
+- ["Ps28CustomDebugStringConvertible", "allButtons"]
+- ["Ps28CustomDebugStringConvertible", "allTextButtons"]
 - !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - ["Ps28CustomDebugStringConvertible", "backspacePress"]
+- !private ["Ps28CustomDebugStringConvertible", "black"]
 - !private ["Ps28CustomDebugStringConvertible", "bottomAnchor"]
 - !private ["Ps28CustomDebugStringConvertible", "bounds"]
 - ["Ps28CustomDebugStringConvertible", "charCounter"]
@@ -369,8 +386,10 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "path"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "priority"]
+- ["Ps28CustomDebugStringConvertible", "resetSuggestions"]
 - !private ["Ps28CustomDebugStringConvertible", "seq"]
 - !private ["Ps28CustomDebugStringConvertible", "setTitle"]
+- !private ["Ps28CustomDebugStringConvertible", "setTitleColor"]
 - ["Ps28CustomDebugStringConvertible", "setUpHeightConstraint"]
 - ["Ps28CustomDebugStringConvertible", "shiftButton"]
 - ["Ps28CustomDebugStringConvertible", "shiftOff"]
@@ -396,9 +415,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - !private ["Ps28CustomDebugStringConvertible", "white"]
-- ["Ps28CustomDebugStringConvertible", "word1"]
-- ["Ps28CustomDebugStringConvertible", "word2"]
-- ["Ps28CustomDebugStringConvertible", "word3"]
 - ["Ps28CustomDebugStringConvertible", "wordButtons"]
 - ["Ps28CustomDebugStringConvertible", "wordPress"]
 - ["Ps28CustomDebugStringConvertible", ""]
@@ -424,6 +440,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "Stride"]
 - !private ["Ps17CustomReflectable", "SubSequence"]
 - !private ["Ps17CustomReflectable", "_DisabledRangeIndex"]
+- !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "characters"]
 - !private ["Ps17CustomReflectable", "count"]
@@ -445,16 +462,21 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UIControlState"]
 - !private ["Ps23CustomStringConvertible", "UILayoutPriority"]
 - !private ["Ps23CustomStringConvertible", "UILayoutPriorityRequired"]
 - !private ["Ps23CustomStringConvertible", "UIScreen"]
 - !private ["Ps23CustomStringConvertible", "UserDefaults"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addConstraint"]
 - !private ["Ps23CustomStringConvertible", "advanceToNextInputMode"]
+- ["Ps23CustomStringConvertible", "allButtons"]
+- ["Ps23CustomStringConvertible", "allTextButtons"]
 - !private ["Ps23CustomStringConvertible", "backgroundColor"]
 - ["Ps23CustomStringConvertible", "backspacePress"]
+- !private ["Ps23CustomStringConvertible", "black"]
 - !private ["Ps23CustomStringConvertible", "bottomAnchor"]
 - !private ["Ps23CustomStringConvertible", "bounds"]
 - ["Ps23CustomStringConvertible", "charCounter"]
@@ -487,8 +509,10 @@ depends-member:
 - ["Ps23CustomStringConvertible", "path"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "priority"]
+- ["Ps23CustomStringConvertible", "resetSuggestions"]
 - !private ["Ps23CustomStringConvertible", "seq"]
 - !private ["Ps23CustomStringConvertible", "setTitle"]
+- !private ["Ps23CustomStringConvertible", "setTitleColor"]
 - ["Ps23CustomStringConvertible", "setUpHeightConstraint"]
 - ["Ps23CustomStringConvertible", "shiftButton"]
 - ["Ps23CustomStringConvertible", "shiftOff"]
@@ -514,9 +538,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - !private ["Ps23CustomStringConvertible", "white"]
-- ["Ps23CustomStringConvertible", "word1"]
-- ["Ps23CustomStringConvertible", "word2"]
-- ["Ps23CustomStringConvertible", "word3"]
 - ["Ps23CustomStringConvertible", "wordButtons"]
 - ["Ps23CustomStringConvertible", "wordPress"]
 - ["Ps23CustomStringConvertible", ""]
@@ -539,6 +560,7 @@ depends-member:
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UIControlState"]
 - !private ["Ps9Equatable", "UILayoutPriority"]
 - !private ["Ps9Equatable", "UILayoutPriorityRequired"]
 - !private ["Ps9Equatable", "UIScreen"]
@@ -547,8 +569,11 @@ depends-member:
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addConstraint"]
 - !private ["Ps9Equatable", "advanceToNextInputMode"]
+- ["Ps9Equatable", "allButtons"]
+- ["Ps9Equatable", "allTextButtons"]
 - !private ["Ps9Equatable", "backgroundColor"]
 - ["Ps9Equatable", "backspacePress"]
+- !private ["Ps9Equatable", "black"]
 - !private ["Ps9Equatable", "bottomAnchor"]
 - !private ["Ps9Equatable", "bounds"]
 - ["Ps9Equatable", "charCounter"]
@@ -583,8 +608,10 @@ depends-member:
 - ["Ps9Equatable", "path"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "priority"]
+- ["Ps9Equatable", "resetSuggestions"]
 - !private ["Ps9Equatable", "seq"]
 - !private ["Ps9Equatable", "setTitle"]
+- !private ["Ps9Equatable", "setTitleColor"]
 - ["Ps9Equatable", "setUpHeightConstraint"]
 - ["Ps9Equatable", "shiftButton"]
 - ["Ps9Equatable", "shiftOff"]
@@ -609,15 +636,14 @@ depends-member:
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
 - !private ["Ps9Equatable", "white"]
-- ["Ps9Equatable", "word1"]
-- ["Ps9Equatable", "word2"]
-- ["Ps9Equatable", "word3"]
 - ["Ps9Equatable", "wordButtons"]
 - ["Ps9Equatable", "wordPress"]
 - ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
+- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
 - !private ["Ps25ExpressibleByArrayLiteral", "SubSequence"]
+- !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "contains"]
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
 - ["Ps25ExpressibleByArrayLiteral", "letters"]
@@ -638,6 +664,7 @@ depends-member:
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
+- !private ["Ps23ExpressibleByNilLiteral", "Iterator"]
 - !private ["Ps32ExpressibleByStringInterpolation", "characters"]
 - ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps32ExpressibleByStringInterpolation", "lowercased"]
@@ -667,6 +694,7 @@ depends-member:
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UIControlState"]
 - !private ["Ps8Hashable", "UILayoutPriority"]
 - !private ["Ps8Hashable", "UILayoutPriorityRequired"]
 - !private ["Ps8Hashable", "UIScreen"]
@@ -675,8 +703,11 @@ depends-member:
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addConstraint"]
 - !private ["Ps8Hashable", "advanceToNextInputMode"]
+- ["Ps8Hashable", "allButtons"]
+- ["Ps8Hashable", "allTextButtons"]
 - !private ["Ps8Hashable", "backgroundColor"]
 - ["Ps8Hashable", "backspacePress"]
+- !private ["Ps8Hashable", "black"]
 - !private ["Ps8Hashable", "bottomAnchor"]
 - !private ["Ps8Hashable", "bounds"]
 - ["Ps8Hashable", "charCounter"]
@@ -710,8 +741,10 @@ depends-member:
 - ["Ps8Hashable", "path"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "priority"]
+- ["Ps8Hashable", "resetSuggestions"]
 - !private ["Ps8Hashable", "seq"]
 - !private ["Ps8Hashable", "setTitle"]
+- !private ["Ps8Hashable", "setTitleColor"]
 - ["Ps8Hashable", "setUpHeightConstraint"]
 - ["Ps8Hashable", "shiftButton"]
 - ["Ps8Hashable", "shiftOff"]
@@ -736,12 +769,10 @@ depends-member:
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
 - !private ["Ps8Hashable", "white"]
-- ["Ps8Hashable", "word1"]
-- ["Ps8Hashable", "word2"]
-- ["Ps8Hashable", "word3"]
 - ["Ps8Hashable", "wordButtons"]
 - ["Ps8Hashable", "wordPress"]
 - ["Ps8Hashable", ""]
+- !private ["SQ", "Iterator"]
 - ["SQ", "deinit"]
 - ["VVSS13CharacterView5Index", "deinit"]
 - !private ["Ps9Indexable", "Index"]
@@ -782,6 +813,7 @@ depends-member:
 - ["C6Key9pi22KeyboardViewController", "String"]
 - ["C6Key9pi22KeyboardViewController", "UIButton"]
 - !private ["C6Key9pi22KeyboardViewController", "UIColor"]
+- !private ["C6Key9pi22KeyboardViewController", "UIControlState"]
 - !private ["C6Key9pi22KeyboardViewController", "UIKeyInput"]
 - !private ["C6Key9pi22KeyboardViewController", "UILayoutPriority"]
 - !private ["C6Key9pi22KeyboardViewController", "UILayoutPriorityRequired"]
@@ -790,6 +822,8 @@ depends-member:
 - ["C6Key9pi22KeyboardViewController", "UIView"]
 - !private ["C6Key9pi22KeyboardViewController", "UserDefaults"]
 - !private ["C6Key9pi22KeyboardViewController", "advanceToNextInputMode"]
+- ["C6Key9pi22KeyboardViewController", "allButtons"]
+- ["C6Key9pi22KeyboardViewController", "allTextButtons"]
 - ["C6Key9pi22KeyboardViewController", "backspacePress"]
 - ["C6Key9pi22KeyboardViewController", "charCounter"]
 - ["C6Key9pi22KeyboardViewController", "deinit"]
@@ -809,6 +843,7 @@ depends-member:
 - ["C6Key9pi22KeyboardViewController", "numView"]
 - !private ["C6Key9pi22KeyboardViewController", "path"]
 - !private ["C6Key9pi22KeyboardViewController", "print"]
+- ["C6Key9pi22KeyboardViewController", "resetSuggestions"]
 - !private ["C6Key9pi22KeyboardViewController", "seq"]
 - ["C6Key9pi22KeyboardViewController", "setUpHeightConstraint"]
 - ["C6Key9pi22KeyboardViewController", "shiftButton"]
@@ -826,9 +861,6 @@ depends-member:
 - ["C6Key9pi22KeyboardViewController", "updateViewConstraints"]
 - !private ["C6Key9pi22KeyboardViewController", "view"]
 - ["C6Key9pi22KeyboardViewController", "viewDidLoad"]
-- ["C6Key9pi22KeyboardViewController", "word1"]
-- ["C6Key9pi22KeyboardViewController", "word2"]
-- ["C6Key9pi22KeyboardViewController", "word3"]
 - ["C6Key9pi22KeyboardViewController", "wordButtons"]
 - ["C6Key9pi22KeyboardViewController", "wordPress"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
@@ -851,26 +883,34 @@ depends-member:
 - !private ["Ps10MirrorPath", "uppercased"]
 - !private ["Ps17MutableCollection", "Index"]
 - !private ["Ps17MutableCollection", "IndexDistance"]
+- !private ["Ps17MutableCollection", "Iterator"]
 - !private ["Ps17MutableCollection", "SubSequence"]
+- !private ["Ps17MutableCollection", "_Element"]
 - !private ["Ps17MutableCollection", "count"]
 - !private ["Ps17MutableCollection", "subscript"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
+- !private ["Ps16MutableIndexable", "Iterator"]
 - !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "count"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - ["CSo7NSCoder", "deinit"]
 - !private ["PSo8NSCoding", "NSLayoutConstraint"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "UIControlState"]
 - !private ["PSo8NSCoding", "UILayoutPriority"]
 - !private ["PSo8NSCoding", "UILayoutPriorityRequired"]
 - !private ["PSo8NSCoding", "UIScreen"]
 - !private ["PSo8NSCoding", "UserDefaults"]
 - !private ["PSo8NSCoding", "addConstraint"]
 - !private ["PSo8NSCoding", "advanceToNextInputMode"]
+- ["PSo8NSCoding", "allButtons"]
+- ["PSo8NSCoding", "allTextButtons"]
 - !private ["PSo8NSCoding", "backgroundColor"]
 - ["PSo8NSCoding", "backspacePress"]
+- !private ["PSo8NSCoding", "black"]
 - !private ["PSo8NSCoding", "bottomAnchor"]
 - ["PSo8NSCoding", "charCounter"]
 - !private ["PSo8NSCoding", "characters"]
@@ -894,8 +934,10 @@ depends-member:
 - ["PSo8NSCoding", "numView"]
 - !private ["PSo8NSCoding", "path"]
 - !private ["PSo8NSCoding", "print"]
+- ["PSo8NSCoding", "resetSuggestions"]
 - !private ["PSo8NSCoding", "seq"]
 - !private ["PSo8NSCoding", "setTitle"]
+- !private ["PSo8NSCoding", "setTitleColor"]
 - ["PSo8NSCoding", "setUpHeightConstraint"]
 - ["PSo8NSCoding", "shiftButton"]
 - ["PSo8NSCoding", "shiftOff"]
@@ -919,12 +961,10 @@ depends-member:
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - !private ["PSo8NSCoding", "white"]
-- ["PSo8NSCoding", "word1"]
-- ["PSo8NSCoding", "word2"]
-- ["PSo8NSCoding", "word3"]
 - ["PSo8NSCoding", "wordButtons"]
 - ["PSo8NSCoding", "wordPress"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "black"]
 - !private ["PSo9NSCopying", "characters"]
 - !private ["PSo9NSCopying", "cyan"]
 - ["PSo9NSCopying", "init"]
@@ -937,11 +977,14 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "NSLayoutConstraint"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
+- !private ["PSo26NSExtensionRequestHandling", "UIControlState"]
 - !private ["PSo26NSExtensionRequestHandling", "UILayoutPriority"]
 - !private ["PSo26NSExtensionRequestHandling", "UILayoutPriorityRequired"]
 - !private ["PSo26NSExtensionRequestHandling", "UIScreen"]
 - !private ["PSo26NSExtensionRequestHandling", "UserDefaults"]
 - !private ["PSo26NSExtensionRequestHandling", "advanceToNextInputMode"]
+- ["PSo26NSExtensionRequestHandling", "allButtons"]
+- ["PSo26NSExtensionRequestHandling", "allTextButtons"]
 - ["PSo26NSExtensionRequestHandling", "backspacePress"]
 - ["PSo26NSExtensionRequestHandling", "charCounter"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
@@ -960,6 +1003,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "numView"]
 - !private ["PSo26NSExtensionRequestHandling", "path"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
+- ["PSo26NSExtensionRequestHandling", "resetSuggestions"]
 - !private ["PSo26NSExtensionRequestHandling", "seq"]
 - ["PSo26NSExtensionRequestHandling", "setUpHeightConstraint"]
 - ["PSo26NSExtensionRequestHandling", "shiftButton"]
@@ -977,9 +1021,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "updateViewConstraints"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
-- ["PSo26NSExtensionRequestHandling", "word1"]
-- ["PSo26NSExtensionRequestHandling", "word2"]
-- ["PSo26NSExtensionRequestHandling", "word3"]
 - ["PSo26NSExtensionRequestHandling", "wordButtons"]
 - ["PSo26NSExtensionRequestHandling", "wordPress"]
 - ["PSo26NSExtensionRequestHandling", ""]
@@ -1008,6 +1049,7 @@ depends-member:
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIColor"]
+- !private ["CSo8NSObject", "UIControlState"]
 - !private ["CSo8NSObject", "UIKeyInput"]
 - !private ["CSo8NSObject", "UILayoutPriority"]
 - !private ["CSo8NSObject", "UILayoutPriorityRequired"]
@@ -1017,8 +1059,11 @@ depends-member:
 - !private ["CSo8NSObject", "UserDefaults"]
 - !private ["CSo8NSObject", "addConstraint"]
 - !private ["CSo8NSObject", "advanceToNextInputMode"]
+- ["CSo8NSObject", "allButtons"]
+- ["CSo8NSObject", "allTextButtons"]
 - !private ["CSo8NSObject", "backgroundColor"]
 - ["CSo8NSObject", "backspacePress"]
+- !private ["CSo8NSObject", "black"]
 - !private ["CSo8NSObject", "bottomAnchor"]
 - !private ["CSo8NSObject", "bounds"]
 - ["CSo8NSObject", "charCounter"]
@@ -1049,8 +1094,10 @@ depends-member:
 - ["CSo8NSObject", "path"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "priority"]
+- ["CSo8NSObject", "resetSuggestions"]
 - !private ["CSo8NSObject", "seq"]
 - !private ["CSo8NSObject", "setTitle"]
+- !private ["CSo8NSObject", "setTitleColor"]
 - ["CSo8NSObject", "setUpHeightConstraint"]
 - ["CSo8NSObject", "shiftButton"]
 - ["CSo8NSObject", "shiftOff"]
@@ -1075,22 +1122,23 @@ depends-member:
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["CSo8NSObject", "white"]
-- ["CSo8NSObject", "word1"]
-- ["CSo8NSObject", "word2"]
-- ["CSo8NSObject", "word3"]
 - ["CSo8NSObject", "wordButtons"]
 - ["CSo8NSObject", "wordPress"]
 - !private ["PSo16NSObjectProtocol", "NSLayoutConstraint"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UIControlState"]
 - !private ["PSo16NSObjectProtocol", "UILayoutPriority"]
 - !private ["PSo16NSObjectProtocol", "UILayoutPriorityRequired"]
 - !private ["PSo16NSObjectProtocol", "UIScreen"]
 - !private ["PSo16NSObjectProtocol", "UserDefaults"]
 - !private ["PSo16NSObjectProtocol", "addConstraint"]
 - !private ["PSo16NSObjectProtocol", "advanceToNextInputMode"]
+- ["PSo16NSObjectProtocol", "allButtons"]
+- ["PSo16NSObjectProtocol", "allTextButtons"]
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - ["PSo16NSObjectProtocol", "backspacePress"]
+- !private ["PSo16NSObjectProtocol", "black"]
 - !private ["PSo16NSObjectProtocol", "bottomAnchor"]
 - !private ["PSo16NSObjectProtocol", "bounds"]
 - ["PSo16NSObjectProtocol", "charCounter"]
@@ -1124,8 +1172,10 @@ depends-member:
 - ["PSo16NSObjectProtocol", "path"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "priority"]
+- ["PSo16NSObjectProtocol", "resetSuggestions"]
 - !private ["PSo16NSObjectProtocol", "seq"]
 - !private ["PSo16NSObjectProtocol", "setTitle"]
+- !private ["PSo16NSObjectProtocol", "setTitleColor"]
 - ["PSo16NSObjectProtocol", "setUpHeightConstraint"]
 - ["PSo16NSObjectProtocol", "shiftButton"]
 - ["PSo16NSObjectProtocol", "shiftOff"]
@@ -1150,12 +1200,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "white"]
-- ["PSo16NSObjectProtocol", "word1"]
-- ["PSo16NSObjectProtocol", "word2"]
-- ["PSo16NSObjectProtocol", "word3"]
 - ["PSo16NSObjectProtocol", "wordButtons"]
 - ["PSo16NSObjectProtocol", "wordPress"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "black"]
 - !private ["PSo14NSSecureCoding", "characters"]
 - !private ["PSo14NSSecureCoding", "cyan"]
 - ["PSo14NSSecureCoding", "init"]
@@ -1200,6 +1248,7 @@ depends-member:
 - !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
 - !private ["Ps26RangeReplaceableCollection", "Iterator"]
 - !private ["Ps26RangeReplaceableCollection", "SubSequence"]
+- !private ["Ps26RangeReplaceableCollection", "_Element"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
 - !private ["Ps26RangeReplaceableCollection", "last"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
@@ -1207,6 +1256,7 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
 - !private ["Ps25RangeReplaceableIndexable", "Iterator"]
 - !private ["Ps25RangeReplaceableIndexable", "SubSequence"]
+- !private ["Ps25RangeReplaceableIndexable", "_Element"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
 - !private ["Ps25RangeReplaceableIndexable", "last"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
@@ -1287,6 +1337,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "currentTitle"]
 - !private ["PSo29UIAccessibilityIdentification", "isHidden"]
 - !private ["PSo29UIAccessibilityIdentification", "setTitle"]
+- !private ["PSo29UIAccessibilityIdentification", "setTitleColor"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "titleLabel"]
 - !private ["PSo12UIAppearance", "addConstraint"]
@@ -1295,17 +1346,21 @@ depends-member:
 - !private ["PSo12UIAppearance", "currentTitle"]
 - !private ["PSo12UIAppearance", "isHidden"]
 - !private ["PSo12UIAppearance", "setTitle"]
+- !private ["PSo12UIAppearance", "setTitleColor"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "titleLabel"]
 - !private ["PSo21UIAppearanceContainer", "NSLayoutConstraint"]
 - !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "UIControlState"]
 - !private ["PSo21UIAppearanceContainer", "UILayoutPriority"]
 - !private ["PSo21UIAppearanceContainer", "UILayoutPriorityRequired"]
 - !private ["PSo21UIAppearanceContainer", "UIScreen"]
 - !private ["PSo21UIAppearanceContainer", "UserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "addConstraint"]
 - !private ["PSo21UIAppearanceContainer", "advanceToNextInputMode"]
+- ["PSo21UIAppearanceContainer", "allButtons"]
+- ["PSo21UIAppearanceContainer", "allTextButtons"]
 - !private ["PSo21UIAppearanceContainer", "backgroundColor"]
 - ["PSo21UIAppearanceContainer", "backspacePress"]
 - !private ["PSo21UIAppearanceContainer", "bottomAnchor"]
@@ -1328,8 +1383,10 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "numView"]
 - !private ["PSo21UIAppearanceContainer", "path"]
 - !private ["PSo21UIAppearanceContainer", "print"]
+- ["PSo21UIAppearanceContainer", "resetSuggestions"]
 - !private ["PSo21UIAppearanceContainer", "seq"]
 - !private ["PSo21UIAppearanceContainer", "setTitle"]
+- !private ["PSo21UIAppearanceContainer", "setTitleColor"]
 - ["PSo21UIAppearanceContainer", "setUpHeightConstraint"]
 - ["PSo21UIAppearanceContainer", "shiftButton"]
 - ["PSo21UIAppearanceContainer", "shiftOff"]
@@ -1348,9 +1405,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "updateViewConstraints"]
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
-- ["PSo21UIAppearanceContainer", "word1"]
-- ["PSo21UIAppearanceContainer", "word2"]
-- ["PSo21UIAppearanceContainer", "word3"]
 - ["PSo21UIAppearanceContainer", "wordButtons"]
 - ["PSo21UIAppearanceContainer", "wordPress"]
 - ["PSo21UIAppearanceContainer", ""]
@@ -1358,7 +1412,9 @@ depends-member:
 - !private ["CSo8UIButton", "currentTitle"]
 - ["CSo8UIButton", "deinit"]
 - !private ["CSo8UIButton", "setTitle"]
+- !private ["CSo8UIButton", "setTitleColor"]
 - !private ["CSo8UIButton", "titleLabel"]
+- !private ["CSo7UIColor", "black"]
 - !private ["CSo7UIColor", "cyan"]
 - ["CSo7UIColor", "deinit"]
 - !private ["CSo7UIColor", "init"]
@@ -1366,11 +1422,14 @@ depends-member:
 - !private ["PSo18UIContentContainer", "NSLayoutConstraint"]
 - !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "UIColor"]
+- !private ["PSo18UIContentContainer", "UIControlState"]
 - !private ["PSo18UIContentContainer", "UILayoutPriority"]
 - !private ["PSo18UIContentContainer", "UILayoutPriorityRequired"]
 - !private ["PSo18UIContentContainer", "UIScreen"]
 - !private ["PSo18UIContentContainer", "UserDefaults"]
 - !private ["PSo18UIContentContainer", "advanceToNextInputMode"]
+- ["PSo18UIContentContainer", "allButtons"]
+- ["PSo18UIContentContainer", "allTextButtons"]
 - ["PSo18UIContentContainer", "backspacePress"]
 - ["PSo18UIContentContainer", "charCounter"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
@@ -1389,6 +1448,7 @@ depends-member:
 - ["PSo18UIContentContainer", "numView"]
 - !private ["PSo18UIContentContainer", "path"]
 - !private ["PSo18UIContentContainer", "print"]
+- ["PSo18UIContentContainer", "resetSuggestions"]
 - !private ["PSo18UIContentContainer", "seq"]
 - ["PSo18UIContentContainer", "setUpHeightConstraint"]
 - ["PSo18UIContentContainer", "shiftButton"]
@@ -1406,9 +1466,6 @@ depends-member:
 - ["PSo18UIContentContainer", "updateViewConstraints"]
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
-- ["PSo18UIContentContainer", "word1"]
-- ["PSo18UIContentContainer", "word2"]
-- ["PSo18UIContentContainer", "word3"]
 - ["PSo18UIContentContainer", "wordButtons"]
 - ["PSo18UIContentContainer", "wordPress"]
 - ["PSo18UIContentContainer", ""]
@@ -1416,6 +1473,7 @@ depends-member:
 - !private ["CSo9UIControl", "backgroundColor"]
 - !private ["CSo9UIControl", "currentTitle"]
 - !private ["CSo9UIControl", "setTitle"]
+- !private ["CSo9UIControl", "setTitleColor"]
 - !private ["CSo9UIControl", "titleLabel"]
 - ["VSC14UIControlState", "deinit"]
 - !private ["VSC14UIControlState", "normal"]
@@ -1425,6 +1483,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "currentTitle"]
 - !private ["PSo17UICoordinateSpace", "isHidden"]
 - !private ["PSo17UICoordinateSpace", "setTitle"]
+- !private ["PSo17UICoordinateSpace", "setTitleColor"]
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo17UICoordinateSpace", "titleLabel"]
 - !private ["PSo13UIDynamicItem", "addConstraint"]
@@ -1433,17 +1492,21 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "currentTitle"]
 - !private ["PSo13UIDynamicItem", "isHidden"]
 - !private ["PSo13UIDynamicItem", "setTitle"]
+- !private ["PSo13UIDynamicItem", "setTitleColor"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "titleLabel"]
 - !private ["PSo18UIFocusEnvironment", "NSLayoutConstraint"]
 - !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "UIControlState"]
 - !private ["PSo18UIFocusEnvironment", "UILayoutPriority"]
 - !private ["PSo18UIFocusEnvironment", "UILayoutPriorityRequired"]
 - !private ["PSo18UIFocusEnvironment", "UIScreen"]
 - !private ["PSo18UIFocusEnvironment", "UserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "addConstraint"]
 - !private ["PSo18UIFocusEnvironment", "advanceToNextInputMode"]
+- ["PSo18UIFocusEnvironment", "allButtons"]
+- ["PSo18UIFocusEnvironment", "allTextButtons"]
 - !private ["PSo18UIFocusEnvironment", "backgroundColor"]
 - ["PSo18UIFocusEnvironment", "backspacePress"]
 - !private ["PSo18UIFocusEnvironment", "bottomAnchor"]
@@ -1466,8 +1529,10 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "numView"]
 - !private ["PSo18UIFocusEnvironment", "path"]
 - !private ["PSo18UIFocusEnvironment", "print"]
+- ["PSo18UIFocusEnvironment", "resetSuggestions"]
 - !private ["PSo18UIFocusEnvironment", "seq"]
 - !private ["PSo18UIFocusEnvironment", "setTitle"]
+- !private ["PSo18UIFocusEnvironment", "setTitleColor"]
 - ["PSo18UIFocusEnvironment", "setUpHeightConstraint"]
 - ["PSo18UIFocusEnvironment", "shiftButton"]
 - ["PSo18UIFocusEnvironment", "shiftOff"]
@@ -1486,9 +1551,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "updateViewConstraints"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
-- ["PSo18UIFocusEnvironment", "word1"]
-- ["PSo18UIFocusEnvironment", "word2"]
-- ["PSo18UIFocusEnvironment", "word3"]
 - ["PSo18UIFocusEnvironment", "wordButtons"]
 - ["PSo18UIFocusEnvironment", "wordPress"]
 - ["PSo18UIFocusEnvironment", ""]
@@ -1498,6 +1560,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "currentTitle"]
 - !private ["PSo11UIFocusItem", "isHidden"]
 - !private ["PSo11UIFocusItem", "setTitle"]
+- !private ["PSo11UIFocusItem", "setTitleColor"]
 - !private ["PSo11UIFocusItem", "text"]
 - !private ["PSo11UIFocusItem", "titleLabel"]
 - ["CSo21UIInputViewController", "Int"]
@@ -1505,6 +1568,7 @@ depends-member:
 - ["CSo21UIInputViewController", "String"]
 - ["CSo21UIInputViewController", "UIButton"]
 - !private ["CSo21UIInputViewController", "UIColor"]
+- !private ["CSo21UIInputViewController", "UIControlState"]
 - !private ["CSo21UIInputViewController", "UIKeyInput"]
 - !private ["CSo21UIInputViewController", "UILayoutPriority"]
 - !private ["CSo21UIInputViewController", "UILayoutPriorityRequired"]
@@ -1513,6 +1577,8 @@ depends-member:
 - ["CSo21UIInputViewController", "UIView"]
 - !private ["CSo21UIInputViewController", "UserDefaults"]
 - !private ["CSo21UIInputViewController", "advanceToNextInputMode"]
+- ["CSo21UIInputViewController", "allButtons"]
+- ["CSo21UIInputViewController", "allTextButtons"]
 - ["CSo21UIInputViewController", "backspacePress"]
 - ["CSo21UIInputViewController", "charCounter"]
 - ["CSo21UIInputViewController", "deinit"]
@@ -1532,6 +1598,7 @@ depends-member:
 - ["CSo21UIInputViewController", "numView"]
 - !private ["CSo21UIInputViewController", "path"]
 - !private ["CSo21UIInputViewController", "print"]
+- ["CSo21UIInputViewController", "resetSuggestions"]
 - !private ["CSo21UIInputViewController", "seq"]
 - ["CSo21UIInputViewController", "setUpHeightConstraint"]
 - ["CSo21UIInputViewController", "shiftButton"]
@@ -1549,9 +1616,6 @@ depends-member:
 - ["CSo21UIInputViewController", "updateViewConstraints"]
 - !private ["CSo21UIInputViewController", "view"]
 - ["CSo21UIInputViewController", "viewDidLoad"]
-- ["CSo21UIInputViewController", "word1"]
-- ["CSo21UIInputViewController", "word2"]
-- ["CSo21UIInputViewController", "word3"]
 - ["CSo21UIInputViewController", "wordButtons"]
 - ["CSo21UIInputViewController", "wordPress"]
 - ["CSo21UIInputViewController", ""]
@@ -1567,6 +1631,7 @@ depends-member:
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIColor"]
+- !private ["CSo11UIResponder", "UIControlState"]
 - !private ["CSo11UIResponder", "UIKeyInput"]
 - !private ["CSo11UIResponder", "UILayoutPriority"]
 - !private ["CSo11UIResponder", "UILayoutPriorityRequired"]
@@ -1576,6 +1641,8 @@ depends-member:
 - !private ["CSo11UIResponder", "UserDefaults"]
 - !private ["CSo11UIResponder", "addConstraint"]
 - !private ["CSo11UIResponder", "advanceToNextInputMode"]
+- ["CSo11UIResponder", "allButtons"]
+- ["CSo11UIResponder", "allTextButtons"]
 - !private ["CSo11UIResponder", "backgroundColor"]
 - ["CSo11UIResponder", "backspacePress"]
 - !private ["CSo11UIResponder", "bottomAnchor"]
@@ -1598,8 +1665,10 @@ depends-member:
 - ["CSo11UIResponder", "numView"]
 - !private ["CSo11UIResponder", "path"]
 - !private ["CSo11UIResponder", "print"]
+- ["CSo11UIResponder", "resetSuggestions"]
 - !private ["CSo11UIResponder", "seq"]
 - !private ["CSo11UIResponder", "setTitle"]
+- !private ["CSo11UIResponder", "setTitleColor"]
 - ["CSo11UIResponder", "setUpHeightConstraint"]
 - ["CSo11UIResponder", "shiftButton"]
 - ["CSo11UIResponder", "shiftOff"]
@@ -1618,20 +1687,20 @@ depends-member:
 - ["CSo11UIResponder", "updateViewConstraints"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
-- ["CSo11UIResponder", "word1"]
-- ["CSo11UIResponder", "word2"]
-- ["CSo11UIResponder", "word3"]
 - ["CSo11UIResponder", "wordButtons"]
 - ["CSo11UIResponder", "wordPress"]
 - !private ["PSo30UIResponderStandardEditActions", "NSLayoutConstraint"]
 - !private ["PSo30UIResponderStandardEditActions", "String"]
 - !private ["PSo30UIResponderStandardEditActions", "UIColor"]
+- !private ["PSo30UIResponderStandardEditActions", "UIControlState"]
 - !private ["PSo30UIResponderStandardEditActions", "UILayoutPriority"]
 - !private ["PSo30UIResponderStandardEditActions", "UILayoutPriorityRequired"]
 - !private ["PSo30UIResponderStandardEditActions", "UIScreen"]
 - !private ["PSo30UIResponderStandardEditActions", "UserDefaults"]
 - !private ["PSo30UIResponderStandardEditActions", "addConstraint"]
 - !private ["PSo30UIResponderStandardEditActions", "advanceToNextInputMode"]
+- ["PSo30UIResponderStandardEditActions", "allButtons"]
+- ["PSo30UIResponderStandardEditActions", "allTextButtons"]
 - !private ["PSo30UIResponderStandardEditActions", "backgroundColor"]
 - ["PSo30UIResponderStandardEditActions", "backspacePress"]
 - !private ["PSo30UIResponderStandardEditActions", "bottomAnchor"]
@@ -1654,8 +1723,10 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "numView"]
 - !private ["PSo30UIResponderStandardEditActions", "path"]
 - !private ["PSo30UIResponderStandardEditActions", "print"]
+- ["PSo30UIResponderStandardEditActions", "resetSuggestions"]
 - !private ["PSo30UIResponderStandardEditActions", "seq"]
 - !private ["PSo30UIResponderStandardEditActions", "setTitle"]
+- !private ["PSo30UIResponderStandardEditActions", "setTitleColor"]
 - ["PSo30UIResponderStandardEditActions", "setUpHeightConstraint"]
 - ["PSo30UIResponderStandardEditActions", "shiftButton"]
 - ["PSo30UIResponderStandardEditActions", "shiftOff"]
@@ -1674,9 +1745,6 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "updateViewConstraints"]
 - !private ["PSo30UIResponderStandardEditActions", "view"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
-- ["PSo30UIResponderStandardEditActions", "word1"]
-- ["PSo30UIResponderStandardEditActions", "word2"]
-- ["PSo30UIResponderStandardEditActions", "word3"]
 - ["PSo30UIResponderStandardEditActions", "wordButtons"]
 - ["PSo30UIResponderStandardEditActions", "wordPress"]
 - ["PSo30UIResponderStandardEditActions", ""]
@@ -1686,11 +1754,14 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "NSLayoutConstraint"]
 - !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
+- !private ["PSo16UIStateRestoring", "UIControlState"]
 - !private ["PSo16UIStateRestoring", "UILayoutPriority"]
 - !private ["PSo16UIStateRestoring", "UILayoutPriorityRequired"]
 - !private ["PSo16UIStateRestoring", "UIScreen"]
 - !private ["PSo16UIStateRestoring", "UserDefaults"]
 - !private ["PSo16UIStateRestoring", "advanceToNextInputMode"]
+- ["PSo16UIStateRestoring", "allButtons"]
+- ["PSo16UIStateRestoring", "allTextButtons"]
 - ["PSo16UIStateRestoring", "backspacePress"]
 - ["PSo16UIStateRestoring", "charCounter"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
@@ -1709,6 +1780,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "numView"]
 - !private ["PSo16UIStateRestoring", "path"]
 - !private ["PSo16UIStateRestoring", "print"]
+- ["PSo16UIStateRestoring", "resetSuggestions"]
 - !private ["PSo16UIStateRestoring", "seq"]
 - ["PSo16UIStateRestoring", "setUpHeightConstraint"]
 - ["PSo16UIStateRestoring", "shiftButton"]
@@ -1726,9 +1798,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "updateViewConstraints"]
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
-- ["PSo16UIStateRestoring", "word1"]
-- ["PSo16UIStateRestoring", "word2"]
-- ["PSo16UIStateRestoring", "word3"]
 - ["PSo16UIStateRestoring", "wordButtons"]
 - ["PSo16UIStateRestoring", "wordPress"]
 - ["PSo16UIStateRestoring", ""]
@@ -1739,11 +1808,14 @@ depends-member:
 - !private ["PSo19UITextInputDelegate", "NSLayoutConstraint"]
 - !private ["PSo19UITextInputDelegate", "String"]
 - !private ["PSo19UITextInputDelegate", "UIColor"]
+- !private ["PSo19UITextInputDelegate", "UIControlState"]
 - !private ["PSo19UITextInputDelegate", "UILayoutPriority"]
 - !private ["PSo19UITextInputDelegate", "UILayoutPriorityRequired"]
 - !private ["PSo19UITextInputDelegate", "UIScreen"]
 - !private ["PSo19UITextInputDelegate", "UserDefaults"]
 - !private ["PSo19UITextInputDelegate", "advanceToNextInputMode"]
+- ["PSo19UITextInputDelegate", "allButtons"]
+- ["PSo19UITextInputDelegate", "allTextButtons"]
 - ["PSo19UITextInputDelegate", "backspacePress"]
 - ["PSo19UITextInputDelegate", "charCounter"]
 - ["PSo19UITextInputDelegate", "didReceiveMemoryWarning"]
@@ -1762,6 +1834,7 @@ depends-member:
 - ["PSo19UITextInputDelegate", "numView"]
 - !private ["PSo19UITextInputDelegate", "path"]
 - !private ["PSo19UITextInputDelegate", "print"]
+- ["PSo19UITextInputDelegate", "resetSuggestions"]
 - !private ["PSo19UITextInputDelegate", "seq"]
 - ["PSo19UITextInputDelegate", "setUpHeightConstraint"]
 - ["PSo19UITextInputDelegate", "shiftButton"]
@@ -1779,9 +1852,6 @@ depends-member:
 - ["PSo19UITextInputDelegate", "updateViewConstraints"]
 - !private ["PSo19UITextInputDelegate", "view"]
 - ["PSo19UITextInputDelegate", "viewDidLoad"]
-- ["PSo19UITextInputDelegate", "word1"]
-- ["PSo19UITextInputDelegate", "word2"]
-- ["PSo19UITextInputDelegate", "word3"]
 - ["PSo19UITextInputDelegate", "wordButtons"]
 - ["PSo19UITextInputDelegate", "wordPress"]
 - ["PSo19UITextInputDelegate", ""]
@@ -1792,12 +1862,15 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "NSLayoutConstraint"]
 - !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "UIControlState"]
 - !private ["PSo18UITraitEnvironment", "UILayoutPriority"]
 - !private ["PSo18UITraitEnvironment", "UILayoutPriorityRequired"]
 - !private ["PSo18UITraitEnvironment", "UIScreen"]
 - !private ["PSo18UITraitEnvironment", "UserDefaults"]
 - !private ["PSo18UITraitEnvironment", "addConstraint"]
 - !private ["PSo18UITraitEnvironment", "advanceToNextInputMode"]
+- ["PSo18UITraitEnvironment", "allButtons"]
+- ["PSo18UITraitEnvironment", "allTextButtons"]
 - !private ["PSo18UITraitEnvironment", "backgroundColor"]
 - ["PSo18UITraitEnvironment", "backspacePress"]
 - !private ["PSo18UITraitEnvironment", "bottomAnchor"]
@@ -1822,8 +1895,10 @@ depends-member:
 - ["PSo18UITraitEnvironment", "numView"]
 - !private ["PSo18UITraitEnvironment", "path"]
 - !private ["PSo18UITraitEnvironment", "print"]
+- ["PSo18UITraitEnvironment", "resetSuggestions"]
 - !private ["PSo18UITraitEnvironment", "seq"]
 - !private ["PSo18UITraitEnvironment", "setTitle"]
+- !private ["PSo18UITraitEnvironment", "setTitleColor"]
 - ["PSo18UITraitEnvironment", "setUpHeightConstraint"]
 - ["PSo18UITraitEnvironment", "shiftButton"]
 - ["PSo18UITraitEnvironment", "shiftOff"]
@@ -1842,9 +1917,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "updateViewConstraints"]
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
-- ["PSo18UITraitEnvironment", "word1"]
-- ["PSo18UITraitEnvironment", "word2"]
-- ["PSo18UITraitEnvironment", "word3"]
 - ["PSo18UITraitEnvironment", "wordButtons"]
 - ["PSo18UITraitEnvironment", "wordPress"]
 - ["PSo18UITraitEnvironment", ""]
@@ -1854,6 +1926,7 @@ depends-member:
 - !private ["CSo6UIView", "currentTitle"]
 - !private ["CSo6UIView", "isHidden"]
 - !private ["CSo6UIView", "setTitle"]
+- !private ["CSo6UIView", "setTitleColor"]
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "titleLabel"]
 - ["CSo16UIViewController", "Int"]
@@ -1861,6 +1934,7 @@ depends-member:
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIColor"]
+- !private ["CSo16UIViewController", "UIControlState"]
 - !private ["CSo16UIViewController", "UIKeyInput"]
 - !private ["CSo16UIViewController", "UILayoutPriority"]
 - !private ["CSo16UIViewController", "UILayoutPriorityRequired"]
@@ -1869,6 +1943,8 @@ depends-member:
 - ["CSo16UIViewController", "UIView"]
 - !private ["CSo16UIViewController", "UserDefaults"]
 - !private ["CSo16UIViewController", "advanceToNextInputMode"]
+- ["CSo16UIViewController", "allButtons"]
+- ["CSo16UIViewController", "allTextButtons"]
 - ["CSo16UIViewController", "backspacePress"]
 - ["CSo16UIViewController", "charCounter"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
@@ -1887,6 +1963,7 @@ depends-member:
 - ["CSo16UIViewController", "numView"]
 - !private ["CSo16UIViewController", "path"]
 - !private ["CSo16UIViewController", "print"]
+- ["CSo16UIViewController", "resetSuggestions"]
 - !private ["CSo16UIViewController", "seq"]
 - ["CSo16UIViewController", "setUpHeightConstraint"]
 - ["CSo16UIViewController", "shiftButton"]
@@ -1904,9 +1981,6 @@ depends-member:
 - ["CSo16UIViewController", "updateViewConstraints"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
-- ["CSo16UIViewController", "word1"]
-- ["CSo16UIViewController", "word2"]
-- ["CSo16UIViewController", "word3"]
 - ["CSo16UIViewController", "wordButtons"]
 - ["CSo16UIViewController", "wordPress"]
 - ["Sc", "deinit"]
@@ -1918,7 +1992,9 @@ depends-member:
 - !private ["CSo12UserDefaults", "string"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
+- !private ["Ps14_ArrayProtocol", "Iterator"]
 - !private ["Ps14_ArrayProtocol", "SubSequence"]
+- !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "count"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
 - !private ["Ps15_CVarArgAligned", "init"]
@@ -1929,11 +2005,14 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "currentTitle"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isHidden"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setTitle"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setTitleColor"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "titleLabel"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
+- !private ["Ps24_DestructorSafeContainer", "Iterator"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
@@ -1970,6 +2049,7 @@ depends-member:
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "subscript"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "unicodeScalars"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "uppercased"]
+- !private ["Ps26_ExpressibleByColorLiteral", "black"]
 - !private ["Ps26_ExpressibleByColorLiteral", "cyan"]
 - !private ["Ps26_ExpressibleByColorLiteral", "init"]
 - !private ["Ps26_ExpressibleByColorLiteral", "white"]
@@ -1985,6 +2065,7 @@ depends-member:
 - !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "String"]
 - !private ["Ps9_Hashable", "UIColor"]
+- !private ["Ps9_Hashable", "UIControlState"]
 - !private ["Ps9_Hashable", "UILayoutPriority"]
 - !private ["Ps9_Hashable", "UILayoutPriorityRequired"]
 - !private ["Ps9_Hashable", "UIScreen"]
@@ -1993,8 +2074,11 @@ depends-member:
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "addConstraint"]
 - !private ["Ps9_Hashable", "advanceToNextInputMode"]
+- ["Ps9_Hashable", "allButtons"]
+- ["Ps9_Hashable", "allTextButtons"]
 - !private ["Ps9_Hashable", "backgroundColor"]
 - ["Ps9_Hashable", "backspacePress"]
+- !private ["Ps9_Hashable", "black"]
 - !private ["Ps9_Hashable", "bottomAnchor"]
 - !private ["Ps9_Hashable", "bounds"]
 - ["Ps9_Hashable", "charCounter"]
@@ -2028,8 +2112,10 @@ depends-member:
 - ["Ps9_Hashable", "path"]
 - !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "priority"]
+- ["Ps9_Hashable", "resetSuggestions"]
 - !private ["Ps9_Hashable", "seq"]
 - !private ["Ps9_Hashable", "setTitle"]
+- !private ["Ps9_Hashable", "setTitleColor"]
 - ["Ps9_Hashable", "setUpHeightConstraint"]
 - ["Ps9_Hashable", "shiftButton"]
 - ["Ps9_Hashable", "shiftOff"]
@@ -2054,9 +2140,6 @@ depends-member:
 - !private ["Ps9_Hashable", "view"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - !private ["Ps9_Hashable", "white"]
-- ["Ps9_Hashable", "word1"]
-- ["Ps9_Hashable", "word2"]
-- ["Ps9_Hashable", "word3"]
 - ["Ps9_Hashable", "wordButtons"]
 - ["Ps9_Hashable", "wordPress"]
 - ["Ps9_Hashable", ""]
@@ -2078,6 +2161,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Stride"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "characters"]
 - !private ["Ps21_ObjectiveCBridgeable", "contains"]
@@ -2134,6 +2218,7 @@ depends-nominal:
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps25ExpressibleByFloatLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
+- !private "Ps23ExpressibleByNilLiteral"
 - "Ps32ExpressibleByStringInterpolation"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
@@ -2254,4 +2339,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "3b068b76af7136f64db426c5fad8bd20"
+interface-hash: "9692cd03a54f37674e289a302741b39b"
