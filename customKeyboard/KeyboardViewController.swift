@@ -166,7 +166,13 @@ class KeyboardViewController: UIInputViewController {
 //            str =  str.uppercased()
 //            enterPressed = false
 //        }
-        (textDocumentProxy as UIKeyInput).insertText(str + " ")
+        if (numView.isHidden == false){
+            (textDocumentProxy as UIKeyInput).insertText(str)
+        }
+        else{
+            (textDocumentProxy as UIKeyInput).insertText(str + " ")
+        }
+        
         if str == "." || str == "!" || str == "?" {
             shiftOn()
         }
