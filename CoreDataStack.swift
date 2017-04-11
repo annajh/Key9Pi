@@ -75,29 +75,60 @@ class CoreDataStack {
     /* -------------------------------- */
     
     func getWords(trie: Trie, rootNode: Node) {
-        if trie.isEmpty(rootNode: rootNode) {
-            var count = 0
-            //create a fetch request, telling it about the entity
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
-            
-            do {
-                //go get the results
-                let searchResults = try self.getContext().fetch(fetchRequest)
+        DispatchQueue.global(qos: .background).async {
+            print("This is run on the background queue")
+
+            if trie.isEmpty(rootNode: rootNode) {
+                var count = 0
+                //create a fetch request, telling it about the entity
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
                 
-                //check the size of the returned results!
-                print ("num words in dictionary = \(searchResults.count)\n")
-                
-                //need to convert to NSManagedObject to use 'for' loops
-                for entry in searchResults {
-                    //get the Key Value pairs
-                    var word = ((entry as AnyObject).value(forKey: "word"))
-                    print(word!)
-                    word = (word as AnyObject).lowercased
-                    trie.insert(word: word as! String, freq: count, rootNode: rootNode)
-                    count += 1
+                do {
+                    //go get the results
+                    let searchResults = try self.getContext().fetch(fetchRequest)
+                    
+                    //check the size of the returned results!
+                    print ("num words in dictionary = \(searchResults.count)\n")
+                    
+                    //need to convert to NSManagedObject to use 'for' loops
+                    for entry in searchResults {
+                        //get the Key Value pairs
+                        var word = ((entry as AnyObject).value(forKey: "word"))
+                        print(word!)
+                        word = (word as AnyObject).lowercased
+                        trie.insert(word: word as! String, freq: count, rootNode: rootNode)
+                        count += 1
+                    }
+                } catch {
+                    print("Error with request: \(error)")
+                    print("COULDN'T RETRIEVE DATA")
                 }
-            } catch {
-                //print("Error with request: \(error)")
+            }
+            
+//            if let filepath = Bundle.main.path(forResource: "comm-dict", ofType: "txt")
+//            {
+//                do
+//                {
+//                    let contents = try String(contentsOfFile: filepath)
+//                    let lines = contents.components(separatedBy: "\n")
+//                    for line in lines {
+//                        print(line)
+//                        let trimmedLine = line.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+//                        self.insert(word: trimmedLine.lowercased(), freq: 0, rootNode: self.rootNode)
+//                    }
+//                }
+//                catch
+//                {
+//                    print("contents could not be loaded")
+//                }
+//            }
+//            else {
+//                print("Could not find file")
+//            }
+//            
+            
+            DispatchQueue.main.async {
+                print("This is run on the main queue, after the previous code in outer block")
             }
         }
     }

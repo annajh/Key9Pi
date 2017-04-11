@@ -13,6 +13,8 @@ var trie = Trie()
 var seq = SequenceModel()
 let letters = CharacterSet.letters
 
+var coredata = CoreDataStack()
+
 class KeyboardViewController: UIInputViewController {
 
    // @IBOutlet var nextKeyboardButton: UIButton!
@@ -199,7 +201,9 @@ class KeyboardViewController: UIInputViewController {
         self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
         shiftOn()
-        trie.loadTrie(fileName: path!)
+//        trie.loadTrie(fileName: path!)
+        print("POOP")
+        coredata.getWords(trie: trie, rootNode: trie.rootNode)
         
 
         if let userDefaults = UserDefaults(suiteName: "group.k9") {
