@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -751,27 +750,27 @@
                                     <constraint firstItem="TAv-0t-KFC" firstAttribute="top" secondItem="Ume-fj-j4D" secondAttribute="bottom" constant="5" id="zkX-mn-gcu"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n1y-3p-seG">
-                                <rect key="frame" x="16" y="147" width="343" height="227"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uah-Qo-u23">
+                                <rect key="frame" x="78" y="414" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-wt-0pB">
+                                        <rect key="frame" x="8" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="n1y-3p-seG" firstAttribute="leading" secondItem="Q2e-g2-3ve" secondAttribute="leadingMargin" id="3J5-UZ-HvL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uhc-ix-wGT" secondAttribute="trailing" constant="-16" id="EHC-nJ-8du"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n1y-3p-seG" secondAttribute="trailing" id="F6s-UP-Fe6"/>
                             <constraint firstItem="rOZ-pb-AAh" firstAttribute="top" secondItem="uhc-ix-wGT" secondAttribute="bottom" constant="346" id="MAQ-ZJ-MfN"/>
-                            <constraint firstItem="n1y-3p-seG" firstAttribute="top" secondItem="LPN-ak-rz9" secondAttribute="bottom" constant="20" id="aKc-nf-Kiw"/>
                             <constraint firstAttribute="leadingMargin" secondItem="uhc-ix-wGT" secondAttribute="leading" constant="16" id="dhB-Ik-6ve"/>
                             <constraint firstItem="uhc-ix-wGT" firstAttribute="top" secondItem="LPN-ak-rz9" secondAttribute="bottom" id="i3a-uX-JW6"/>
                             <constraint firstItem="uhc-ix-wGT" firstAttribute="centerX" secondItem="Q2e-g2-3ve" secondAttribute="centerX" id="oBo-Ba-1dj"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="n1y-3p-seG"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="numView" destination="aZL-8J-TUd" id="QxV-ar-ZTI"/>
