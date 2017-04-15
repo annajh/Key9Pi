@@ -26,9 +26,13 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var symView: UIView!
     @IBOutlet weak var numView: UIView!
     @IBOutlet weak var downArrow: UIView!
+    @IBOutlet weak var downArrow2: UIView!
+    
     
     @IBOutlet var allTextButtons: [UIButton]!
     
+    
+    @IBOutlet var allArrowButtons: [UIButton]!
    
     @IBOutlet weak var shiftButton: UIButton!
     
@@ -47,7 +51,17 @@ class KeyboardViewController: UIInputViewController {
         textView.isHidden = true
         symView.isHidden = true
         downArrow.isHidden = false
+        downArrow2.isHidden = true
     }
+    
+    @IBAction func nextArrowPress(_ sender: UIButton) {
+        numView.isHidden = true
+        textView.isHidden = true
+        symView.isHidden = true
+        downArrow.isHidden = true
+        downArrow2.isHidden = false
+    }
+    
     var shiftPressed = false
     var enterPressed = false
     var charCounter = 0
@@ -238,23 +252,34 @@ class KeyboardViewController: UIInputViewController {
                 textView.backgroundColor = UIColor.white
                 numView.backgroundColor = UIColor.white
                 symView.backgroundColor = UIColor.white
+                downArrow.backgroundColor = UIColor.white
+                downArrow.backgroundColor = UIColor.white
             } else if background == "Black" {
                 textView.backgroundColor = UIColor.black
                 numView.backgroundColor = UIColor.black
                 symView.backgroundColor = UIColor.black
+                downArrow.backgroundColor = UIColor.black
+                downArrow2.backgroundColor = UIColor.black
             } else if background == "Blue" {
                 textView.backgroundColor = myBlue
                 numView.backgroundColor = myBlue
                 symView.backgroundColor = myBlue
+                downArrow.backgroundColor = myBlue
+                downArrow2.backgroundColor = myBlue
             } else if background == "Maize" {
                 textView.backgroundColor = maize
                 numView.backgroundColor = maize
                 symView.backgroundColor = maize
+                downArrow.backgroundColor = maize
+                downArrow2.backgroundColor = maize
             }
             
             if button == "White" {
                
                 for button in allButtons{
+                    button.backgroundColor = UIColor.white
+                }
+                for button in allArrowButtons{
                     button.backgroundColor = UIColor.white
                 }
                 
@@ -263,14 +288,23 @@ class KeyboardViewController: UIInputViewController {
                 for button in allButtons{
                     button.backgroundColor = UIColor.black
                 }
+                for button in allArrowButtons{
+                    button.backgroundColor = UIColor.black
+                }
             } else if button == "Blue" {
              
                 for button in allButtons{
                     button.backgroundColor = myBlue
                 }
+                for button in allArrowButtons{
+                    button.backgroundColor = myBlue
+                }
             } else if button == "Maize" {
                
                 for button in allButtons{
+                    button.backgroundColor = maize
+                }
+                for button in allArrowButtons{
                     button.backgroundColor = maize
                 }
             }
@@ -279,13 +313,22 @@ class KeyboardViewController: UIInputViewController {
                 for button in allButtons{
                     button.setTitleColor(UIColor.white, for: UIControlState.normal)
                 }
+                for button in allArrowButtons{
+                    button.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
 
             } else if text == "Black" {
                 for button in allButtons{
                     button.setTitleColor(UIColor.black, for: UIControlState.normal)
                 }
+                for button in allArrowButtons{
+                    button.setTitleColor(UIColor.black, for: UIControlState.normal)
+                }
             } else if text == "Blue" {
                 for button in allButtons{
+                    button.setTitleColor(myBlue, for: .normal)
+                }
+                for button in allArrowButtons{
                     button.setTitleColor(myBlue, for: .normal)
                 }
 
@@ -293,6 +336,10 @@ class KeyboardViewController: UIInputViewController {
                 for button in allButtons{
                     button.setTitleColor(maize, for: .normal)
                 }
+                for button in allArrowButtons{
+                    button.setTitleColor(maize, for: .normal)
+                }
+
             }
             
             
