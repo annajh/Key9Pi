@@ -25,7 +25,7 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var textView: UIView!
     @IBOutlet weak var symView: UIView!
     @IBOutlet weak var numView: UIView!
-    
+    @IBOutlet weak var downArrow: UIView!
     
     @IBOutlet var allTextButtons: [UIButton]!
     
@@ -35,7 +35,19 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet var allButtons: [UIButton]!
     
     
+    @IBAction func backFromArrow(_ sender: UIButton) {
+        numView.isHidden = true
+        textView.isHidden = false
+        symView.isHidden = true
+        downArrow.isHidden = true
+    }
     
+    @IBAction func downArrowPress(_ sender: UIButton) {
+        numView.isHidden = true
+        textView.isHidden = true
+        symView.isHidden = true
+        downArrow.isHidden = false
+    }
     var shiftPressed = false
     var enterPressed = false
     var charCounter = 0
@@ -196,7 +208,7 @@ class KeyboardViewController: UIInputViewController {
         
         
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
-        self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
+        //self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
         shiftColor = shiftButton.backgroundColor!
         print("color of shift")
