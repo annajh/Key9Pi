@@ -188,10 +188,7 @@ class KeyboardViewController: UIInputViewController {
         print(charCounter)
         //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
         if shiftPressed {
-            //str =  str.uppercased()
-            //shiftPressed = false
-            //shiftButton.backgroundColor = UIColor(red: 230, green: 230, blue: 230, alpha: 1);
-            //shiftButton.backgroundColor = UIColor.white
+          
             shiftOff()
         }
 //        if enterPressed {
@@ -230,11 +227,7 @@ class KeyboardViewController: UIInputViewController {
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         //self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
-        shiftColor = shiftButton.backgroundColor!
-        print("color of shift")
-        print(shiftColor)
-        
-        shiftOn()
+      
         trie.loadTrie(fileName: path!)
         
         if let userDefaults = UserDefaults(suiteName: "group.k9") {
@@ -369,6 +362,11 @@ class KeyboardViewController: UIInputViewController {
             
             
         }
+        shiftColor = shiftButton.backgroundColor!
+        print("color of shift")
+        print(shiftColor)
+        
+        shiftOn()
      
         
         //let defaults = UserDefaults.standard
