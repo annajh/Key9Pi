@@ -487,11 +487,12 @@ class KeyboardViewController: UIInputViewController {
             button.setTitle(seq.addCapitalization(word: word), for: .normal)
             wordcount += 1
         }
+        
     }
     
     //func for displaying word choices in down arrow views
     func displayArrowSuggestions(results: [(key:String,value:Int)]) {
-        resetSuggestions()
+        //resetSuggestions()
         print("in arrow view 1")
         
         var wordcount = 3; //starts from 3rd word
