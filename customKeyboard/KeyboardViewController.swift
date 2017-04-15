@@ -30,14 +30,15 @@ class KeyboardViewController: UIInputViewController {
     
     
     @IBOutlet var allTextButtons: [UIButton]!
-    
-    
     @IBOutlet var allArrowButtons: [UIButton]!
    
     @IBOutlet weak var shiftButton: UIButton!
     
     @IBOutlet var allButtons: [UIButton]!
     
+    
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func backFromArrow(_ sender: UIButton) {
         numView.isHidden = true
@@ -52,6 +53,8 @@ class KeyboardViewController: UIInputViewController {
         symView.isHidden = true
         downArrow.isHidden = false
         downArrow2.isHidden = true
+        
+        
     }
     
     @IBAction func nextArrowPress(_ sender: UIButton) {
@@ -94,6 +97,9 @@ class KeyboardViewController: UIInputViewController {
     
     func resetSuggestions() {
         for button in wordButtons {
+            button.setTitle("", for: .normal)
+        }
+        for button in allArrowButtons {
             button.setTitle("", for: .normal)
         }
     }
@@ -282,6 +288,8 @@ class KeyboardViewController: UIInputViewController {
                 for button in allArrowButtons{
                     button.backgroundColor = UIColor.white
                 }
+                backButton.backgroundColor = UIColor.white
+                nextButton.backgroundColor = UIColor.white
                 
             } else if button == "Black" {
             
@@ -291,6 +299,9 @@ class KeyboardViewController: UIInputViewController {
                 for button in allArrowButtons{
                     button.backgroundColor = UIColor.black
                 }
+                backButton.backgroundColor = UIColor.black
+                nextButton.backgroundColor = UIColor.black
+                
             } else if button == "Blue" {
              
                 for button in allButtons{
@@ -299,6 +310,9 @@ class KeyboardViewController: UIInputViewController {
                 for button in allArrowButtons{
                     button.backgroundColor = myBlue
                 }
+                backButton.backgroundColor = myBlue
+                nextButton.backgroundColor = myBlue
+                
             } else if button == "Maize" {
                
                 for button in allButtons{
@@ -307,6 +321,8 @@ class KeyboardViewController: UIInputViewController {
                 for button in allArrowButtons{
                     button.backgroundColor = maize
                 }
+                backButton.backgroundColor = maize
+                nextButton.backgroundColor = maize
             }
             
             if text == "White" {
@@ -316,6 +332,8 @@ class KeyboardViewController: UIInputViewController {
                 for button in allArrowButtons{
                     button.setTitleColor(UIColor.white, for: UIControlState.normal)
                 }
+                backButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+                nextButton.setTitleColor(UIColor.white, for: UIControlState.normal)
 
             } else if text == "Black" {
                 for button in allButtons{
@@ -324,6 +342,9 @@ class KeyboardViewController: UIInputViewController {
                 for button in allArrowButtons{
                     button.setTitleColor(UIColor.black, for: UIControlState.normal)
                 }
+                backButton.setTitleColor(UIColor.black, for: UIControlState.normal)
+                nextButton.setTitleColor(UIColor.black, for: UIControlState.normal)
+                
             } else if text == "Blue" {
                 for button in allButtons{
                     button.setTitleColor(myBlue, for: .normal)
@@ -331,6 +352,8 @@ class KeyboardViewController: UIInputViewController {
                 for button in allArrowButtons{
                     button.setTitleColor(myBlue, for: .normal)
                 }
+                backButton.setTitleColor(myBlue, for: .normal)
+                nextButton.setTitleColor(myBlue, for: .normal)
 
             } else if text == "Maize" {
                 for button in allButtons{
@@ -339,6 +362,8 @@ class KeyboardViewController: UIInputViewController {
                 for button in allArrowButtons{
                     button.setTitleColor(maize, for: .normal)
                 }
+                backButton.setTitleColor(maize, for: .normal)
+                nextButton.setTitleColor(maize, for: .normal)
 
             }
             
@@ -407,7 +432,7 @@ class KeyboardViewController: UIInputViewController {
             heightConstraint.constant = customHeight
         }
     }
-
+   
     @IBAction func letterKeyPress(_ sender: UIButton) {
         let letterGroup = sender.titleLabel!.text!.lowercased()
         seq.push(button: letterGroup, cap: shiftPressed)
@@ -415,8 +440,10 @@ class KeyboardViewController: UIInputViewController {
         
         let tempDict = trie.getPossibilities(seq: seq.numSeq, rootNode: trie.rootNode, maxDepth: 1)
         let sorted = tempDict.sorted(by: { (a, b) in (a.key.characters.count - a.value) < (b.key.characters.count - b.value) })
+        
         print(sorted)
         displaySuggestions(results: sorted)
+        displayArrowSuggestions(results: sorted)
         
         shiftOff()
     }
@@ -432,9 +459,10 @@ class KeyboardViewController: UIInputViewController {
             }
             
             let tempDict = trie.getPossibilities(seq: seq.numSeq, rootNode: trie.rootNode, maxDepth: 1)
-            let sorted = tempDict.sorted(by: { (a, b) in (a.key.characters.count - a.value) < (b.key.characters.count - b.value) })
+             let sorted = tempDict.sorted(by: { (a, b) in (a.key.characters.count - a.value) < (b.key.characters.count - b.value) })
             print(sorted)
             displaySuggestions(results: sorted)
+            displayArrowSuggestions(results: sorted)
         } else {
             while textDocumentProxy.hasText {  // Delete whole words.
                 let tempDocText = textDocumentProxy.documentContextBeforeInput
@@ -456,6 +484,31 @@ class KeyboardViewController: UIInputViewController {
         for button in wordButtons {
             if wordcount >= results.count { return }
             let word = results[wordcount].key
+            button.setTitle(seq.addCapitalization(word: word), for: .normal)
+            wordcount += 1
+        }
+    }
+    
+    //func for displaying word choices in down arrow views
+    func displayArrowSuggestions(results: [(key:String,value:Int)]) {
+        resetSuggestions()
+        print("in arrow view 1")
+        
+        var wordcount = 3; //starts from 3rd word
+        nextButton.isEnabled = true
+        
+        // -3 because 3 word suggestions appear in main keyboard?
+        let numSuggestions = results.count
+        if numSuggestions < 21 {
+            nextButton.isEnabled = false
+        }
+        
+        for button in allArrowButtons {
+            if wordcount >= numSuggestions{
+                return
+            }
+            let word = results[wordcount].key
+            
             button.setTitle(seq.addCapitalization(word: word), for: .normal)
             wordcount += 1
         }

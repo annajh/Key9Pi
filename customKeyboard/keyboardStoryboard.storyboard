@@ -1154,8 +1154,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="ThI-7M-4GL" id="XKh-nU-IuB"/>
                         <outlet property="downArrow" destination="AsH-bd-eVE" id="M5z-Ru-ZYR"/>
                         <outlet property="downArrow2" destination="mfl-6d-zbj" id="pnb-Es-bbk"/>
+                        <outlet property="nextButton" destination="l5P-V8-dRc" id="KH6-oi-ZWP"/>
                         <outlet property="numView" destination="aZL-8J-TUd" id="QxV-ar-ZTI"/>
                         <outlet property="shiftButton" destination="8v5-Gp-ga0" id="uat-LY-j12"/>
                         <outlet property="symView" destination="vHf-vm-ori" id="kHr-Gj-ybq"/>
