@@ -198,6 +198,10 @@ class KeyboardViewController: UIInputViewController {
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
+        shiftColor = shiftButton.backgroundColor!
+        print("color of shift")
+        print(shiftColor)
+        
         shiftOn()
         trie.loadTrie(fileName: path!)
         
@@ -281,9 +285,7 @@ class KeyboardViewController: UIInputViewController {
             
             
         }
-        shiftColor = shiftButton.backgroundColor!
-        print("color of shift")
-        print(shiftColor)
+     
         
         //let defaults = UserDefaults.standard
         //let dict = defaults.object(forKey: "resultsDict")
