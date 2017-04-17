@@ -14,7 +14,6 @@ var seq = SequenceModel()
 let letters = CharacterSet.letters
 
 class KeyboardViewController: UIInputViewController {
-
    // @IBOutlet var nextKeyboardButton: UIButton!
     var heightConstraint: NSLayoutConstraint!
     
@@ -27,7 +26,6 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var numView: UIView!
     @IBOutlet weak var downArrow: UIView!
     @IBOutlet weak var downArrow2: UIView!
-    
     
     @IBOutlet var allTextButtons: [UIButton]!
     @IBOutlet var allArrowButtons: [UIButton]!
@@ -42,9 +40,26 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var backButton2: UIButton!
     
+    //for custom qwerty only
+    @IBOutlet weak var qwertyView:
+    UIView!
     
+    
+    @IBAction func qwertyWordPress(_ sender: UIButton) {
+        let str = sender.titleLabel!.text!
+      (textDocumentProxy as UIKeyInput).insertText("\(str)")
+    }
+    
+    @IBAction func qwertyBackPressed(_ sender: UIButton) {
+        (textDocumentProxy as UIKeyInput).deleteBackward()
+    }
+    
+    @IBAction func qwertyAddPress(_ sender: UIButton) {
+        //to implement
+    }
     
     @IBAction func downArrowPress(_ sender: UIButton) {
+        qwertyView.isHidden = true
         numView.isHidden = true
         textView.isHidden = true
         symView.isHidden = true
@@ -55,6 +70,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func nextArrowPress(_ sender: UIButton) {
+        qwertyView.isHidden = true
         numView.isHidden = true
         textView.isHidden = true
         symView.isHidden = true
@@ -158,6 +174,15 @@ class KeyboardViewController: UIInputViewController {
     @IBAction func goToText(_ sender: UIButton) {
         numView.isHidden = true
         textView.isHidden = false
+        symView.isHidden = true
+        downArrow.isHidden = true
+        downArrow2.isHidden = true
+    }
+    
+    @IBAction func goToAdd(_ sender: UIButton) {
+        qwertyView.isHidden = false
+        numView.isHidden = true
+        textView.isHidden = true
         symView.isHidden = true
         downArrow.isHidden = true
         downArrow2.isHidden = true
