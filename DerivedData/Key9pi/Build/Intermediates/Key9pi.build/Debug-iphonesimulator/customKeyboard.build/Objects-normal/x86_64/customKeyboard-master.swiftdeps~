@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.51 clang-802.0.41)"
+options: "fbe3c1f037cf25e7f7db88a679c9c596"
+build_time: [545806047, 549154000]
+inputs:
+  "/Users/Michael/Desktop/Key9Pi/customKeyboard/SequenceModel.swift": [544055171, 0]
+  "/Users/Michael/Desktop/Key9Pi/Key9pi/AppDelegate.swift": [545803511, 0]
+  "/Users/Michael/Desktop/Key9Pi/Key9pi/ColorPicker.swift": [545803511, 0]
+  "/Users/Michael/Desktop/Key9Pi/customKeyboard/KeyboardViewController.swift": [545806036, 0]
+  "/Users/Michael/Desktop/Key9Pi/customKeyboard/DictionaryModel.swift": [545803511, 0]

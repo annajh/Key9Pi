@@ -186,6 +186,7 @@ class KeyboardViewController: UIInputViewController {
     
     
     @IBAction func goToNum(_ sender: UIButton) {
+        seq.reset()
         numView.isHidden = false
         textView.isHidden = true
         symView.isHidden = true
@@ -193,12 +194,14 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func goToSym(_ sender: UIButton) {
+        seq.reset()
         numView.isHidden = true
         textView.isHidden = true
         symView.isHidden = false
     }
     
     @IBAction func goToText(_ sender: UIButton) {
+        seq.reset()
         numView.isHidden = true
         textView.isHidden = false
         symView.isHidden = true
@@ -207,6 +210,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func goToAdd(_ sender: UIButton) {
+        seq.reset()
         qwertyView.isHidden = false
         numView.isHidden = true
         textView.isHidden = true
