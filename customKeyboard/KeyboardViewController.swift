@@ -14,6 +14,51 @@ var seq = SequenceModel()
 let letters = CharacterSet.letters
 
 class KeyboardViewController: UIInputViewController {
+    
+    func updateDict() {
+        if let userDefaults = UserDefaults(suiteName: "group.k9") {
+            let currProfile = userDefaults.object(forKey: "profile") as? String
+            var otherProfile1 = ""
+            var otherProfile2 = ""
+            
+            if currProfile == "0" {
+                otherProfile1 = "1"
+                otherProfile2 = "2"
+            } else if currProfile == "1"{
+                otherProfile1 = "0"
+                otherProfile2 = "2"
+            } else if currProfile == "2" {
+                otherProfile1 = "0"
+                otherProfile2 = "1"
+            }
+            
+            let del1 = userDefaults.object(forKey: "addWords" + otherProfile1) as? [String] ?? [String]()
+            let del2 = userDefaults.object(forKey: "addWords" + otherProfile2) as? [String] ?? [String]()
+            
+            for word in del1 {
+                trie.deleteWord(word: word, rootNode: trie.rootNode)
+            }
+            
+            for word in del2 {
+                trie.deleteWord(word: word, rootNode: trie.rootNode)
+            }
+            
+            //////////
+            
+            let addWords = userDefaults.object(forKey: "addWords" + currProfile!) as? [String] ?? [String]()
+            let delWords = userDefaults.object(forKey: "delWords" + currProfile!) as? [String] ?? [String]()
+            
+            for word in addWords {
+                trie.insert(word: word, freq: 1, rootNode: trie.rootNode)
+            }
+            
+            for word in delWords {
+                trie.deleteWord(word: word, rootNode: trie.rootNode)
+            }
+        }
+        
+    }
+    
    // @IBOutlet var nextKeyboardButton: UIButton!
     var heightConstraint: NSLayoutConstraint!
     
@@ -127,10 +172,6 @@ class KeyboardViewController: UIInputViewController {
     //above is the array of the word buttons
     
     @IBAction func wordPress(_ sender: UIButton) {
-//        while(charCounter>0){
-//            textDocumentProxy.deleteBackward()
-//            charCounter = charCounter - 1
-//        }
 
         let str = sender.currentTitle!
         (textDocumentProxy as UIKeyInput).insertText(str + " ")
@@ -142,20 +183,6 @@ class KeyboardViewController: UIInputViewController {
         
         goToText(sender)
     }
-    
-    
-    
-//    @IBOutlet weak var abcButton: UIButton!
-//    @IBOutlet weak var defButton: UIButton!
-//    @IBOutlet weak var ghiButton: UIButton!
-//    @IBOutlet weak var jklButton: UIButton!
-//    @IBOutlet weak var mnoButton: UIButton!
-//    @IBOutlet weak var pqrsButton: UIButton!
-//    @IBOutlet weak var tuvButton: UIButton!
-//    @IBOutlet weak var wxyzButton: UIButton!
-//    
-    
-    //let letterButtons: [UIButton] = [abcButton ];
     
     
     @IBAction func goToNum(_ sender: UIButton) {
@@ -216,15 +243,12 @@ class KeyboardViewController: UIInputViewController {
         str = (String(str[index])).lowercased()
         charCounter = charCounter + 1
         print(charCounter)
-        //(textDocumentProxy as UIKeyInput).insertText("\(str[index])")
+        
         if shiftPressed {
           
             shiftOff()
         }
-//        if enterPressed {
-//            str =  str.uppercased()
-//            enterPressed = false
-//        }
+
         if (numView.isHidden == false){
             (textDocumentProxy as UIKeyInput).insertText(str)
         }
@@ -257,7 +281,7 @@ class KeyboardViewController: UIInputViewController {
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         //self.numView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
         
-      
+        shiftOn()
         trie.loadTrie(fileName: path!)
         
         if let userDefaults = UserDefaults(suiteName: "group.k9") {
@@ -265,17 +289,7 @@ class KeyboardViewController: UIInputViewController {
             let button = userDefaults.string(forKey: "button")
             let text = userDefaults.string(forKey: "text")
             
-            let addWords = userDefaults.object(forKey: "addWords") as? [String] ?? [String]()
-            let delWords = userDefaults.object(forKey: "delWords") as? [String] ?? [String]()
-            
-            for word in addWords {
-                trie.insert(word: word, freq: 1, rootNode: trie.rootNode)
-            }
-            
-            for word in delWords {
-                trie.deleteWord(word: word, rootNode: trie.rootNode)
-            }
-            
+            self.updateDict()
             
             if background == "White" {
                 textView.backgroundColor = UIColor.white
@@ -431,25 +445,8 @@ class KeyboardViewController: UIInputViewController {
         print(shiftColor)
         
         shiftOn()
-     
-        
-        //let defaults = UserDefaults.standard
-        //let dict = defaults.object(forKey: "resultsDict")
-        //print(dict!)
-        
-        // Perform custom UI setup here
-        //self.nextKeyboardButton = UIButton(type: .system)
-        
-        //self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-//        self.nextKeyboardButton.sizeToFit()
-//        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-//        
-//        self.view.addSubview(self.nextKeyboardButton)
-//        
-//        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-//        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -463,15 +460,6 @@ class KeyboardViewController: UIInputViewController {
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
-        
-//        var textColor: UIColor
-//        let proxy = self.textDocumentProxy
-//        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-//            textColor = UIColor.white
-//        } else {
-//            textColor = UIColor.black
-//        }
-//        self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
     
     func setUpHeightConstraint()

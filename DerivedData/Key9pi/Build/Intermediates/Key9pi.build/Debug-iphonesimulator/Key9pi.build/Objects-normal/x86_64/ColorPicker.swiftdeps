@@ -9,36 +9,35 @@ provides-member:
 - ["P6Key9pi13colorDelegate", ""]
 - ["C6Key9pi11ColorPicker", ""]
 provides-dynamic-lookup:
-- "touchesMoved"
-- "draw"
-- "selectedColor"
-- "selectedColor"
-- "updateColor"
 - "currentSelectionX"
-- "touchesEnded"
-- "touchesBegan"
-- "pickedColor"
 - "delegate"
+- "draw"
+- "pickedColor"
+- "selectedColor"
+- "touchesBegan"
+- "touchesEnded"
+- "touchesMoved"
+- "updateColor"
 depends-top-level:
-- !private "..<"
-- "ColorPicker"
-- !private "UIRectFill"
-- "colorDelegate"
 - !private "!="
-- !private "Int"
-- !private "-"
-- "UIEvent"
-- "CGRect"
-- "CGFloat"
-- "UIColor"
-- !private ">="
-- "Set"
-- "UITouch"
 - !private "*"
+- !private "-"
+- !private "..<"
 - !private "/"
 - !private "<"
-- "UIView"
+- !private ">="
 - "AssignmentPrecedence"
+- "CGFloat"
+- "CGRect"
+- "ColorPicker"
+- !private "Int"
+- "Set"
+- "UIColor"
+- "UIEvent"
+- !private "UIRectFill"
+- "UITouch"
+- "UIView"
+- "colorDelegate"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGFloat"]
@@ -47,54 +46,35 @@ depends-member:
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIRectFill"]
 - !private ["Ps9AnyObject", "black"]
-- ["Ps9AnyObject", "currentSelectionX"]
-- ["Ps9AnyObject", "delegate"]
-- ["Ps9AnyObject", "draw"]
+- !private ["Ps9AnyObject", "currentSelectionX"]
+- !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "frame"]
 - !private ["Ps9AnyObject", "getHue"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "location"]
-- ["Ps9AnyObject", "selectedColor"]
+- !private ["Ps9AnyObject", "selectedColor"]
 - !private ["Ps9AnyObject", "set"]
 - !private ["Ps9AnyObject", "setNeedsDisplay"]
-- ["Ps9AnyObject", "touchesBegan"]
-- ["Ps9AnyObject", "touchesEnded"]
-- ["Ps9AnyObject", "touchesMoved"]
-- ["Ps9AnyObject", "updateColor"]
+- !private ["Ps9AnyObject", "updateColor"]
 - ["Ps9AnyObject", ""]
-- !private ["Ps23BidirectionalCollection", "Iterator"]
-- !private ["Ps23BidirectionalCollection", "_Element"]
-- !private ["Ps22BidirectionalIndexable", "Iterator"]
-- !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps19BinaryFloatingPoint", "init"]
-- !private ["Ps17BitwiseOperations", "IntegerLiteralType"]
-- !private ["Ps17BitwiseOperations", "Stride"]
-- !private ["Ps17BitwiseOperations", "_DisabledRangeIndex"]
 - !private ["Ps17BitwiseOperations", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "CGFloat"]
 - !private ["PSo15CALayerDelegate", "CGRect"]
 - !private ["PSo15CALayerDelegate", "Int"]
 - !private ["PSo15CALayerDelegate", "UIColor"]
 - !private ["PSo15CALayerDelegate", "UIRectFill"]
-- ["PSo15CALayerDelegate", "currentSelectionX"]
-- ["PSo15CALayerDelegate", "delegate"]
-- ["PSo15CALayerDelegate", "draw"]
+- !private ["PSo15CALayerDelegate", "currentSelectionX"]
+- !private ["PSo15CALayerDelegate", "delegate"]
 - !private ["PSo15CALayerDelegate", "frame"]
 - !private ["PSo15CALayerDelegate", "init"]
-- ["PSo15CALayerDelegate", "selectedColor"]
+- !private ["PSo15CALayerDelegate", "selectedColor"]
 - !private ["PSo15CALayerDelegate", "setNeedsDisplay"]
-- ["PSo15CALayerDelegate", "touchesBegan"]
-- ["PSo15CALayerDelegate", "touchesEnded"]
-- ["PSo15CALayerDelegate", "touchesMoved"]
-- ["PSo15CALayerDelegate", "updateColor"]
+- !private ["PSo15CALayerDelegate", "updateColor"]
 - ["PSo15CALayerDelegate", ""]
-- ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["V12CoreGraphics7CGFloat", "init"]
-- ["VSC7CGPoint", "deinit"]
 - !private ["VSC7CGPoint", "x"]
-- ["VSC6CGRect", "deinit"]
 - !private ["VSC6CGRect", "init"]
 - !private ["VSC6CGRect", "size"]
 - !private ["VSC6CGSize", "height"]
@@ -102,31 +82,21 @@ depends-member:
 - !private ["Ps7CVarArg", "CGFloat"]
 - !private ["Ps7CVarArg", "CGRect"]
 - !private ["Ps7CVarArg", "Int"]
-- !private ["Ps7CVarArg", "IntegerLiteralType"]
-- !private ["Ps7CVarArg", "Iterator"]
-- !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UIRectFill"]
-- !private ["Ps7CVarArg", "_DisabledRangeIndex"]
 - !private ["Ps7CVarArg", "black"]
-- ["Ps7CVarArg", "currentSelectionX"]
-- ["Ps7CVarArg", "delegate"]
-- ["Ps7CVarArg", "draw"]
+- !private ["Ps7CVarArg", "currentSelectionX"]
+- !private ["Ps7CVarArg", "delegate"]
 - !private ["Ps7CVarArg", "first"]
 - !private ["Ps7CVarArg", "frame"]
 - !private ["Ps7CVarArg", "getHue"]
 - !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "location"]
-- ["Ps7CVarArg", "selectedColor"]
+- !private ["Ps7CVarArg", "selectedColor"]
 - !private ["Ps7CVarArg", "set"]
 - !private ["Ps7CVarArg", "setNeedsDisplay"]
-- ["Ps7CVarArg", "touchesBegan"]
-- ["Ps7CVarArg", "touchesEnded"]
-- ["Ps7CVarArg", "touchesMoved"]
-- ["Ps7CVarArg", "updateColor"]
+- !private ["Ps7CVarArg", "updateColor"]
 - ["Ps7CVarArg", ""]
-- !private ["Ps10Collection", "Iterator"]
-- !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "first"]
 - ["C6Key9pi11ColorPicker", "CGFloat"]
 - ["C6Key9pi11ColorPicker", "CGRect"]
@@ -149,58 +119,35 @@ depends-member:
 - ["C6Key9pi11ColorPicker", "touchesEnded"]
 - ["C6Key9pi11ColorPicker", "touchesMoved"]
 - ["C6Key9pi11ColorPicker", "updateColor"]
-- !private ["Ps10Comparable", "IntegerLiteralType"]
-- !private ["Ps10Comparable", "Stride"]
-- !private ["Ps10Comparable", "_DisabledRangeIndex"]
 - !private ["Ps10Comparable", "init"]
-- !private ["Vs14CountableRange", "Iterator"]
-- !private ["Vs14CountableRange", "_Element"]
-- ["Vs14CountableRange", "deinit"]
 - !private ["Ps28CustomDebugStringConvertible", "CGFloat"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRect"]
 - !private ["Ps28CustomDebugStringConvertible", "Int"]
-- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
-- !private ["Ps28CustomDebugStringConvertible", "RawValue"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIRectFill"]
-- !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "black"]
-- ["Ps28CustomDebugStringConvertible", "currentSelectionX"]
-- ["Ps28CustomDebugStringConvertible", "delegate"]
-- ["Ps28CustomDebugStringConvertible", "draw"]
+- !private ["Ps28CustomDebugStringConvertible", "currentSelectionX"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "first"]
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - !private ["Ps28CustomDebugStringConvertible", "getHue"]
 - !private ["Ps28CustomDebugStringConvertible", "height"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "location"]
-- ["Ps28CustomDebugStringConvertible", "selectedColor"]
+- !private ["Ps28CustomDebugStringConvertible", "selectedColor"]
 - !private ["Ps28CustomDebugStringConvertible", "set"]
 - !private ["Ps28CustomDebugStringConvertible", "setNeedsDisplay"]
 - !private ["Ps28CustomDebugStringConvertible", "size"]
-- ["Ps28CustomDebugStringConvertible", "touchesBegan"]
-- ["Ps28CustomDebugStringConvertible", "touchesEnded"]
-- ["Ps28CustomDebugStringConvertible", "touchesMoved"]
-- ["Ps28CustomDebugStringConvertible", "updateColor"]
+- !private ["Ps28CustomDebugStringConvertible", "updateColor"]
 - !private ["Ps28CustomDebugStringConvertible", "width"]
 - !private ["Ps28CustomDebugStringConvertible", "x"]
 - ["Ps28CustomDebugStringConvertible", ""]
-- !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "_DisabledRangeIndex"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "height"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "size"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "width"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "x"]
-- !private ["Ps17CustomReflectable", "Element"]
-- !private ["Ps17CustomReflectable", "IntegerLiteralType"]
-- !private ["Ps17CustomReflectable", "Iterator"]
-- !private ["Ps17CustomReflectable", "RawValue"]
-- !private ["Ps17CustomReflectable", "Stride"]
-- !private ["Ps17CustomReflectable", "_DisabledRangeIndex"]
-- !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "first"]
 - !private ["Ps17CustomReflectable", "height"]
@@ -211,160 +158,94 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGFloat"]
 - !private ["Ps23CustomStringConvertible", "CGRect"]
 - !private ["Ps23CustomStringConvertible", "Int"]
-- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
-- !private ["Ps23CustomStringConvertible", "Iterator"]
-- !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UIRectFill"]
-- !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
-- !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "black"]
-- ["Ps23CustomStringConvertible", "currentSelectionX"]
-- ["Ps23CustomStringConvertible", "delegate"]
-- ["Ps23CustomStringConvertible", "draw"]
+- !private ["Ps23CustomStringConvertible", "currentSelectionX"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "first"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - !private ["Ps23CustomStringConvertible", "getHue"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "location"]
-- ["Ps23CustomStringConvertible", "selectedColor"]
+- !private ["Ps23CustomStringConvertible", "selectedColor"]
 - !private ["Ps23CustomStringConvertible", "set"]
 - !private ["Ps23CustomStringConvertible", "setNeedsDisplay"]
-- ["Ps23CustomStringConvertible", "touchesBegan"]
-- ["Ps23CustomStringConvertible", "touchesEnded"]
-- ["Ps23CustomStringConvertible", "touchesMoved"]
-- ["Ps23CustomStringConvertible", "updateColor"]
+- !private ["Ps23CustomStringConvertible", "updateColor"]
 - ["Ps23CustomStringConvertible", ""]
-- ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CGFloat"]
 - !private ["Ps9Equatable", "CGRect"]
 - !private ["Ps9Equatable", "Int"]
-- !private ["Ps9Equatable", "IntegerLiteralType"]
-- !private ["Ps9Equatable", "Iterator"]
-- !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIRectFill"]
-- !private ["Ps9Equatable", "_DisabledRangeIndex"]
-- !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "black"]
-- ["Ps9Equatable", "currentSelectionX"]
-- ["Ps9Equatable", "delegate"]
-- ["Ps9Equatable", "draw"]
+- !private ["Ps9Equatable", "currentSelectionX"]
+- !private ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "first"]
 - !private ["Ps9Equatable", "frame"]
 - !private ["Ps9Equatable", "getHue"]
 - !private ["Ps9Equatable", "height"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "location"]
-- ["Ps9Equatable", "selectedColor"]
+- !private ["Ps9Equatable", "selectedColor"]
 - !private ["Ps9Equatable", "set"]
 - !private ["Ps9Equatable", "setNeedsDisplay"]
 - !private ["Ps9Equatable", "size"]
-- ["Ps9Equatable", "touchesBegan"]
-- ["Ps9Equatable", "touchesEnded"]
-- ["Ps9Equatable", "touchesMoved"]
-- ["Ps9Equatable", "updateColor"]
+- !private ["Ps9Equatable", "updateColor"]
 - !private ["Ps9Equatable", "width"]
 - !private ["Ps9Equatable", "x"]
 - ["Ps9Equatable", ""]
-- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
 - !private ["Ps25ExpressibleByArrayLiteral", "first"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps25ExpressibleByFloatLiteral", "init"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
-- !private ["Ps23ExpressibleByNilLiteral", "RawValue"]
-- !private ["Sf", "deinit"]
-- !private ["Vs7Float80", "deinit"]
 - !private ["Ps13FloatingPoint", "init"]
 - !private ["Ps8Hashable", "CGFloat"]
 - !private ["Ps8Hashable", "CGRect"]
 - !private ["Ps8Hashable", "Int"]
-- !private ["Ps8Hashable", "IntegerLiteralType"]
-- !private ["Ps8Hashable", "Iterator"]
-- !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIRectFill"]
-- !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "black"]
-- ["Ps8Hashable", "currentSelectionX"]
-- ["Ps8Hashable", "delegate"]
-- ["Ps8Hashable", "draw"]
+- !private ["Ps8Hashable", "currentSelectionX"]
+- !private ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "first"]
 - !private ["Ps8Hashable", "frame"]
 - !private ["Ps8Hashable", "getHue"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "location"]
-- ["Ps8Hashable", "selectedColor"]
+- !private ["Ps8Hashable", "selectedColor"]
 - !private ["Ps8Hashable", "set"]
 - !private ["Ps8Hashable", "setNeedsDisplay"]
-- ["Ps8Hashable", "touchesBegan"]
-- ["Ps8Hashable", "touchesEnded"]
-- ["Ps8Hashable", "touchesMoved"]
-- ["Ps8Hashable", "updateColor"]
+- !private ["Ps8Hashable", "updateColor"]
 - ["Ps8Hashable", ""]
-- ["SQ", "deinit"]
-- !private ["Ps9Indexable", "Iterator"]
-- !private ["Ps9Indexable", "_Element"]
-- !private ["Ps9Indexable", "first"]
-- !private ["Ps13IndexableBase", "Iterator"]
-- !private ["Ps13IndexableBase", "_Element"]
-- !private ["Ps13IndexableBase", "first"]
-- !private ["Vs16IndexingIterator", "Element"]
-- !private ["Si", "IntegerLiteralType"]
-- !private ["Si", "Stride"]
-- !private ["Si", "_DisabledRangeIndex"]
-- ["Si", "deinit"]
 - !private ["Si", "init"]
-- !private ["Vs5Int16", "deinit"]
-- !private ["Vs5Int32", "deinit"]
-- !private ["Vs5Int64", "deinit"]
-- !private ["Vs4Int8", "deinit"]
-- !private ["Ps7Integer", "IntegerLiteralType"]
-- !private ["Ps7Integer", "Stride"]
-- !private ["Ps7Integer", "_DisabledRangeIndex"]
 - !private ["Ps7Integer", "init"]
-- !private ["Ps17IntegerArithmetic", "IntegerLiteralType"]
-- !private ["Ps17IntegerArithmetic", "Stride"]
-- !private ["Ps17IntegerArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps17IntegerArithmetic", "init"]
-- !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps10MirrorPath", "IntegerLiteralType"]
-- !private ["Ps10MirrorPath", "Stride"]
-- !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - !private ["Ps10MirrorPath", "init"]
-- ["CSo7NSCoder", "deinit"]
 - !private ["PSo8NSCoding", "CGFloat"]
 - !private ["PSo8NSCoding", "CGRect"]
 - !private ["PSo8NSCoding", "Int"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIRectFill"]
 - !private ["PSo8NSCoding", "black"]
-- ["PSo8NSCoding", "currentSelectionX"]
-- ["PSo8NSCoding", "delegate"]
-- ["PSo8NSCoding", "draw"]
+- !private ["PSo8NSCoding", "currentSelectionX"]
+- !private ["PSo8NSCoding", "delegate"]
 - !private ["PSo8NSCoding", "frame"]
 - !private ["PSo8NSCoding", "getHue"]
 - !private ["PSo8NSCoding", "init"]
-- ["PSo8NSCoding", "selectedColor"]
+- !private ["PSo8NSCoding", "selectedColor"]
 - !private ["PSo8NSCoding", "set"]
 - !private ["PSo8NSCoding", "setNeedsDisplay"]
-- ["PSo8NSCoding", "touchesBegan"]
-- ["PSo8NSCoding", "touchesEnded"]
-- ["PSo8NSCoding", "touchesMoved"]
-- ["PSo8NSCoding", "updateColor"]
+- !private ["PSo8NSCoding", "updateColor"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "black"]
 - !private ["PSo9NSCopying", "getHue"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "set"]
-- !private ["CSo8NSNumber", "deinit"]
 - ["CSo8NSObject", "CGFloat"]
 - ["CSo8NSObject", "CGRect"]
 - !private ["CSo8NSObject", "Int"]
@@ -376,7 +257,6 @@ depends-member:
 - !private ["CSo8NSObject", "black"]
 - ["CSo8NSObject", "colorDelegate"]
 - ["CSo8NSObject", "currentSelectionX"]
-- !private ["CSo8NSObject", "deinit"]
 - ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "draw"]
 - !private ["CSo8NSObject", "frame"]
@@ -396,107 +276,67 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIRectFill"]
 - !private ["PSo16NSObjectProtocol", "black"]
-- ["PSo16NSObjectProtocol", "currentSelectionX"]
-- ["PSo16NSObjectProtocol", "delegate"]
-- ["PSo16NSObjectProtocol", "draw"]
+- !private ["PSo16NSObjectProtocol", "currentSelectionX"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - !private ["PSo16NSObjectProtocol", "getHue"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "location"]
-- ["PSo16NSObjectProtocol", "selectedColor"]
+- !private ["PSo16NSObjectProtocol", "selectedColor"]
 - !private ["PSo16NSObjectProtocol", "set"]
 - !private ["PSo16NSObjectProtocol", "setNeedsDisplay"]
-- ["PSo16NSObjectProtocol", "touchesBegan"]
-- ["PSo16NSObjectProtocol", "touchesEnded"]
-- ["PSo16NSObjectProtocol", "touchesMoved"]
-- ["PSo16NSObjectProtocol", "updateColor"]
+- !private ["PSo16NSObjectProtocol", "updateColor"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "black"]
 - !private ["PSo14NSSecureCoding", "getHue"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "set"]
-- !private ["Sq", "RawValue"]
-- ["Sq", "deinit"]
-- !private ["Ps22RandomAccessCollection", "Iterator"]
-- !private ["Ps22RandomAccessCollection", "_Element"]
-- !private ["Ps21RandomAccessIndexable", "Iterator"]
-- !private ["Ps21RandomAccessIndexable", "_Element"]
-- !private ["Vs5Range", "deinit"]
-- !private ["Ps8Sequence", "Element"]
-- !private ["Ps8Sequence", "Iterator"]
-- !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "first"]
-- !private ["Vs3Set", "Iterator"]
-- ["Vs3Set", "deinit"]
 - !private ["Vs3Set", "first"]
-- !private ["Ps10SetAlgebra", "Iterator"]
 - !private ["Ps10SetAlgebra", "first"]
-- !private ["Vs11SetIterator", "Element"]
-- !private ["Ps13SignedInteger", "IntegerLiteralType"]
-- !private ["Ps13SignedInteger", "Stride"]
-- !private ["Ps13SignedInteger", "_DisabledRangeIndex"]
 - !private ["Ps13SignedInteger", "init"]
-- !private ["Ps12SignedNumber", "IntegerLiteralType"]
-- !private ["Ps12SignedNumber", "Stride"]
-- !private ["Ps12SignedNumber", "_DisabledRangeIndex"]
 - !private ["Ps12SignedNumber", "init"]
-- !private ["Ps10Strideable", "IntegerLiteralType"]
-- !private ["Ps10Strideable", "Stride"]
-- !private ["Ps10Strideable", "_DisabledRangeIndex"]
 - !private ["Ps10Strideable", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "CGFloat"]
 - !private ["PSo29UIAccessibilityIdentification", "CGRect"]
 - !private ["PSo29UIAccessibilityIdentification", "Int"]
 - !private ["PSo29UIAccessibilityIdentification", "UIColor"]
 - !private ["PSo29UIAccessibilityIdentification", "UIRectFill"]
-- ["PSo29UIAccessibilityIdentification", "currentSelectionX"]
-- ["PSo29UIAccessibilityIdentification", "delegate"]
-- ["PSo29UIAccessibilityIdentification", "draw"]
+- !private ["PSo29UIAccessibilityIdentification", "currentSelectionX"]
+- !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "frame"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
-- ["PSo29UIAccessibilityIdentification", "selectedColor"]
+- !private ["PSo29UIAccessibilityIdentification", "selectedColor"]
 - !private ["PSo29UIAccessibilityIdentification", "setNeedsDisplay"]
-- ["PSo29UIAccessibilityIdentification", "touchesBegan"]
-- ["PSo29UIAccessibilityIdentification", "touchesEnded"]
-- ["PSo29UIAccessibilityIdentification", "touchesMoved"]
-- ["PSo29UIAccessibilityIdentification", "updateColor"]
+- !private ["PSo29UIAccessibilityIdentification", "updateColor"]
 - ["PSo29UIAccessibilityIdentification", ""]
 - !private ["PSo12UIAppearance", "CGFloat"]
 - !private ["PSo12UIAppearance", "CGRect"]
 - !private ["PSo12UIAppearance", "Int"]
 - !private ["PSo12UIAppearance", "UIColor"]
 - !private ["PSo12UIAppearance", "UIRectFill"]
-- ["PSo12UIAppearance", "currentSelectionX"]
-- ["PSo12UIAppearance", "delegate"]
-- ["PSo12UIAppearance", "draw"]
+- !private ["PSo12UIAppearance", "currentSelectionX"]
+- !private ["PSo12UIAppearance", "delegate"]
 - !private ["PSo12UIAppearance", "frame"]
 - !private ["PSo12UIAppearance", "init"]
-- ["PSo12UIAppearance", "selectedColor"]
+- !private ["PSo12UIAppearance", "selectedColor"]
 - !private ["PSo12UIAppearance", "setNeedsDisplay"]
-- ["PSo12UIAppearance", "touchesBegan"]
-- ["PSo12UIAppearance", "touchesEnded"]
-- ["PSo12UIAppearance", "touchesMoved"]
-- ["PSo12UIAppearance", "updateColor"]
+- !private ["PSo12UIAppearance", "updateColor"]
 - ["PSo12UIAppearance", ""]
 - !private ["PSo21UIAppearanceContainer", "CGFloat"]
 - !private ["PSo21UIAppearanceContainer", "CGRect"]
 - !private ["PSo21UIAppearanceContainer", "Int"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIRectFill"]
-- ["PSo21UIAppearanceContainer", "currentSelectionX"]
-- ["PSo21UIAppearanceContainer", "delegate"]
-- ["PSo21UIAppearanceContainer", "draw"]
+- !private ["PSo21UIAppearanceContainer", "currentSelectionX"]
+- !private ["PSo21UIAppearanceContainer", "delegate"]
 - !private ["PSo21UIAppearanceContainer", "frame"]
 - !private ["PSo21UIAppearanceContainer", "init"]
-- ["PSo21UIAppearanceContainer", "selectedColor"]
+- !private ["PSo21UIAppearanceContainer", "selectedColor"]
 - !private ["PSo21UIAppearanceContainer", "setNeedsDisplay"]
-- ["PSo21UIAppearanceContainer", "touchesBegan"]
-- ["PSo21UIAppearanceContainer", "touchesEnded"]
-- ["PSo21UIAppearanceContainer", "touchesMoved"]
-- ["PSo21UIAppearanceContainer", "updateColor"]
+- !private ["PSo21UIAppearanceContainer", "updateColor"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["CSo7UIColor", "black"]
-- ["CSo7UIColor", "deinit"]
 - !private ["CSo7UIColor", "getHue"]
 - !private ["CSo7UIColor", "init"]
 - !private ["CSo7UIColor", "set"]
@@ -505,68 +345,52 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "Int"]
 - !private ["PSo17UICoordinateSpace", "UIColor"]
 - !private ["PSo17UICoordinateSpace", "UIRectFill"]
-- ["PSo17UICoordinateSpace", "currentSelectionX"]
-- ["PSo17UICoordinateSpace", "delegate"]
-- ["PSo17UICoordinateSpace", "draw"]
+- !private ["PSo17UICoordinateSpace", "currentSelectionX"]
+- !private ["PSo17UICoordinateSpace", "delegate"]
 - !private ["PSo17UICoordinateSpace", "frame"]
 - !private ["PSo17UICoordinateSpace", "init"]
-- ["PSo17UICoordinateSpace", "selectedColor"]
+- !private ["PSo17UICoordinateSpace", "selectedColor"]
 - !private ["PSo17UICoordinateSpace", "setNeedsDisplay"]
-- ["PSo17UICoordinateSpace", "touchesBegan"]
-- ["PSo17UICoordinateSpace", "touchesEnded"]
-- ["PSo17UICoordinateSpace", "touchesMoved"]
-- ["PSo17UICoordinateSpace", "updateColor"]
+- !private ["PSo17UICoordinateSpace", "updateColor"]
 - ["PSo17UICoordinateSpace", ""]
 - !private ["PSo13UIDynamicItem", "CGFloat"]
 - !private ["PSo13UIDynamicItem", "CGRect"]
 - !private ["PSo13UIDynamicItem", "Int"]
 - !private ["PSo13UIDynamicItem", "UIColor"]
 - !private ["PSo13UIDynamicItem", "UIRectFill"]
-- ["PSo13UIDynamicItem", "currentSelectionX"]
-- ["PSo13UIDynamicItem", "delegate"]
-- ["PSo13UIDynamicItem", "draw"]
+- !private ["PSo13UIDynamicItem", "currentSelectionX"]
+- !private ["PSo13UIDynamicItem", "delegate"]
 - !private ["PSo13UIDynamicItem", "frame"]
 - !private ["PSo13UIDynamicItem", "init"]
-- ["PSo13UIDynamicItem", "selectedColor"]
+- !private ["PSo13UIDynamicItem", "selectedColor"]
 - !private ["PSo13UIDynamicItem", "setNeedsDisplay"]
-- ["PSo13UIDynamicItem", "touchesBegan"]
-- ["PSo13UIDynamicItem", "touchesEnded"]
-- ["PSo13UIDynamicItem", "touchesMoved"]
-- ["PSo13UIDynamicItem", "updateColor"]
+- !private ["PSo13UIDynamicItem", "updateColor"]
 - ["PSo13UIDynamicItem", ""]
 - !private ["PSo18UIFocusEnvironment", "CGFloat"]
 - !private ["PSo18UIFocusEnvironment", "CGRect"]
 - !private ["PSo18UIFocusEnvironment", "Int"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIRectFill"]
-- ["PSo18UIFocusEnvironment", "currentSelectionX"]
-- ["PSo18UIFocusEnvironment", "delegate"]
-- ["PSo18UIFocusEnvironment", "draw"]
+- !private ["PSo18UIFocusEnvironment", "currentSelectionX"]
+- !private ["PSo18UIFocusEnvironment", "delegate"]
 - !private ["PSo18UIFocusEnvironment", "frame"]
 - !private ["PSo18UIFocusEnvironment", "init"]
-- ["PSo18UIFocusEnvironment", "selectedColor"]
+- !private ["PSo18UIFocusEnvironment", "selectedColor"]
 - !private ["PSo18UIFocusEnvironment", "setNeedsDisplay"]
-- ["PSo18UIFocusEnvironment", "touchesBegan"]
-- ["PSo18UIFocusEnvironment", "touchesEnded"]
-- ["PSo18UIFocusEnvironment", "touchesMoved"]
-- ["PSo18UIFocusEnvironment", "updateColor"]
+- !private ["PSo18UIFocusEnvironment", "updateColor"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo11UIFocusItem", "CGFloat"]
 - !private ["PSo11UIFocusItem", "CGRect"]
 - !private ["PSo11UIFocusItem", "Int"]
 - !private ["PSo11UIFocusItem", "UIColor"]
 - !private ["PSo11UIFocusItem", "UIRectFill"]
-- ["PSo11UIFocusItem", "currentSelectionX"]
-- ["PSo11UIFocusItem", "delegate"]
-- ["PSo11UIFocusItem", "draw"]
+- !private ["PSo11UIFocusItem", "currentSelectionX"]
+- !private ["PSo11UIFocusItem", "delegate"]
 - !private ["PSo11UIFocusItem", "frame"]
 - !private ["PSo11UIFocusItem", "init"]
-- ["PSo11UIFocusItem", "selectedColor"]
+- !private ["PSo11UIFocusItem", "selectedColor"]
 - !private ["PSo11UIFocusItem", "setNeedsDisplay"]
-- ["PSo11UIFocusItem", "touchesBegan"]
-- ["PSo11UIFocusItem", "touchesEnded"]
-- ["PSo11UIFocusItem", "touchesMoved"]
-- ["PSo11UIFocusItem", "updateColor"]
+- !private ["PSo11UIFocusItem", "updateColor"]
 - ["PSo11UIFocusItem", ""]
 - ["CSo11UIResponder", "CGFloat"]
 - ["CSo11UIResponder", "CGRect"]
@@ -593,36 +417,27 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "Int"]
 - !private ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "UIRectFill"]
-- ["PSo30UIResponderStandardEditActions", "currentSelectionX"]
-- ["PSo30UIResponderStandardEditActions", "delegate"]
-- ["PSo30UIResponderStandardEditActions", "draw"]
+- !private ["PSo30UIResponderStandardEditActions", "currentSelectionX"]
+- !private ["PSo30UIResponderStandardEditActions", "delegate"]
 - !private ["PSo30UIResponderStandardEditActions", "frame"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
-- ["PSo30UIResponderStandardEditActions", "selectedColor"]
+- !private ["PSo30UIResponderStandardEditActions", "selectedColor"]
 - !private ["PSo30UIResponderStandardEditActions", "setNeedsDisplay"]
-- ["PSo30UIResponderStandardEditActions", "touchesBegan"]
-- ["PSo30UIResponderStandardEditActions", "touchesEnded"]
-- ["PSo30UIResponderStandardEditActions", "touchesMoved"]
-- ["PSo30UIResponderStandardEditActions", "updateColor"]
+- !private ["PSo30UIResponderStandardEditActions", "updateColor"]
 - ["PSo30UIResponderStandardEditActions", ""]
-- ["CSo7UITouch", "deinit"]
 - !private ["CSo7UITouch", "location"]
 - !private ["PSo18UITraitEnvironment", "CGFloat"]
 - !private ["PSo18UITraitEnvironment", "CGRect"]
 - !private ["PSo18UITraitEnvironment", "Int"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIRectFill"]
-- ["PSo18UITraitEnvironment", "currentSelectionX"]
-- ["PSo18UITraitEnvironment", "delegate"]
-- ["PSo18UITraitEnvironment", "draw"]
+- !private ["PSo18UITraitEnvironment", "currentSelectionX"]
+- !private ["PSo18UITraitEnvironment", "delegate"]
 - !private ["PSo18UITraitEnvironment", "frame"]
 - !private ["PSo18UITraitEnvironment", "init"]
-- ["PSo18UITraitEnvironment", "selectedColor"]
+- !private ["PSo18UITraitEnvironment", "selectedColor"]
 - !private ["PSo18UITraitEnvironment", "setNeedsDisplay"]
-- ["PSo18UITraitEnvironment", "touchesBegan"]
-- ["PSo18UITraitEnvironment", "touchesEnded"]
-- ["PSo18UITraitEnvironment", "touchesMoved"]
-- ["PSo18UITraitEnvironment", "updateColor"]
+- !private ["PSo18UITraitEnvironment", "updateColor"]
 - ["PSo18UITraitEnvironment", ""]
 - ["CSo6UIView", "CGFloat"]
 - ["CSo6UIView", "CGRect"]
@@ -634,7 +449,6 @@ depends-member:
 - ["CSo6UIView", "UITouch"]
 - ["CSo6UIView", "colorDelegate"]
 - ["CSo6UIView", "currentSelectionX"]
-- ["CSo6UIView", "deinit"]
 - ["CSo6UIView", "delegate"]
 - ["CSo6UIView", "draw"]
 - !private ["CSo6UIView", "frame"]
@@ -646,11 +460,6 @@ depends-member:
 - ["CSo6UIView", "touchesMoved"]
 - ["CSo6UIView", "updateColor"]
 - ["CSo6UIView", ""]
-- !private ["Su", "deinit"]
-- !private ["Vs6UInt16", "deinit"]
-- !private ["Vs6UInt32", "deinit"]
-- !private ["Vs6UInt64", "deinit"]
-- !private ["Vs5UInt8", "deinit"]
 - !private ["Ps15_CVarArgAligned", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "CGFloat"]
@@ -658,22 +467,15 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "Int"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "UIColor"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "UIRectFill"]
-- ["Ps37_DefaultCustomPlaygroundQuickLookable", "currentSelectionX"]
-- ["Ps37_DefaultCustomPlaygroundQuickLookable", "delegate"]
-- ["Ps37_DefaultCustomPlaygroundQuickLookable", "draw"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "currentSelectionX"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "delegate"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "frame"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
-- ["Ps37_DefaultCustomPlaygroundQuickLookable", "selectedColor"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "selectedColor"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setNeedsDisplay"]
-- ["Ps37_DefaultCustomPlaygroundQuickLookable", "touchesBegan"]
-- ["Ps37_DefaultCustomPlaygroundQuickLookable", "touchesEnded"]
-- ["Ps37_DefaultCustomPlaygroundQuickLookable", "touchesMoved"]
-- ["Ps37_DefaultCustomPlaygroundQuickLookable", "updateColor"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "updateColor"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", ""]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisabledRangeIndex"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - !private ["Ps26_ExpressibleByColorLiteral", "black"]
 - !private ["Ps26_ExpressibleByColorLiteral", "getHue"]
@@ -682,47 +484,27 @@ depends-member:
 - !private ["Ps9_Hashable", "CGFloat"]
 - !private ["Ps9_Hashable", "CGRect"]
 - !private ["Ps9_Hashable", "Int"]
-- !private ["Ps9_Hashable", "IntegerLiteralType"]
-- !private ["Ps9_Hashable", "Iterator"]
-- !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UIRectFill"]
-- !private ["Ps9_Hashable", "_DisabledRangeIndex"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "black"]
-- ["Ps9_Hashable", "currentSelectionX"]
-- ["Ps9_Hashable", "delegate"]
-- ["Ps9_Hashable", "draw"]
+- !private ["Ps9_Hashable", "currentSelectionX"]
+- !private ["Ps9_Hashable", "delegate"]
 - !private ["Ps9_Hashable", "first"]
 - !private ["Ps9_Hashable", "frame"]
 - !private ["Ps9_Hashable", "getHue"]
 - !private ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "location"]
-- ["Ps9_Hashable", "selectedColor"]
+- !private ["Ps9_Hashable", "selectedColor"]
 - !private ["Ps9_Hashable", "set"]
 - !private ["Ps9_Hashable", "setNeedsDisplay"]
-- ["Ps9_Hashable", "touchesBegan"]
-- ["Ps9_Hashable", "touchesEnded"]
-- ["Ps9_Hashable", "touchesMoved"]
-- ["Ps9_Hashable", "updateColor"]
+- !private ["Ps9_Hashable", "updateColor"]
 - ["Ps9_Hashable", ""]
-- !private ["Ps14_Incrementable", "IntegerLiteralType"]
-- !private ["Ps14_Incrementable", "Stride"]
-- !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
 - !private ["Ps14_Incrementable", "init"]
-- !private ["Ps8_Integer", "IntegerLiteralType"]
-- !private ["Ps8_Integer", "Stride"]
-- !private ["Ps8_Integer", "_DisabledRangeIndex"]
+- !private ["Ps10_Indexable", "first"]
+- !private ["Ps14_IndexableBase", "first"]
 - !private ["Ps8_Integer", "init"]
-- !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
-- !private ["Ps18_IntegerArithmetic", "Stride"]
-- !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps18_IntegerArithmetic", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
-- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
-- !private ["Ps21_ObjectiveCBridgeable", "RawValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "Stride"]
-- !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "first"]
 - !private ["Ps21_ObjectiveCBridgeable", "height"]
@@ -730,99 +512,65 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "size"]
 - !private ["Ps21_ObjectiveCBridgeable", "width"]
 - !private ["Ps21_ObjectiveCBridgeable", "x"]
-- !private ["Ps14_SignedInteger", "IntegerLiteralType"]
-- !private ["Ps14_SignedInteger", "Stride"]
-- !private ["Ps14_SignedInteger", "_DisabledRangeIndex"]
 - !private ["Ps14_SignedInteger", "init"]
-- !private ["Ps11_Strideable", "IntegerLiteralType"]
-- !private ["Ps11_Strideable", "Stride"]
-- !private ["Ps11_Strideable", "_DisabledRangeIndex"]
 - !private ["Ps11_Strideable", "init"]
 - ["P6Key9pi13colorDelegate", "UIColor"]
 - ["P6Key9pi13colorDelegate", "pickedColor"]
 depends-nominal:
 - !private "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
-- !private "Ps23BidirectionalCollection"
-- !private "Ps22BidirectionalIndexable"
 - !private "Ps19BinaryFloatingPoint"
 - !private "Ps17BitwiseOperations"
-- "Sb"
+- !private "Sb"
 - "PSo15CALayerDelegate"
-- "V12CoreGraphics7CGFloat"
-- "VSC7CGPoint"
-- "VSC6CGRect"
+- !private "V12CoreGraphics7CGFloat"
+- !private "VSC7CGPoint"
+- !private "VSC6CGRect"
 - !private "VSC6CGSize"
 - "Ps7CVarArg"
 - !private "Ps10Collection"
 - "C6Key9pi11ColorPicker"
 - !private "Ps10Comparable"
-- "Vs14CountableRange"
 - "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
 - !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
-- "Sd"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps25ExpressibleByFloatLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
-- !private "Ps23ExpressibleByNilLiteral"
-- !private "Sf"
-- !private "Vs7Float80"
 - !private "Ps13FloatingPoint"
 - "Ps8Hashable"
-- "SQ"
-- !private "Ps9Indexable"
-- !private "Ps13IndexableBase"
-- !private "Vs16IndexingIterator"
-- "Si"
-- !private "Vs5Int16"
-- !private "Vs5Int32"
-- !private "Vs5Int64"
-- !private "Vs4Int8"
+- !private "Si"
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
-- !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
-- "CSo7NSCoder"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
-- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
-- "Sq"
-- !private "Ps22RandomAccessCollection"
-- !private "Ps21RandomAccessIndexable"
-- !private "Vs5Range"
 - !private "Ps8Sequence"
-- "Vs3Set"
+- !private "Vs3Set"
 - !private "Ps10SetAlgebra"
-- !private "Vs11SetIterator"
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Ps10Strideable"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
-- "CSo7UIColor"
+- !private "CSo7UIColor"
 - "PSo17UICoordinateSpace"
 - "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - "PSo11UIFocusItem"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
-- "CSo7UITouch"
+- !private "CSo7UITouch"
 - "PSo18UITraitEnvironment"
 - "CSo6UIView"
-- !private "Su"
-- !private "Vs6UInt16"
-- !private "Vs6UInt32"
-- !private "Vs6UInt64"
-- !private "Vs5UInt8"
 - !private "Ps15_CVarArgAligned"
 - !private "Ps22_CVarArgPassedAsDouble"
 - "Ps37_DefaultCustomPlaygroundQuickLookable"
@@ -831,6 +579,8 @@ depends-nominal:
 - !private "Ps26_ExpressibleByColorLiteral"
 - "Ps9_Hashable"
 - !private "Ps14_Incrementable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
 - !private "Ps8_Integer"
 - !private "Ps18_IntegerArithmetic"
 - !private "Ps21_ObjectiveCBridgeable"
@@ -842,12 +592,19 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "874175409787e1741e8bd98fd8f83552"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.apinotesc"
+interface-hash: "49e3fb1341383ad5cf3da4b8f3b9d7cf"
