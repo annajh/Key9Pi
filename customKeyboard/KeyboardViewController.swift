@@ -216,6 +216,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func globePress(_ sender: UIButton) {
+        seq.reset()
         advanceToNextInputMode()
     }
     

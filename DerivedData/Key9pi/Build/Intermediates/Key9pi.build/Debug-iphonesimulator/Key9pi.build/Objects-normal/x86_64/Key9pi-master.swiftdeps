@@ -1,13 +1,13 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.51 clang-802.0.41)"
 options: "1841132cc03a06062961f6ffd5161c24"
-build_time: [545804654, 756706000]
+build_time: [545806052, 626514000]
 inputs:
   "/Users/Michael/Desktop/Key9Pi/customKeyboard/SequenceModel.swift": [544055171, 0]
   "/Users/Michael/Desktop/Key9Pi/Key9pi/ColorPicker.swift": [545803511, 0]
   "/Users/Michael/Desktop/Key9Pi/Key9pi/ViewController.swift": [545804201, 0]
   "/Users/Michael/Desktop/Key9Pi/Key9pi/AppDelegate.swift": [545803511, 0]
-  "/Users/Michael/Desktop/Key9Pi/customKeyboard/KeyboardViewController.swift": [545804649, 0]
+  "/Users/Michael/Desktop/Key9Pi/customKeyboard/KeyboardViewController.swift": [545806036, 0]
   "/Users/Michael/Desktop/Key9Pi/customKeyboard/DictionaryModel.swift": [545803511, 0]
-  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Word+CoreDataClass.swift": [545804401, 0]
-  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Word+CoreDataProperties.swift": [545804401, 0]
-  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Key9pi+CoreDataModel.swift": [545804401, 0]
+  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Word+CoreDataClass.swift": [545806052, 0]
+  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Word+CoreDataProperties.swift": [545806052, 0]
+  "/Users/Michael/Desktop/Key9Pi/DerivedData/Key9pi/Build/Intermediates/Key9pi.build/Debug-iphonesimulator/Key9pi.build/DerivedSources/CoreDataGenerated/Key9pi/Key9pi+CoreDataModel.swift": [545806052, 0]
