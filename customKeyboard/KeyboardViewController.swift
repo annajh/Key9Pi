@@ -101,6 +101,17 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func qwertyAddPress(_ sender: UIButton) {
         //to implement
+//        let text = (textDocumentProxy as UIKeyInput)
+//        trie.insert(word: text as! String, freq: 1, rootNode: trie.rootNode)
+    }
+    
+    @IBAction func qwertyReturnPressed(_ sender: UIButton) {
+        qwertyView.isHidden = true
+        numView.isHidden = true
+        textView.isHidden = false
+        symView.isHidden = true
+        downArrow.isHidden = true
+        downArrow2.isHidden = true
     }
     
     @IBAction func downArrowPress(_ sender: UIButton) {

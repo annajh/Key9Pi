@@ -198,7 +198,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="addPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="CH8-4r-b6V"/>
                                             <action selector="goToAdd:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="ggU-Dz-Vmc"/>
                                         </connections>
                                     </button>
@@ -387,7 +386,7 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Njs-J0-gw0" userLabel="qwertyBlue">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjD-2c-YUf">
@@ -411,7 +410,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="globePress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="BO5-eA-dSa"/>
+                                            <action selector="qwertyReturnPressed:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Fyy-9O-j4U"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-ZW-21o">
@@ -447,7 +446,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="8s2-7J-D8p"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="hzY-Vi-U5q"/>
                                         </connections>
                                     </button>
@@ -460,7 +458,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="iK8-gd-Pjb"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Nkm-oW-LIw"/>
                                         </connections>
                                     </button>
@@ -473,7 +470,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="hkN-Md-QkB"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="QaY-Zb-qBj"/>
                                         </connections>
                                     </button>
@@ -486,7 +482,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Ewe-uj-que"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="UZf-E0-LDp"/>
                                         </connections>
                                     </button>
@@ -499,7 +494,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="9oT-kn-Pek"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="FdC-EK-ahI"/>
                                         </connections>
                                     </button>
@@ -512,7 +506,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Bed-kA-gwo"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="lCZ-Ls-x5c"/>
                                         </connections>
                                     </button>
@@ -525,7 +518,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="UlD-MF-Xbg"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="jhW-gw-xbB"/>
                                         </connections>
                                     </button>
@@ -538,7 +530,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="iaQ-QK-Uog"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="B6l-a5-8nF"/>
                                         </connections>
                                     </button>
@@ -551,7 +542,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="nb5-hc-G1W"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="MAq-rb-JaV"/>
                                         </connections>
                                     </button>
@@ -564,7 +554,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="dJw-gP-0dQ"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Wet-hi-6Ln"/>
                                         </connections>
                                     </button>
@@ -577,7 +566,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="wfw-pX-jca"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="SfB-B9-Ty5"/>
                                         </connections>
                                     </button>
@@ -590,7 +578,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="FPu-4a-Is5"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="sbF-5q-pBN"/>
                                         </connections>
                                     </button>
@@ -603,7 +590,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="28B-yC-GJj"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="YWP-Q8-0gn"/>
                                         </connections>
                                     </button>
@@ -616,7 +602,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="hyL-7K-RTu"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="W70-Bp-Lpj"/>
                                         </connections>
                                     </button>
@@ -629,7 +614,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="eoz-n9-VnZ"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="0Q7-2G-VGI"/>
                                         </connections>
                                     </button>
@@ -642,7 +626,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="laA-w9-4nB"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="SSK-YF-t0G"/>
                                         </connections>
                                     </button>
@@ -655,7 +638,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="feO-Bc-hbG"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="oOH-hU-KMX"/>
                                         </connections>
                                     </button>
@@ -668,7 +650,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="2Ix-KN-Z0y"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Vp6-nc-Jwn"/>
                                         </connections>
                                     </button>
@@ -681,7 +662,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="8eg-pY-qeq"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="ip7-in-NeD"/>
                                         </connections>
                                     </button>
@@ -694,7 +674,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="d7d-un-LmU"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="E3n-zA-h4N"/>
                                         </connections>
                                     </button>
@@ -707,7 +686,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="OLy-qw-NDC"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="3Nq-xB-b9u"/>
                                         </connections>
                                     </button>
@@ -720,7 +698,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="YgC-Cy-naC"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="jDc-Yd-uhX"/>
                                         </connections>
                                     </button>
@@ -733,7 +710,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="SWj-CN-sOL"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="AAS-oI-Pb4"/>
                                         </connections>
                                     </button>
@@ -746,7 +722,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="zfc-qc-NuY"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="HvI-Lo-pVe"/>
                                         </connections>
                                     </button>
@@ -759,7 +734,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="fxe-vo-F5x"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="yhK-8S-WlF"/>
                                         </connections>
                                     </button>
@@ -772,7 +746,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToNum:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="RJD-z0-ym3"/>
                                             <action selector="qwertyWordPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="lom-ce-z2G"/>
                                         </connections>
                                     </button>
@@ -785,10 +758,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="downArrowPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="ZUg-tQ-abE"/>
                                             <action selector="qwertyBackPressed:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="gIJ-jG-Bt0"/>
-                                            <action selector="qwertyBackPressedWith_sender:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="FL0-05-5on"/>
-                                            <action selector="shiftPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="HIG-hP-nrk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1265,6 +1235,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="309"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exB-xN-3Gb">
+                                        <rect key="frame" x="147" y="122" width="81" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <state key="normal" title=",?#">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToSym:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="VxM-bC-eaW"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rux-an-mOY">
                                         <rect key="frame" x="9" y="82" width="81" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1575,18 +1557,6 @@
                                             <action selector="keyPress:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="Mvg-7g-0bP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exB-xN-3Gb">
-                                        <rect key="frame" x="8" y="219" width="81" height="64"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                        <state key="normal" title=",?#">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goToSym:" destination="rTm-Wr-SFk" eventType="touchUpInside" id="VxM-bC-eaW"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nq-Bx-ccY">
                                         <rect key="frame" x="282" y="149" width="81" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1725,7 +1695,6 @@
                         <outletCollection property="allButtons" destination="oWY-rb-td1" collectionClass="NSMutableArray" id="a4n-xw-OsD"/>
                         <outletCollection property="allButtons" destination="yd9-Lx-6Ri" collectionClass="NSMutableArray" id="bIp-AS-MwD"/>
                         <outletCollection property="allButtons" destination="9Nq-Bx-ccY" collectionClass="NSMutableArray" id="5u4-mb-OGp"/>
-                        <outletCollection property="allButtons" destination="exB-xN-3Gb" collectionClass="NSMutableArray" id="sVM-sH-nBG"/>
                         <outletCollection property="allButtons" destination="9cA-4v-y6Q" collectionClass="NSMutableArray" id="d1l-XJ-m4u"/>
                         <outletCollection property="allButtons" destination="5GF-1y-wM0" collectionClass="NSMutableArray" id="u4a-6N-z5A"/>
                         <outletCollection property="allButtons" destination="mBC-BF-pY3" collectionClass="NSMutableArray" id="a7k-YH-t5v"/>
@@ -1778,6 +1747,7 @@
                         <outletCollection property="allArrowButtons2" destination="Vib-pS-USW" collectionClass="NSMutableArray" id="vq7-gr-GWm"/>
                         <outletCollection property="allArrowButtons2" destination="VJd-N0-Je6" collectionClass="NSMutableArray" id="9kB-zj-sew"/>
                         <outletCollection property="allArrowButtons2" destination="hz7-va-8I4" collectionClass="NSMutableArray" id="iar-cy-rzx"/>
+                        <outletCollection property="allButtons" destination="exB-xN-3Gb" collectionClass="NSMutableArray" id="sVM-sH-nBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOI-VO-ngD" userLabel="First Responder" sceneMemberID="firstResponder"/>
