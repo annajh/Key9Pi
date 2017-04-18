@@ -101,8 +101,11 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func qwertyAddPress(_ sender: UIButton) {
         //to implement
-//        let text = (textDocumentProxy as UIKeyInput)
-//        trie.insert(word: text as! String, freq: 1, rootNode: trie.rootNode)
+        if textDocumentProxy.hasText {
+            let word = textDocumentProxy.documentContextBeforeInput?.lowercased()
+            //print(word!)
+            trie.insert(word: word!, freq: 1, rootNode: trie.rootNode)
+        }
     }
     
     @IBAction func qwertyReturnPressed(_ sender: UIButton) {
