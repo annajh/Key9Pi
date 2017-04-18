@@ -12,9 +12,8 @@ import CoreData
 class ViewControllerMy: UIViewController {
     
     let userDefaults = UserDefaults(suiteName: "group.k9")
-
-    @IBOutlet weak var wordTextField: UITextField!
     
+    @IBOutlet weak var wordTextField: UITextField!
     
     @IBOutlet var backgroundButtons: [UIButton]!
     
@@ -22,39 +21,117 @@ class ViewControllerMy: UIViewController {
     
     @IBOutlet var textButtons: [UIButton]!
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @IBAction func addWordsPressed(_ sender: UIButton) {
+        let currProfile = userDefaults?.object(forKey: "profile") as? String
+        print(currProfile!)
+
         if wordTextField.text! != "" {
             let text = wordTextField.text!.lowercased()
             
-            if userDefaults?.object(forKey: "addWords") as? [String] != nil {
-                var temp = userDefaults?.object(forKey: "addWords") as? [String] ?? [String]()
+            if userDefaults?.object(forKey: "addWords" + currProfile!) as? [String] != nil {
+                var temp = userDefaults?.object(forKey: "addWords" + currProfile!) as? [String] ?? [String]()
                 temp.append(text)
-                userDefaults?.set(temp, forKey: "addWords")
+                userDefaults?.set(temp, forKey: "addWords" + currProfile!)
                 userDefaults?.synchronize()
+                print(userDefaults?.object(forKey: "addWords" + currProfile!) as? [String] ?? [String]())
             } else {
                 let arrayAdd = [text]
-                userDefaults?.set(arrayAdd, forKey: "addWords")
+                userDefaults?.set(arrayAdd, forKey: "addWords" + currProfile!)
                 userDefaults?.synchronize()
+                print(userDefaults?.object(forKey: "addWords" + currProfile!) as? [String] ?? [String]())
+            }
+            
+            if userDefaults?.object(forKey: "delWords" + currProfile!) as? [String] != nil {
+                var temp = userDefaults?.object(forKey: "delWords" + currProfile!) as? [String] ?? [String]()
+                
+                var offset = 0
+                
+
+                for (index, element) in temp.enumerated() {
+                    if element == text {
+                        print("deleting ", element, "at index ", index - offset)
+                        temp.remove(at: index - offset)
+                        offset += 1
+                    }
+                }
+                
+                userDefaults?.set(temp, forKey: "delWords" + currProfile!)
+                userDefaults?.synchronize()
+                //print(userDefaults?.object(forKey: "delWords" + currProfile!) as? [String] ?? [String]())
             }
         }
     }
     
     
+    @IBAction func profilePressed(_ sender: UIButton) {
+        
+        var profile = "0"
+        
+        if sender.currentTitle == "Academic" {
+            userDefaults?.set(profile, forKey: "profile")
+            userDefaults?.synchronize()
+        } else if sender.currentTitle == "Professional" {
+            profile = "1"
+            userDefaults?.set(profile, forKey: "profile")
+            userDefaults?.synchronize()
+        } else if sender.currentTitle == "Personal" {
+            profile = "2"
+            userDefaults?.set(profile, forKey: "profile")
+            userDefaults?.synchronize()
+        }
+        
+        highlightActiveProfile()
+        
+        let p = userDefaults?.object(forKey: "profile") as? String
+        print(p)
+    }
+    
+    
 
     @IBAction func delWordsPressed(_ sender: UIButton) {
+        let currProfile = userDefaults?.object(forKey: "profile") as? String
+        print(currProfile!)
+        
         if wordTextField.text! != "" {
             let text = wordTextField.text!.lowercased()
             
-            if userDefaults?.object(forKey: "delWords") as? [String] != nil {
-                var temp = userDefaults?.object(forKey: "delWords") as? [String] ?? [String]()
+            if userDefaults?.object(forKey: "delWords" + currProfile!) as? [String] != nil {
+                var temp = userDefaults?.object(forKey: "delWords" + currProfile!) as? [String] ?? [String]()
                 temp.append(text)
-                userDefaults?.set(temp, forKey: "delWords")
+                userDefaults?.set(temp, forKey: "delWords" + currProfile!)
                 userDefaults?.synchronize()
-                print(userDefaults?.object(forKey: "delWords") as? [String] ?? [String]())
+                print(userDefaults?.object(forKey: "delWords" + currProfile!) as? [String] ?? [String]())
             } else {
                 let arrayDel = [text]
-                userDefaults?.set(arrayDel, forKey: "delWords")
+                userDefaults?.set(arrayDel, forKey: "delWords" + currProfile!)
                 userDefaults?.synchronize()
+            }
+        }
+    }
+    
+    @IBOutlet weak var academic: UIButton!
+    @IBOutlet weak var professional: UIButton!
+    @IBOutlet weak var personal: UIButton!
+    
+    func highlightActiveProfile() {
+        let currProfile = userDefaults?.object(forKey: "profile") as? String
+        
+        if academic != nil {
+            if currProfile == "0" {
+                academic.backgroundColor = UIColor.blue;
+                professional.backgroundColor = UIColor.black
+                personal.backgroundColor = UIColor.black;
+
+            } else if currProfile == "1" {
+                academic.backgroundColor = UIColor.black;
+                professional.backgroundColor = UIColor.blue;
+                personal.backgroundColor = UIColor.black;
+
+            } else if currProfile == "2" {
+                academic.backgroundColor = UIColor.black;
+                professional.backgroundColor = UIColor.black
+                personal.backgroundColor = UIColor.blue;
             }
         }
     }
@@ -63,23 +140,16 @@ class ViewControllerMy: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-  
-//        wordTextField.layer.borderColor = UIColor.black.cgColor;
-//        wordTextField.layer.borderWidth = 2;
         
-//        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-//        let fileURL = documentsURL?.appendingPathComponent("test.sqlite")
-
-//        let defaults = UserDefaults.standard
-//        var dict = [String: Int]()
-//        dict["apple"] = 0;
-//        defaults.set(dict, forKey: "resultsDict")
+        let profile = "0"
+        userDefaults?.set(profile, forKey: "profile")
+        userDefaults?.synchronize()
         
+        highlightActiveProfile()
 
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-   
 
     @IBAction func goBack(_ sender: UIButton) {
     self.dismiss(animated: true, completion: {});

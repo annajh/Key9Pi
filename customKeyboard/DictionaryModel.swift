@@ -42,7 +42,7 @@ class Trie {
                     let contents = try String(contentsOfFile: filepath)
                     let lines = contents.components(separatedBy: "\n")
                     for line in lines {
-                        print(line)
+                        //print(line)
                         let trimmedLine = line.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
                         self.insert(word: trimmedLine.lowercased(), freq: 0, rootNode: self.rootNode)
                     }
@@ -107,14 +107,14 @@ class Trie {
     }
     
     func deleteWord(word: String, rootNode: Node) {
-        let deleteNode = self.findNode(word: word, rootNode: rootNode)
-        
-        print("wvbowbvfbvfbnvf", deleteNode.wordList)
-        
-        for key in deleteNode.wordList.keys {
-            if key == word {
-                deleteNode.wordList.removeValue(forKey: key)
-                return
+        if wordInTrie(searchWord: word, rootNode: rootNode) {
+            let deleteNode = self.findNode(word: word, rootNode: rootNode)
+            
+            for key in deleteNode.wordList.keys {
+                if key == word {
+                    deleteNode.wordList.removeValue(forKey: key)
+                    return
+                }
             }
         }
     }
